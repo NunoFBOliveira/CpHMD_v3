@@ -9,6 +9,7 @@ Also contains the Sts and Delphitools which will be completed in the future!
 ## 05/07/2023 ##
 - Introduction of dendrimer portion of the code
 - Added dendrimer blocks to delphi, sts and FF GROMOS54a7
+- corrected C-termini when capped to 8 due to the adition of SPB
 
 ## 04/07/2023 ##
 - Added block for cobimetinib and cobimetinib-EP to delphi, sts and FF GROMOS54a7
