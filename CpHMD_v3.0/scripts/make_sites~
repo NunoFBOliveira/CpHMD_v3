@@ -1,0 +1,93 @@
+#!/bin/bash -e
+
+# Read arguments and make some assignments:
+[ $# -gt 2 ] && echo "Usage: make_sites <CpHMD settings file> <pdb file>" >&2 && exit 1
+if [ ! -f $1 ]; then
+    echo "File $1 is missing!!!... Program will crash"; exit 1;
+fi
+
+source $1
+
+### Set standard files if no CpHDIR or STDIR given ###
+if [ -z  ${CpHDIR} ] ;then
+    CpHDIR="/home/noliveira/CpHMD/CpHMD_v3.0/"
+fi
+if [ -z  ${StDIR} ] ;then
+    StDIR="/home/noliveira/CpHMD/CpHMD_v3.0/St-54a7_Fit_DelPHi/"
+fi
+
+#at this point we have the TMP_protein.pdb which is the pdb with only the titrable
+#portion of our molecules!
+if [[ $sites == *(" ") ]]; then
+    echo "" 
+elif [[ $sites == "all"* ]]; then
+    rm -rf ./aux_site.dat
+    
+    list=`awk '/ATOM/ {if (substr($0,20,1) ~ /^[0-9]/)  {print substr($0,23,5)+0, substr($0,18,3)}}' $2 | uniq `
+    while read line; do
+	ind=`echo $line | awk '{print $1}'`
+	res=`echo $line | awk '{print $2}'`
+	stname=`awk -v n=$res '/#res/ && $0~n {print $NF}' $CpHDIR/scripts/pdbswitch `			
+	
+	if [[ $stname != "ARG" ]] ;then
+	    if  [[ ! -z `ls -a $StDIR | grep $stname ` ]] ;then
+		tau=`ls -a $StDIR | grep $stname | sed -e 's/.st//' | awk 1 ORS=" "`
+		awk -v i="$ind" -v t="$tau" 'BEGIN{printf("%-5s%s\n",i,t)}' >> ./aux_site.dat
+	    else
+		echo message E  "Residue $ind $res not present in STs."
+	    fi
+	fi
+    done <<< $list
+        
+    if [[ `echo $sites | awk '{print NF}'` > 1  ]];then
+	for ndx in `echo $sites | awk '{$1="";print}'`;do
+	    if [[ $ndx = *N ]];then
+		ind=`echo $ndx | sed 's/N//'`
+		res="NTR"
+    		stname="NTR"
+	    elif [[ $ndx = *C ]];then
+		ind=`echo $ndx | sed 's/C//'`
+		res="CTR"
+		stname="CTR"
+	    else
+		echo message E  "Residue $ind $res not a terminal"
+	    fi
+	    
+	    if [[ ! -z `ls -a $StDIR | grep $stname ` ]];then
+		tau=`ls -a $StDIR | grep $stname | sed -e 's/.st//' | awk 1 ORS=" "`
+		awk -v i="$ind" -v t="$tau" 'BEGIN{printf("%-5s%s\n",i,t)}' >> ./aux_site.dat
+	    else
+		echo message E  "Residue $ind $res not present in STs."
+	    fi		    
+	done
+    fi
+    sort -nk 1 ./aux_site.dat
+    
+
+    
+else    
+    for ndx in $sites;do
+	if [[ $ndx = *N ]];then
+	    ind=`echo $ndx | sed 's/N//'`
+	    res="NTR"
+    	    stname="NTR"
+	elif [[ $ndx = *C ]];then
+	    ind=`echo $ndx | sed 's/C//'`
+	    res="CTR"
+	    stname="CTR"
+	else
+	    ind=$ndx
+	    res=`awk -v i=$ndx 'substr($0,22,5)+0==i {a=substr($0,18,3)}END{print a}' $2`
+	    stname=`awk -v n=$res '/#res/ && $0~n {print $NF}' $CpHDIR/scripts/pdbswitch `
+	fi
+	#replace the case with pdbswitch search 
+	
+	if [[ ! -z `ls -a $StDIR | grep $stname ` ]]
+	then
+	    tau=`ls -a $StDIR | grep $stname | sed -e 's/.st//' | awk 1 ORS=" "`
+	    awk -v i="$ind" -v t="$tau" 'BEGIN{printf("%-5s%s\n",i,t)}'
+	    else
+		echo message E  "Residue $ind $res not present in STs."
+	fi
+    done
+fi
