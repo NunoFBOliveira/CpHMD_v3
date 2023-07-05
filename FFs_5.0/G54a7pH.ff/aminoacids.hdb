@@ -919,3 +919,32 @@ CX2    10
 1	4	 H1  C2	 C1 OE1
 1	4	 H8  N2	 C2  C5
 1	4	H22  N2	 C2  H1
+LRD     2
+1       1       H       N       -C      CA
+1       1       HZ      NZ      CE      CD
+LYD     2       
+1	1	H	N	-C	CA
+2	4	HZ	NZ	CE	CD
+LD0     2       
+1       1       H       N       -C      CA
+3       4       HZ      NZ      CE      CD
+LD1     2       
+1       1       H       N       -C      CA
+3       4       HZ      NZ      CE      CD
+LD2     2       
+1       1       H       N       -C      CA
+3       4       HZ      NZ      CE      CD
+LD3     2       
+1       1       H       N       -C      CA
+3       4       HZ      NZ      CE      CD
+LED     1       
+1	1	H	N	-C	CA
+LYSD    2       
+1	1	H	N	-C	CA
+3	4	HZ	NZ	CE	CD
+LYL     2
+1       1       H       N       -C      CA
+1       1       HZ      NZ      CE      CD
+DYL     2
+1       1       H       N       -C      CA
+1       1       HZ      NZ      CE      CD

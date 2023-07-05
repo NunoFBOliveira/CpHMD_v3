@@ -276,3 +276,15 @@ N	CA	C	O	gd_42
 CA	C	O	HO	gd_12
 [ impropers ]
 C	CA	OT	O	gi_1
+
+[ Special_Bonds ]
+[ add ]
+1	2	 HX	C	CA	C
+	H	1.008	0.000
+[ bonds ]
+C	HX	gb_1
+[ angles ]
+CA	C	HX	ga_19
+O	C	HX	ga_33
+[ dihedrals ]
+N	CA	C	HX	gd_40

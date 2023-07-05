@@ -409,17 +409,33 @@ set_termini()
          # This is FF hack specific. It is now working with modified GMX 5.1.5
          # Capping Conditions
                 if [[ $Titrating == "FALSE" ]]; then
-                    case ${Cterminus[$n]} in 
-                        CAP | CAPpro )  CTer[$i]=7 ;; 
-                        CHG )           CTer[$i]=4 ;; 
-                        NEU | TAU1 )    CTer[$i]=0 ;;
-                        TAU2 )          CTer[$i]=1 ;;
-                        TAU3 )          CTer[$i]=2 ;;
-                        TAU4 )          CTer[$i]=3 ;;
-                        REGC )          CTer[$i]=6 ;;
-                        REGN )          CTer[$i]=5 ;;
-                        * ) message E "Cterminus = ${Cterminus[$n]} is not valid. Check .pHmdp file" ;;
-                    esac
+		    if [[ $dendrimers == 1 ]] ; then
+			message W "Using option dendrimers to correct the C termini"
+			case ${Cterminus[$n]} in 
+                            CAP | CAPpro )  CTer[$i]=8 ;; 
+                            SPB )           CTer[$i]=7 ;; 
+                            CHG )           CTer[$i]=4 ;; 
+                            NEU | TAU1 )    CTer[$i]=0 ;;
+                            TAU2 )          CTer[$i]=1 ;;
+                            TAU3 )          CTer[$i]=2 ;;
+                            TAU4 )          CTer[$i]=3 ;;
+                            REGC )          CTer[$i]=6 ;;
+                            REGN )          CTer[$i]=5 ;;
+                            * ) message E "Cterminus = ${Cterminus[$n]} is not valid. Check .pHmdp file" ;;
+			esac
+		    else
+			case ${Cterminus[$n]} in 
+                            CAP | CAPpro )  CTer[$i]=7 ;; 
+                            CHG )           CTer[$i]=4 ;; 
+                            NEU | TAU1 )    CTer[$i]=0 ;;
+                            TAU2 )          CTer[$i]=1 ;;
+                            TAU3 )          CTer[$i]=2 ;;
+                            TAU4 )          CTer[$i]=3 ;;
+                            REGC )          CTer[$i]=6 ;;
+                            REGN )          CTer[$i]=5 ;;
+                            * ) message E "Cterminus = ${Cterminus[$n]} is not valid. Check .pHmdp file" ;;
+			esac
+		    fi
                     ((++n))
                 fi
             done

@@ -29671,3 +29671,917 @@ CLCl2 CLCl4    gb_52
   H17   F2
    F2   F1
 ; End  of Cobi w/ EP blocks
+
+; start of dendrimer blocks
+[ LYD ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH2     0.00000     2
+   CD   CH2     0.00000     2
+   CE   CH2    -0.24000     3
+   NZ    NT    -0.64000     3
+  HZ1     H     0.44000     3
+  HZ2     H     0.44000     3
+    C     C       0.450     4
+    O     O      -0.450     4
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG    CD    gb_27   
+   CD    CE    gb_27   
+   CE    NZ    gb_21   
+   NZ   HZ1    gb_2    
+   NZ   HZ2    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG    CD     ga_15   
+   CG    CD    CE     ga_15   
+   CD    CE    NZ     ga_15   
+   CE    NZ   HZ1     ga_11   
+   CE    NZ   HZ2     ga_11   
+  HZ1    NZ   HZ2     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_5    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_44   
+   -C     N    CA     C     gd_43
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_45   
+    N    CA     C    +N     gd_42   
+   CA    CB    CG    CD     gd_34   
+   CB    CG    CD    CE     gd_34   
+   CG    CD    CE    NZ     gd_34   
+   CD    CE    NZ   HZ1     gd_29   
+
+[ LYSD ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH2     0.00000     2
+   CD   CH2     0.00000     2
+   CE   CH2     0.12700     3
+   NZ    NL     0.12900     3
+  HZ1     H     0.24800     3
+  HZ2     H     0.24800     3
+  HZ3     H     0.24800     3
+    C     C       0.450     4
+    O     O      -0.450     4
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG    CD    gb_27   
+   CD    CE    gb_27   
+   CE    NZ    gb_21   
+   NZ   HZ1    gb_2    
+   NZ   HZ2    gb_2    
+   NZ   HZ3    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG    CD     ga_15   
+   CG    CD    CE     ga_15   
+   CD    CE    NZ     ga_15   
+   CE    NZ   HZ1     ga_11   
+   CE    NZ   HZ2     ga_11   
+   CE    NZ   HZ3     ga_11   
+  HZ1    NZ   HZ2     ga_10   
+  HZ1    NZ   HZ3     ga_10   
+  HZ2    NZ   HZ3     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_5    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_44   
+   -C     N    CA     C     gd_43
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_45   
+    N    CA     C    +N     gd_42   
+   CA    CB    CG    CD     gd_34   
+   CB    CG    CD    CE     gd_34   
+   CG    CD    CE    NZ     gd_34   
+   CD    CE    NZ   HZ1     gd_29   
+
+[ LD0 ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH2     0.00000     2
+   CD   CH2     0.00000     2
+   CE   CH2    -0.24000     3
+   NZ    NT    -0.64000     3
+  HZ1     H     0.00000     3
+  HZ2     H     0.44000     3
+  HZ3     H     0.44000     3
+    C     C       0.450     4
+    O     O      -0.450     4
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG    CD    gb_27   
+   CD    CE    gb_27   
+   CE    NZ    gb_21   
+   NZ   HZ1    gb_2    
+   NZ   HZ2    gb_2    
+   NZ   HZ3    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG    CD     ga_15   
+   CG    CD    CE     ga_15   
+   CD    CE    NZ     ga_15   
+   CE    NZ   HZ1     ga_11   
+   CE    NZ   HZ2     ga_11   
+   CE    NZ   HZ3     ga_11   
+  HZ1    NZ   HZ2     ga_10   
+  HZ1    NZ   HZ3     ga_10   
+  HZ2    NZ   HZ3     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_5    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+   CA    CB    CG    CD     gd_34   
+   CB    CG    CD    CE     gd_34   
+   CG    CD    CE    NZ     gd_34   
+   CD    CE    NZ   HZ1     gd_29   
+
+[ LD1 ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH2     0.00000     2
+   CD   CH2     0.00000     2
+   CE   CH2    -0.24000     3
+   NZ    NT    -0.64000     3
+  HZ1     H     0.44000     3
+  HZ2     H     0.00000     3
+  HZ3     H     0.44000     3
+    C     C       0.450     4
+    O     O      -0.450     4
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG    CD    gb_27   
+   CD    CE    gb_27   
+   CE    NZ    gb_21   
+   NZ   HZ1    gb_2    
+   NZ   HZ2    gb_2    
+   NZ   HZ3    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG    CD     ga_15   
+   CG    CD    CE     ga_15   
+   CD    CE    NZ     ga_15   
+   CE    NZ   HZ1     ga_11   
+   CE    NZ   HZ2     ga_11   
+   CE    NZ   HZ3     ga_11   
+  HZ1    NZ   HZ2     ga_10   
+  HZ1    NZ   HZ3     ga_10   
+  HZ2    NZ   HZ3     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_5    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+   CA    CB    CG    CD     gd_34   
+   CB    CG    CD    CE     gd_34   
+   CG    CD    CE    NZ     gd_34   
+   CD    CE    NZ   HZ1     gd_29   
+
+[ LD2 ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH2     0.00000     2
+   CD   CH2     0.00000     2
+   CE   CH2    -0.24000     3
+   NZ    NT    -0.64000     3
+  HZ1     H     0.44000     3
+  HZ2     H     0.44000     3
+  HZ3     H     0.00000     3
+    C     C       0.450     4
+    O     O      -0.450     4
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG    CD    gb_27   
+   CD    CE    gb_27   
+   CE    NZ    gb_21   
+   NZ   HZ1    gb_2    
+   NZ   HZ2    gb_2    
+   NZ   HZ3    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG    CD     ga_15   
+   CG    CD    CE     ga_15   
+   CD    CE    NZ     ga_15   
+   CE    NZ   HZ1     ga_11   
+   CE    NZ   HZ2     ga_11   
+   CE    NZ   HZ3     ga_11   
+  HZ1    NZ   HZ2     ga_10   
+  HZ1    NZ   HZ3     ga_10   
+  HZ2    NZ   HZ3     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_5    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+   CA    CB    CG    CD     gd_34   
+   CB    CG    CD    CE     gd_34   
+   CG    CD    CE    NZ     gd_34   
+   CD    CE    NZ   HZ1     gd_29   
+
+[ LD3 ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH2     0.00000     2
+   CD   CH2     0.00000     2
+   CE   CH2     0.12700     3
+   NZ    NL     0.12900     3
+  HZ1     H     0.24800     3
+  HZ2     H     0.24800     3
+  HZ3     H     0.24800     3
+    C     C       0.450     4
+    O     O      -0.450     4
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG    CD    gb_27   
+   CD    CE    gb_27   
+   CE    NZ    gb_21   
+   NZ   HZ1    gb_2    
+   NZ   HZ2    gb_2    
+   NZ   HZ3    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG    CD     ga_15   
+   CG    CD    CE     ga_15   
+   CD    CE    NZ     ga_15   
+   CE    NZ   HZ1     ga_11   
+   CE    NZ   HZ2     ga_11   
+   CE    NZ   HZ3     ga_11   
+  HZ1    NZ   HZ2     ga_10   
+  HZ1    NZ   HZ3     ga_10   
+  HZ2    NZ   HZ3     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_5    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+   CA    CB    CG    CD     gd_34   
+   CB    CG    CD    CE     gd_34   
+   CG    CD    CE    NZ     gd_34   
+   CD    CE    NZ   HZ1     gd_29   
+
+[ LRD ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH2     0.00000     2
+   CD   CH2     0.00000     2
+   CE   CH2     0.00000     3
+   NZ     N    -0.31000     3
+   HZ     H     0.31000     3
+    C     C       0.450     4
+    O     O      -0.450     4
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG    CD    gb_27   
+   CD    CE    gb_27   
+   CE    NZ    gb_21   
+   NZ    HZ    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG    CD     ga_15   
+   CG    CD    CE     ga_15   
+   CD    CE    NZ     ga_13
+   CE    NZ    HZ     ga_18
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_5    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+   CA    CB    CG    CD     gd_34   
+   CB    CG    CD    CE     gd_34   
+   CG    CD    CE    NZ     gd_34   
+   CD    CE    NZ    HZ     gd_29
+
+[ LED ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH1     0.00000     2
+  CD1   CH3     0.00000     2
+  CD2   CH3     0.00000     2
+    C     C       0.450     3
+    O     O      -0.450     3
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG   CD1    gb_27   
+   CG   CD2    gb_27   
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG   CD1     ga_15   
+   CB    CG   CD2     ga_15   
+  CD1    CG   CD2     ga_15   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_5    
+   CB   CD1   CD2    CG     gi_2    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_44   
+   -C     N    CA     C     gd_43
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_45   
+    N    CA     C    +N     gd_42   
+   CA    CB    CG   CD1     gd_34   
+
+;[ LYL ] ; Lysine portion from LYR block used; lypidic portion adapted from popc.itp -> problems with some parameters -> currently using LYL block, built from LYR and POX blocks
+; [ atoms ]
+;    N     N    -0.31000     0
+;    H     H     0.31000     0
+;   CA   CH1     0.00000     1
+;   CB   CH2     0.00000     1
+;   CG   CH2     0.00000     2
+;   CD   CH2     0.00000     2
+;   CE   CH2     0.00000     3
+;   NZ     N    -0.31000     3
+;   HZ     H     0.31000     3
+;    C     C       0.450     4
+;    O     O      -0.450     4
+;  C2A     C       0.800    21  ; added lypidic tail from here onwards
+;   OH     O      -0.600    21 
+;  C2B   CH2       0.000    22 
+;  C2C   CH2       0.000    23 
+;  C2D   CH2       0.000    24 
+;  C2E   CH2       0.000    25 
+;  C2F   CH2       0.000    26 
+;  C2G   CH2       0.000    27 
+;  C2H   CH2       0.000    28 
+;  C2I   CH2       0.000    29 
+;  C2J   CH2       0.000    30 
+;  C2K   CH2       0.000    31 
+;  C2L   CH2       0.000    32 
+;  C2M   CH2       0.000    33 
+;  C2N   CH2       0.000    34 
+;  C2O   CH2       0.000    35 
+;  C2P   CH3       0.000    36 
+;
+; [ bonds ]
+;    N     H    gb_2    
+;    N    CA    gb_21   
+;   CA    CB    gb_27   
+;   CA     C    gb_27   
+;   CB    CG    gb_27   
+;   CG    CD    gb_27   
+;   CD    CE    gb_27   
+;   CE    NZ    gb_21   
+;   NZ    HZ    gb_2    
+;    C     O    gb_5    
+;    C    +N    gb_10
+;   NZ   C2A    gb_10 ;added lypid tail from this point onwards; NZ from original residue
+;  C2A    OH    gb_5
+;  C2A   C2B    gb_23
+;  C2B   C2C    gb_27
+;  C2C   C2D    gb_27
+;  C2D   C2E    gb_27
+;  C2E   C2F    gb_27
+;  C2F   C2G    gb_27
+;  C2G   C2H    gb_27
+;  C2H   C2I    gb_27
+;  C2I   C2J    gb_27
+;  C2J   C2K    gb_27
+;  C2K   C2L    gb_27
+;  C2L   C2M    gb_27
+;  C2M   C2N    gb_27
+;  C2N   C2O    gb_27
+;  C2O   C2P    gb_27
+;
+; [ angles ]
+;;  ai    aj    ak   gromos type
+;   -C     N     H     ga_32   
+;   -C     N    CA     ga_31   
+;    H     N    CA     ga_18   
+;    N    CA    CB     ga_13   
+;    N    CA     C     ga_13   
+;   CB    CA     C     ga_13   
+;   CA    CB    CG     ga_15   
+;   CB    CG    CD     ga_15   
+;   CG    CD    CE     ga_15   
+;   CD    CE    NZ     ga_13
+;   CE    NZ    HZ     ga_18
+;   CA     C     O     ga_30   
+;   CA     C    +N     ga_19   
+;    O     C    +N     ga_33
+;   CE    NZ   C2A     ga_22 ;added lypid tail from this point onwards; NZ and CE from original residue
+;   NZ   C2A    OH     ga_31
+;   NZ   C2A   C2B     ga_16
+;  C2A   C2B   C2C     ga_15
+;   OH   C2A   C2B     ga_35
+;  C2B   C2C   C2D     ga_15
+;  C2C   C2D   C2E     ga_15
+;  C2D   C2E   C2F     ga_15
+;  C2E   C2F   C2G     ga_15
+;  C2F   C2G   C2H     ga_15
+;  C2G   C2H   C2I     ga_15
+;  C2H   C2I   C2J     ga_15
+;  C2I   C2J   C2K     ga_15
+;  C2J   C2K   C2L     ga_15
+;  C2K   C2L   C2M     ga_15
+;  C2L   C2M   C2N     ga_15
+;  C2M   C2N   C2O     ga_15
+;  C2N   C2O   C2P     ga_15
+;
+; [ impropers ]
+;;  ai    aj    ak    al   gromos type
+;    N    -C    CA     H     gi_1    
+;   CA     N     C    CB     gi_2    
+;    C    CA    +N     O     gi_1
+;  C2A    NZ    OH   C2B     gi_1 ; planarity of sn-1 carbonyl ;added lypid tail here; NZ from original residue
+;
+; [ dihedrals ]
+;;  ai    aj    ak    al   gromos type
+;  -CA    -C     N    CA     gd_14   
+;   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+;   -C     N    CA     C     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+;    N    CA    CB    CG     gd_34   
+;    N    CA     C    +N     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+;    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+;   CA    CB    CG    CD     gd_34   
+;   CB    CG    CD    CE     gd_34   
+;   CG    CD    CE    NZ     gd_34   
+;   CD    CE    NZ    HZ     gd_29
+;   CE    NZ   C2A   C2B     gd_13 ;added lypid tail from this point onwards; NZ and CE from original residue
+;   NZ   C2A   C2B   C2C     gd_40
+;  C2A   C2B   C2C   C2D     gd_34
+;  C2B   C2C   C2D   C2E     gd_34
+;  C2C   C2D   C2E   C2F     gd_34
+;  C2D   C2E   C2F   C2G     gd_34
+;  C2E   C2F   C2G   C2H     gd_34
+;  C2F   C2G   C2H   C2I     gd_34
+;  C2G   C2H   C2I   C2J     gd_34
+;  C2H   C2I   C2J   C2K     gd_34
+;  C2I   C2J   C2K   C2L     gd_34
+;  C2J   C2K   C2L   C2M     gd_34
+;  C2K   C2L   C2M   C2N     gd_34
+;  C2L   C2M   C2N   C2O     gd_34
+;  C2M   C2N   C2O   C2P     gd_34
+
+[ LYL ] ; Lysine portion from LYR block used
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH2     0.00000     2
+   CD   CH2     0.00000     2
+   CE   CH2     0.00000     3
+   NZ     N    -0.31000     3
+   HZ     H     0.31000     3
+  C01     C     0.45000    10
+  O01     O    -0.45000    10
+  C02   CH2     0.00000    11
+  C03   CH2     0.00000    11
+  C04   CH2     0.00000    12
+  C05   CH2     0.00000    12
+  C06   CH2     0.00000    13
+  C07   CH2     0.00000    13
+  C08   CH2     0.00000    14
+  C09   CH2     0.00000    14
+  C10   CH2     0.00000    15
+  C11   CH2     0.00000    15
+  C12   CH2     0.00000    16
+  C13   CH2     0.00000    16
+  C14   CH2     0.00000    17
+  C15   CH2     0.00000    17
+  C16   CH3     0.00000    18
+    C     C       0.450     4
+    O     O      -0.450     4
+[ bonds ]
+;  ai    aj funct
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG    CD    gb_27   
+   CD    CE    gb_27   
+   CE    NZ    gb_21   
+   NZ    HZ    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+   NZ   C01    gb_10
+  C01   O01    gb_5 
+  C01   C02    gb_23
+  C02   C03    gb_27
+  C03   C04    gb_27
+  C04   C05    gb_27
+  C05   C06    gb_27
+  C06   C07    gb_27
+  C07   C08    gb_27
+  C08   C09    gb_27
+  C09   C10    gb_27
+  C10   C11    gb_27
+  C11   C12    gb_27
+  C12   C13    gb_27
+  C13   C14    gb_27
+  C14   C15    gb_27
+  C15   C16    gb_27
+[ angles ]
+;  ai    aj    ak funct
+  C01    NZ    HZ     ga_32   
+  C01    NZ    CE     ga_31   
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG    CD     ga_15   
+   CG    CD    CE     ga_15   
+   CD    CE    NZ     ga_13
+   CE    NZ    HZ     ga_18
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+  C02   C01    NZ     ga_19   
+  O01   C01    NZ     ga_33   
+  C01    NZ    CG     ga_31   
+  C01   C02   C03     ga_15
+  O01   C01   C02     ga_35
+  C02   C03   C04     ga_15
+  C03   C04   C05     ga_15
+  C04   C05   C06     ga_15
+  C05   C06   C07     ga_15
+  C06   C07   C08     ga_15
+  C07   C08   C09     ga_15
+  C08   C09   C10     ga_15
+  C09   C10   C11     ga_15
+  C10   C11   C12     ga_15
+  C11   C12   C13     ga_15
+  C12   C13   C14     ga_15
+  C13   C14   C15     ga_15
+  C14   C15   C16     ga_15
+[ impropers ]
+;  ai    aj    ak    al funct
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_2    
+    C    CA    +N     O     gi_1    
+   NZ   C01    CG    HZ     gi_1    
+  C01   C02    NZ   O01     gi_1    
+[ dihedrals ]
+;  ai    aj    ak    al funct   phi0     cp     mult
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+   CA    CB    CG    CD     gd_34   
+   CB    CG    CD    CE     gd_34   
+   CG    CD    CE    NZ     gd_34   
+   CD    CE    NZ    HZ     gd_29
+   CD    CE    NZ   C01     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   CD    CE    NZ   C01     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+   CE    NZ   C01   O01     gd_14   
+   NZ   C01   C02   C03     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   NZ   C01   C02   C03     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+  C01   C02   C03   C04     gd_34
+  C02   C03   C04   C05     gd_34
+  C03   C04   C05   C06     gd_34
+  C04   C05   C06   C07     gd_34
+  C05   C06   C07   C08     gd_34
+  C06   C07   C08   C09     gd_34
+  C07   C08   C09   C10     gd_34
+  C08   C09   C10   C11     gd_34
+  C09   C10   C11   C12     gd_34
+  C10   C11   C12   C13     gd_34
+  C11   C12   C13   C14     gd_34
+  C12   C13   C14   C15     gd_34
+  C13   C14   C15   C16     gd_34
+
+[ DYL ] ; Lysine portion from LYR block used
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.00000     1
+   CG   CH2     0.00000     2
+   CD   CH2     0.00000     2
+   CE   CH2     0.00000     3
+   NZ     N    -0.31000     3
+   HZ     H     0.31000     3
+  C01     C     0.45000    10
+  O01     O    -0.45000    10
+  C02   CH2     0.00000    11
+  C03   CH2     0.00000    11
+  C04   CH2     0.00000    12
+  C05   CH2     0.00000    12
+  C06   CH2     0.00000    13
+  C07   CH2     0.00000    13
+  C08   CH2     0.00000    14
+  C09   CH2     0.00000    14
+  C10   CH2     0.00000    15
+  C11   CH2     0.00000    15
+  C12   CH2     0.00000    16
+  C13   CH2     0.00000    16
+  C14   CH2     0.00000    17
+  C15   CH2     0.00000    17
+  C16   CH3     0.00000    18
+    C     C       0.450     4
+    O     O      -0.450     4
+[ bonds ]
+;  ai    aj funct
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    CG    gb_27   
+   CG    CD    gb_27   
+   CD    CE    gb_27   
+   CE    NZ    gb_21   
+   NZ    HZ    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+   NZ   C01    gb_10
+  C01   O01    gb_5 
+  C01   C02    gb_23
+  C02   C03    gb_27
+  C03   C04    gb_27
+  C04   C05    gb_27
+  C05   C06    gb_27
+  C06   C07    gb_27
+  C07   C08    gb_27
+  C08   C09    gb_27
+  C09   C10    gb_27
+  C10   C11    gb_27
+  C11   C12    gb_27
+  C12   C13    gb_27
+  C13   C14    gb_27
+  C14   C15    gb_27
+  C15   C16    gb_27
+[ angles ]
+;  ai    aj    ak funct
+  C01    NZ    HZ     ga_32   
+  C01    NZ    CE     ga_31   
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    CG     ga_15   
+   CB    CG    CD     ga_15   
+   CG    CD    CE     ga_15   
+   CD    CE    NZ     ga_13
+   CE    NZ    HZ     ga_18
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+  C02   C01    NZ     ga_19   
+  O01   C01    NZ     ga_33   
+  C01    NZ    CG     ga_31   
+  C01   C02   C03     ga_15
+  O01   C01   C02     ga_35
+  C02   C03   C04     ga_15
+  C03   C04   C05     ga_15
+  C04   C05   C06     ga_15
+  C05   C06   C07     ga_15
+  C06   C07   C08     ga_15
+  C07   C08   C09     ga_15
+  C08   C09   C10     ga_15
+  C09   C10   C11     ga_15
+  C10   C11   C12     ga_15
+  C11   C12   C13     ga_15
+  C12   C13   C14     ga_15
+  C13   C14   C15     ga_15
+  C14   C15   C16     ga_15
+[ impropers ]
+;  ai    aj    ak    al funct
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_5    
+    C    CA    +N     O     gi_1    
+   NZ   C01    CG    HZ     gi_1    
+  C01   C02    NZ   O01     gi_1    
+[ dihedrals ]
+;  ai    aj    ak    al funct   phi0     cp     mult
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    CG     gd_34   
+    N    CA     C    +N     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+   CA    CB    CG    CD     gd_34   
+   CB    CG    CD    CE     gd_34   
+   CG    CD    CE    NZ     gd_34   
+   CD    CE    NZ    HZ     gd_29
+   CD    CG    NZ   C01     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   CD    CG    NZ   C01     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+   CE    NZ   C01   O01     gd_14   
+   NZ   C01   C02   C03     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   NZ   C01   C02   C03     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+  C01   C02   C03   C04     gd_34
+  C02   C03   C04   C05     gd_34
+  C03   C04   C05   C06     gd_34
+  C04   C05   C06   C07     gd_34
+  C05   C06   C07   C08     gd_34
+  C06   C07   C08   C09     gd_34
+  C07   C08   C09   C10     gd_34
+  C08   C09   C10   C11     gd_34
+  C09   C10   C11   C12     gd_34
+  C10   C11   C12   C13     gd_34
+  C11   C12   C13   C14     gd_34
+  C12   C13   C14   C15     gd_34
+  C13   C14   C15   C16     gd_34

@@ -27,6 +27,7 @@ export EffectiveSteps=10000 # Effective time in steps (real simulation time)
 export Nterminus=CAP  # multiple non-titrating chains: Nterminus=(CHG CHG)
 export Cterminus=CAP  # multiple non-titrating chains: Cterminus=(CHG CHG)
 #
+export dendrimers=1 # flag to use dendrimers on CpHMD (1 or 0)
 export fixgro=0 # Force fixbox to correct PBC in multiple solutes.
 #
 # PB/MC settings
