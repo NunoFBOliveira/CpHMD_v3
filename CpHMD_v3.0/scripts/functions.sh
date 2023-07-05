@@ -339,7 +339,7 @@ set_termini()
 	# log removed a print last_c on "; chain_old=chain_now}}END"
 	
         NTres=`awk 'BEGIN{chain_old=" "};/ATOM/{chain_now=substr($0,22,1); if (chain_now != chain_old) {new_chain=1; chain_old=chain_now}; if (chain_now != " ") if (new_chain && $3=="N"){new_chain=0; print substr($0,23,4)}}' TMP_protein.pdb`
-	CTres=`awk 'BEGIN{chain_old=" "};/ATOM/{if ($3 == "C") last_c=substr($0,23,4); chain_now=substr($0,22,1); if (chain_now != chain_old) {if (chain_old != " "); chain_old=chain_now}}END{if (chain_old != " ") print last_c}' TMP_protein.pdb`	      
+	    CTres=`awk 'BEGIN{chain_old=" "};/ATOM/{if ($3 == "C") last_c=substr($0,23,4); chain_now=substr($0,22,1); if (chain_now != chain_old) {if (chain_old != " "); chain_old=chain_now}}END{if (chain_old != " ") print last_c}' TMP_protein.pdb`	      
        
         NTindex=( `awk -v res="$NTres" 'BEGIN{split(res,r," ")};/NT/{for (i in r) if ($1==r[i]) {print i-1; break}}' ${runname}.sites` )
         CTindex=( `awk -v res="$CTres" 'BEGIN{split(res,r," ")};/CT/{for (i in r) if ($1==r[i]) {print i-1; break}}' ${runname}.sites` )
@@ -425,7 +425,7 @@ set_termini()
 			esac
 		    else
 			case ${Cterminus[$n]} in 
-                            CAP | CAPpro )  CTer[$i]=7 ;; 
+                            CAP | CAPpro )  CTer[$i]=8 ;; 
                             CHG )           CTer[$i]=4 ;; 
                             NEU | TAU1 )    CTer[$i]=0 ;;
                             TAU2 )          CTer[$i]=1 ;;

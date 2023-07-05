@@ -30,9 +30,6 @@ export blockname=${1%.*}
 export runname=${blockname%_*}
 #
 # Check some parameters
-## if [[ $CpHModule != protein && $CpHModule != redox && $CpHModule != dendrimer && $CpHModule != delphi ]]
-##     then message E "CpHModule = $CpHModule is not valid. Check $1."
-## fi
 if [[ $ffID != G54a7pH && $ffID != CHARMM36pH ]]; then
     message E "ffID = $ffID is not valid. Check $1."
 fi
@@ -91,22 +88,8 @@ for (( Cycle=$InitCycle ; Cycle <=$EndCycle ; Cycle++ )); do
     sim_time=`echo "$EffectiveSteps*$TimeStep*($Cycle-1)+$WriteTime" | bc -l`
     echo -e "\nCycle = $Cycle; time = $sim_time ps; Date: `date "+%D %T"`" \
          >> ${blockname}.info
-#    echo "a" $WriteStep
-#    echo "b" $WriteTime
-#    echo "c" $TimeStep
-#    echo "d" $EffectiveSteps
-#    echo "e" $sim_time
-#    exit 1
     #
     ################### PB/MC PART #####################
-    #
-##     # Call the Reduced Titration function when needed
-##     if [ $((Cycle % RTFrequency)) -eq 1 -a $RTThreshold != 0 ]; then
-##         echo -n "PB/MC (All) -  Cycle = $Cycle; Date: `date "+%D %T"` - " \
-##             >> ${blockname}.info
-##         run_PBMC red
-##         echo "`date "+%D %T"`" >> ${blockname}.info
-##     fi
     #
     # Make sure the sites file is not empty...
     sitenumb=$(($(wc -l < ${runname}.sites)))
@@ -124,21 +107,9 @@ for (( Cycle=$InitCycle ; Cycle <=$EndCycle ; Cycle++ )); do
     # Otherwise...
     else
         # ... skip the PB/MC and write fractions to files 
-        #(when RTThreshold = 0 there are no fractions to write;
-        # usefull for tests without PB/MC).
         message W "File ${runname}.sites is empty. PB/MC step is not performed in cycle $Cycle."
         echo "" >> "TMP_CpHMD.occ"
         echo "" >> "TMP_CpHMD.mocc"
-##         if [ $RTThreshold != 0 ]; then 
-##             if [ $((Cycle % RTFrequency)) -eq 1 ]; then
-##             #Use the output from the Reduced Titration routine
-##                 mv -f TMP_MCarlo_mod.out TMP_MCarlo_std.out
-##                 write_fractions
-##                 build_topology 
-##             else  
-##                 write_fractions
-##             fi
-##         fi
     fi
     #
     #### MD PART ####
@@ -173,11 +144,6 @@ done
 #
 # Store Segment Outputs with unambigous Name
 for e in gro tpr edr log xtc; do  mv -f TMP_CpHMD.$e ${blockname}.$e; done
-#
-## if [ $RTThreshold != 0 ]; then
-##     for e in sites occ_red{,_mod} mocc_red ; do 
-##         mv -f TMP_CpHMD.$e ${blockname}.$e; done
-## fi
 #
 if [ -f TMP_CpHMD.occ ]; then
     for e in occ mocc ; do mv -f TMP_CpHMD.$e ${blockname}.$e; done
