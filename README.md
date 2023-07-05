@@ -4,7 +4,13 @@ This repository contains the old versions of CpHMD_v2 (normal, verlet, US, US_ve
 
 Also contains the Sts and Delphitools which will be completed in the future! 
 
--- LOGBOOK --
+### -- LOGBOOK -- ###
+
+## 05/07/2023 ##
+- Introduction of dendrimer portion of the code
+- Added dendrimer blocks to delphi, sts and FF GROMOS54a7
 
 ## 04/07/2023 ##
-Virtual site code was added to CpHMD_v3, allowing it do deal with EPs and others.
+- Added block for cobimetinib and cobimetinib-EP to delphi, sts and FF GROMOS54a7
+- Virtual site code was added to CpHMD_v3, allowing it do deal with EPs and others.
+- Corrected a bug with the sed that corrected O1 on C-terminal
