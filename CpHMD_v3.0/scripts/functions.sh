@@ -194,7 +194,7 @@ make_auxiliary_files ()
     ##################################################################
     Ctres=`awk 'BEGIN{chain_old=" "};/ATOM/{if ($3 == "C") last_c=substr($0,23,4); chain_now=substr($0,22,1); if (chain_now != chain_old) {if (chain_old != " ") ; chain_old=chain_now}}END{if (chain_old != " ") print last_c+0}' TMP_protein.pdb`
     
-    sed -n "/ $Ctres /s/ O1 / O  /" TMP_protein.pdb
+    sed -i "/ $Ctres /s/ O1 / O  /" TMP_protein.pdb
     #################################################################
     ### Getting the correct pbp file for PBMC                     ###
     #################################################################
@@ -410,7 +410,8 @@ set_termini()
          # Capping Conditions
                 if [[ $Titrating == "FALSE" ]]; then
 		    case ${Cterminus[$n]} in 
-                        CAP | CAPpro )  CTer[$i]=7 ;; 
+                        CAP | CAPpro )  CTer[$i]=8 ;;
+			SPB )           CTer[$i]=7 ;; 
                         CHG )           CTer[$i]=4 ;; 
                         NEU | TAU1 )    CTer[$i]=0 ;;
                         TAU2 )          CTer[$i]=1 ;;
@@ -448,7 +449,7 @@ set_termini()
                 message E  "Cterminus array contains wrong number of elements (${#Cterminus[@]}). One element was expected. Please check ${blockname}.pHmdp."
             fi	    
             case $Cterminus in 
-                CAP | CAPpro )  cter=7 ;; 
+                CAP | CAPpro )  cter=8 ;; 
                 CHG )           cter=4 ;; 
                 NEU | TAU1 )    cter=0 ;;
                 TAU2 )          cter=1 ;;
