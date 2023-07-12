@@ -1,8 +1,0 @@
-export DelphiDir="/user03/teixeira/Delphi_Scripts/VersionT_CpH03"
-export MToolsDIR="/programs/meadTools2.0.1"
-export PetitDIR="/programs/petit1.6.1"
-export GroDIR="/programs/gromacs/gromacs-4.0.7_pH_I/bin"
-export CpHDIR="/programs/CpH-MD/CpH-MD_v2.00b"
-export cutoff=2.5
-export ffID=Amber14SBpH
-export temp=310
