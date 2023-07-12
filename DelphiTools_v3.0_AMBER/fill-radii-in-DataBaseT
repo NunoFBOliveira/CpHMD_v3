@@ -1,0 +1,37 @@
+#!/usr/bin/awk -f
+
+BEGIN{
+        cmd = "fill-radii-in-DataBaseT" ;
+    usage = "Usage:  "cmd  \
+          "  Radii File\n" ;
+    if (ARGC != 2) error("Wrong number of arguments.\n" usage) ;
+    #
+    radii_file=ARGV[1] ;
+    empty_file="DataBaseT_to-be-filled.siz"
+    while (getline < radii_file)
+    {
+	radii[$1]  = $2 ;
+    }
+    close(radii_file) ;
+    while (getline < empty_file)
+	  {
+	  n++
+	  if (n < 6) print $0 ;
+	  else printf "%4s  %3s %5.3f\n", $1, $2, radii[$4] ;
+	  }
+    close(empty_file) ;
+}
+
+function warning(msg)
+{
+        print cmd ": Warning: " msg | "cat 1>&2" ;
+}
+
+function error(msg)
+{
+        print cmd ": Error: " msg | "cat 1>&2" ;
+        exit 1 ;
+}
+
+
+ 

@@ -1,0 +1,4 @@
+
+source ../template/CpHMD.settings
+
+

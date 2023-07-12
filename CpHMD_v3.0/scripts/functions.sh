@@ -209,6 +209,12 @@ make_auxiliary_files ()
              s/\(export epsin*=\).*\$/\1$epsin/" \
 		 "$DelphiDir"/DELPHI_Memb.pbp > DELPHI.pbp
     fi
+    ### Check for pytz package not installed in the machine for pybinde ###
+    if [[ $EBind == 1 ]] ; then
+	pip3 install --upgrade pytz
+	pip3 install python-dateutil --upgrade
+    fi    
+    
 }
 
 make_sites () 
@@ -641,7 +647,7 @@ build_topology ()
 		      -ignh -ter -ff $ffID -water $water \
 		      -quiet -merge all
     fi
-    #  
+    #
     ######################################################################
     #
     awk -v s="$TOPSTRING" '/moleculetype/, $0 ~ s' TMP_CpHMD.top \
@@ -676,15 +682,6 @@ build_topology ()
 	
 	rm -rf ep_tmp.dat TMP_pdb2gmx.top
     fi
-    #######################################################
-    #######################################################
-    #######################################################
-##     # Fix the topology using fix_dendrimer_top. LCSF 2011-10-03
-##     if [[ $CpHModule == dendrimer ]]; then
-##         mv TMP_CpHMD.top TMP_aux2.top
-##         $CpHDIR/scripts/fix_dendrimer_top \
-##             $CpHDIR/scripts/${RULEdendr} TMP_aux2.top > TMP_CpHMD.top
-##     fi
 
     # Correct POSRE file in case of using Position Restraints
     if [[ -f $PosRe && $PosRe != *(" ") ]]; then 
@@ -696,6 +693,28 @@ build_topology ()
     # Housekeeping
     rm -f TMP_aux* \#*
 
+}
+
+energy_pybinde ()
+{
+    #
+    ## Generate input gro for PybindE
+    ##
+    # Convert effective into pdb ##
+    #"$CpHDIR"/scripts/groswitch 1 TMP_MCarlo.out \
+    #             TMP_effective.gro > ${ns}.gro
+    ns=`echo ${sim_time} | awk '{print $1-10}' `
+    ln -s TMP_effective.gro ${ns}.gro
+    #### Run PybindE calculation  ####    
+    python3 "$CpHDIR"/scripts/PyBindE/pybinde.py ${ns}.gro $mol1 $mol2 \
+	    -dbs $CpHDIR/scripts/PyBindE/databases/ -ep $dielp -ensav ./Eb_calculation.dat -sav ./
+
+    ## Options for debugging the runs, will write a folder with the outputting .pdb file to check integrity ##
+    mkdir -p Ebind-pdb
+    mv ${ns}.pdb Ebind-pdb/${ns}.pdb
+    
+    #rm -rf ${ns}.pdb
+    
 }
 
 run_dynamics ()
