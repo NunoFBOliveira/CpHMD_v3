@@ -6,9 +6,9 @@ Also contains the Sts and Delphitools which will be completed in the future!
 
 ### -- LOGBOOK -- ###
 ## 12/07/2023 ##
-- Introduction of AMBER FF (by J. Sequeira) into CpHMD v3 framework
+- Introduction of AMBER FF (by J. Sequeira) into CpHMD v3 framework *(Debbug still on going, use carefully)*
     - Creation of Delphi_tools for AMBER
-- Integration of PybindE tool (by J. Vitorino) into the CpHMD Framework.
+- Integration of PybindE tool (by J. Vitorino) into the CpHMD Framework.*(Debbug still on going, use carefully)*
 
 
 ## 05/07/2023 ##
