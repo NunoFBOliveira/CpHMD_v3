@@ -30,7 +30,7 @@ export blockname=${1%.*}
 export runname=${blockname%_*}
 #
 # Check some parameters
-if [[ $ffID != G54a7pH && $ffID != CHARMM36pH ]]; then
+if [[ $ffID != G54a7pH && $ffID != CHARMM36pH && $ffID != Amber14SBpH ]]; then
     message E "ffID = $ffID is not valid. Check $1."
 fi
 #
@@ -112,6 +112,17 @@ for (( Cycle=$InitCycle ; Cycle <=$EndCycle ; Cycle++ )); do
         echo "" >> "TMP_CpHMD.mocc"
     fi
     #
+    #### Insert energy calculation ####
+    ns=`echo ${sim_time} | awk '{print $1-10}' `
+    if [[ $EBind == 1 ]] ; then
+	if [[ $Cycle == 0 ]] || [[ $(( $ns % $EB_freq )) == 0 ]] ; then
+	    echo -n "Energy calculation - Cycle = $Cycle; Date: `date "+%D %T"` - " \
+		 >> ${blockname}.info
+	    ## Calculates energy ##
+	    energy_pybinde 
+	    echo "`date "+%D %T"`" >> ${blockname}.info
+	fi
+    fi
     #### MD PART ####
     # Call dynamics with solvent relaxation 
     if [ $RelaxSteps != 0 ]; then
@@ -137,13 +148,19 @@ for (( Cycle=$InitCycle ; Cycle <=$EndCycle ; Cycle++ )); do
     run_dynamics effective relax
     echo "`date "+%D %T"`" >> ${blockname}.info
     #
-    # Call Append data function
+         
+
+    # Call Append data function   
     data_append
 done
 #### Ends the constant-pH MD cycle ####
 #
 # Store Segment Outputs with unambigous Name
 for e in gro tpr edr log xtc; do  mv -f TMP_CpHMD.$e ${blockname}.$e; done
+## move the energy calculation
+if [ -f Eb_calculation.dat ]; then
+    mv Eb_calculation.dat ${blockname}.ene
+fi
 #
 if [ -f TMP_CpHMD.occ ]; then
     for e in occ mocc ; do mv -f TMP_CpHMD.$e ${blockname}.$e; done
