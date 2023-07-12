@@ -5,6 +5,11 @@ This repository contains the old versions of CpHMD_v2 (normal, verlet, US, US_ve
 Also contains the Sts and Delphitools which will be completed in the future! 
 
 ### -- LOGBOOK -- ###
+## 12/07/2023 ##
+- Introduction of AMBER FF (by J. Sequeira) into CpHMD v3 framework
+    - Creation of Delphi_tools for AMBER
+- Integration of PybindE tool (by J. Vitorino) into the CpHMD Framework.
+
 
 ## 05/07/2023 ##
 - Introduction of dendrimer portion of the code
