@@ -21,7 +21,7 @@ BEGIN{
     if ($0 ~ /^f/)
     {
       for (i = 2 ; i <= NF ; i++)
-	if (type[numb[i-2]] != "") state[numb[i-2]] = $i ;
+	  if (type[numb[i-2]] != "") state[numb[i-2]] = $i ;
     }
   }
   getline < grofile ; # read title
@@ -33,9 +33,10 @@ BEGIN{
     getline < grofile ;
     t = substr($0,1,5) + 0 ;
     if (type[t] != "")
-      print substr($0,1,5) s[type[t],state[t]] substr($0,10) ;
+      print substr($0,1,5) s[type[t],state[t]] substr($0,10) ;    
     else print $0 ;
   }
+  print state[t]
   getline < grofile ; # read box
   print $0
 }

@@ -701,10 +701,11 @@ energy_pybinde ()
     ## Generate input gro for PybindE
     ##
     # Convert effective into pdb ##
-    #"$CpHDIR"/scripts/groswitch 1 TMP_MCarlo.out \
-    #             TMP_effective.gro > ${ns}.gro
     ns=`echo ${sim_time} | awk '{print $1-10}' `
-    ln -s TMP_effective.gro ${ns}.gro
+    "$CpHDIR"/scripts/groswitch 1 TMP_MCarlo.out \
+                 TMP_${runname}.gro > ${ns}.gro
+    
+    #ln -s TMP_effective.gro ${ns}.gro
     #### Run PybindE calculation  ####    
     python3 "$CpHDIR"/scripts/PyBindE/pybinde.py ${ns}.gro $mol1 $mol2 \
 	    -dbs $CpHDIR/scripts/PyBindE/databases/ -ep $dielp -ensav ./Eb_calculation.dat -sav ./
@@ -713,7 +714,7 @@ energy_pybinde ()
     mkdir -p Ebind-pdb
     mv ${ns}.pdb Ebind-pdb/${ns}.pdb
     
-    #rm -rf ${ns}.pdb
+    rm -rf ${ns}.pdb
     
 }
 

@@ -84,7 +84,10 @@ check_files ()
         message W "Scheme used is Group based."
 	## Detect if the gromacs version supports group based
 	#
-	$GroDIR help  > ./gro-ver.txt 2>&1 
+	$GroDIR help  > ./gro-ver.txt 2>&1
+	if [[ ! -z `awk '/error/' gro-ver.txt` ]]; then
+	    message E "An error as occured with the gromacs version"
+	fi	
 	version=`awk '/GROMACS:/ {print $(NF)}' gro-ver.txt`
 	if [[ $version != "5.1.5" ]]; then
 	    message E  "Cut-off scheme ${scheme} is not supported in ${GroDIR} module!!!... Program will crash"
@@ -378,18 +381,32 @@ set_termini()
          # This is FF hack specific. It is now working with modified GMX 4.0.7
          # Capping Conditions
                 if [[ $Titrating == "FALSE" ]]; then
-                #No .pHmdp: export Nterminus=(CAP CHG CHG) (e. g.)
-                    case ${Nterminus[$n]} in
-                        CAP )           NTer[$i]=6 ;;
-                        CAPpro )        NTer[$i]=11 ;; 
-                        CHG )           NTer[$i]=3 ;; 
-                        NEU | TAU1 )    NTer[$i]=0 ;;
-                        TAU2 )          NTer[$i]=1 ;;
-                        TAU3 | TAU4 )    NTer[$i]=2 ;;
-                        * ) message E "Nterminus = ${Nterminus[$n]} is not valid. Check .pHmdp file" ;;
-                    esac
-                    ((++n))
-                fi
+                    #No .pHmdp: export Nterminus=(CAP CHG CHG) (e. g.)
+		    if [[ $ffID == "G54a7pH" ]] ;then
+			case ${Nterminus[$n]} in
+                            CAP )           NTer[$i]=6 ;;
+                            CAPpro )        NTer[$i]=11 ;; 
+                            CHG )           NTer[$i]=3 ;; 
+                            NEU | TAU1 )    NTer[$i]=0 ;;
+                            TAU2 )          NTer[$i]=1 ;;
+                            TAU3 | TAU4 )    NTer[$i]=2 ;;
+                            * ) message E "Nterminus = ${Nterminus[$n]} is not valid. Check .pHmdp file" ;;
+			esac
+			((++n))
+		    elif [[ $ffID == "Amber14SBpH" ]] ;then
+			case ${Nterminus[$n]} in
+                            CAP )           NTer[$i]=4 ;;
+                            CAPpro )        NTer[$i]=7 ;; #needs rechecking 
+                            CHG )           NTer[$i]=3 ;;
+			    CHGpro)         NTer[$i]=2 ;;
+                            NEU | TAU1 )    NTer[$i]=0 ;;
+                            TAU2 )          NTer[$i]=1 ;;
+                            TAU3 | TAU4 )   NTer[$i]=2 ;;
+                            * ) message E "Nterminus = ${Nterminus[$n]} is not valid. Check .pHmdp file" ;;
+			esac
+			((++n))
+		    fi
+		fi
             done
         fi
 
@@ -415,19 +432,31 @@ set_termini()
          # This is FF hack specific. It is now working with modified GMX 5.1.5
          # Capping Conditions
                 if [[ $Titrating == "FALSE" ]]; then
-		    case ${Cterminus[$n]} in 
-                        CAP | CAPpro )  CTer[$i]=8 ;;
-			SPB )           CTer[$i]=7 ;; 
-                        CHG )           CTer[$i]=4 ;; 
-                        NEU | TAU1 )    CTer[$i]=0 ;;
-                        TAU2 )          CTer[$i]=1 ;;
-                        TAU3 )          CTer[$i]=2 ;;
-                        TAU4 )          CTer[$i]=3 ;;
-                        REGC )          CTer[$i]=6 ;;
-                        REGN )          CTer[$i]=5 ;;
-                        * ) message E "Cterminus = ${Cterminus[$n]} is not valid. Check .pHmdp file" ;;
-		    esac
-                ((++n))
+		    if [[ $ffID == "G54a7pH" ]] ;then
+			case ${Cterminus[$n]} in 
+                            CAP | CAPpro )  CTer[$i]=8 ;;
+			    SPB )           CTer[$i]=7 ;; 
+                            CHG )           CTer[$i]=4 ;; 
+                            NEU | TAU1 )    CTer[$i]=0 ;;
+                            TAU2 )          CTer[$i]=1 ;;
+                            TAU3 )          CTer[$i]=2 ;;
+                            TAU4 )          CTer[$i]=3 ;;
+                            REGC )          CTer[$i]=6 ;;
+                            REGN )          CTer[$i]=5 ;;
+                            * ) message E "Cterminus = ${Cterminus[$n]} is not valid. Check .pHmdp file" ;;
+			esac
+			((++n))
+		    elif [[ $ffID == "Amber14SBpH" ]] ;then
+			case ${Cterminus[$n]} in 
+                            CAP | CAPpro )  CTer[$i]=5 ;;
+                            CHG )           CTer[$i]=4 ;; 
+                            NEU | TAU1 )    CTer[$i]=0 ;;
+                            TAU2 )          CTer[$i]=1 ;;
+                            TAU3 )          CTer[$i]=2 ;;
+                            TAU4 )          CTer[$i]=3 ;;
+                            * ) message E "Cterminus = ${Cterminus[$n]} is not valid. Check .pHmdp file" ;;
+			esac
+		    fi
                 fi
             done
         fi
