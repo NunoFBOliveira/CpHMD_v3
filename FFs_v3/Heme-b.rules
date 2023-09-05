@@ -1,0 +1,54 @@
+# Rule file for fix_topology.
+
+# Any line not starting with "bond", "angle" or "dihedral" is ignored,
+# but the best practice is to leave non-readable lines blank or start
+# them with a typical comment character, like #.
+
+# The columns in the readable lines are:
+#   1 : type of term (bond, angle or dihedral)
+#   2 : function type used by Gromacs.
+#   3 to last-1 : residuename_atomname, which may include regular expressions
+#   last : Parameters, usually a Gromacs macro (eg, gb_15) or "delete"
+
+# The columns must be separated by one or more spaces and/or tabs, as
+# the default field separator (FS) in AWK.
+
+# Equivalent definitions for bonds, angles and torsions are done
+# automatically: eg, if the bond AA-BB is defined, the bond BB-AA
+# doesn't need to be defined.
+
+
+########################################
+# Rules involving heme groups in KatG and the covalently bound tripeptide
+
+# Bonds:
+bond      2    HSX_CA             HK[PO]_CB   gb_27
+bond      2    HK[PO]_CA[AD]     P[AD][0-4]_CB[AD]  gb_27
+
+# Bond angles:
+angle     2    HSX_[NC]           HSX_CA            HK[PO]_CB    ga_13
+angle     2    HSX_CA             HK[PO]_CB         HK[PO]_CG    ga_15
+angle     2    HK[PO]_NA          HK[PO]_FE         HK[PO]_NC    delete
+angle     2    HK[PO]_NB          HK[PO]_FE         HK[PO]_ND    delete
+angle     2    HK[PO]_C(2A|3D)   HK[PO]_CA[AD]     P[AD][0-4]_CB[AD]   ga_15
+angle     2    HK[PO]_CA[AD]     P[AD][0-4]_CB[AD]  P[AD][0-4]_CG[AD]   ga_15
+angle     2    HKO_OO              HKO_FE            HKO_NE2     delete   
+
+# Proper dihedrals (torsions):
+dihedral  1   HSX_CA           HK[PO]_CB     HK[PO]_CG    HK[PO]_ND1        gd_40
+dihedral  1   HSX_[NC]         HSX_CA        HK[PO]_CB    HK[PO]_CG         gd_40
+dihedral  1   HK[PO]_C(1A|3A|2D|4D)  HK[PO]_C(2A|3D)  HK[PO]_CA[AD]   P[AD][0-4]_CB[AD]     gd_40
+dihedral  1   HK[PO]_C(2A|3D)    HK[PO]_CA[AD]     P[AD][0-4]_CB[AD]   P[AD][0-4]_CG[AD]     gd_34
+dihedral  1   HK[PO]_CA[AD]      P[AD][0-4]_CB[AD]  P[AD][0-4]_CG[AD]   P[AD][0-4]_O[12][AD]  gd_40
+dihedral  1   PHE_O		 PHE_C 		    VAL_N 		VAL_H delete
+dihedral  1   VAL_CA 		 VAL_C		     LEU_N		 LEU_H  delete
+dihedral  1   VAL_O		 VAL_C 		     LEU_N 		 LEU_H 	delete
+dihedral  1   VAL_O		 VAL_C 		     LEU_N 		 LEU_CA delete
+
+
+
+
+# Improper dihedrals:
+#   (gi_1c, gi_2 and gi_3 : atoms 1 to 4 *must* correspond to bonds 1-2, 1-3, and 1-4)
+#   (gi_1s : atoms 1 to 4 *must* correspond to bonds 1-2, 2-3, and 3-4)
+dihedral 2    HSX_CA              HSX_N              HSX_C               HK[PO]_CB      gi_2

@@ -220,7 +220,7 @@ make_auxiliary_files ()
 make_sites () 
 {
 
-    "$CpHDIR"/scripts/make_sites $1 TMP_protein.pdb > ./${runname}.sites
+    "$CpHDIR"/scripts/make_sites $1 TMP_protein.pdb 
     #
     # Correct TMP_CpHMD.top with NTR and CTR
     #
@@ -446,7 +446,7 @@ set_termini()
                 CHG )           nter=3 ;; 
                 NEU | TAU1 )    nter=0 ;;
                 TAU2 )          nter=1 ;;
-                TAU3 | TAU4 )    nter=2 ;;
+                TAU3 | TAU4 )   nter=2 ;;
                 * ) message E "Nterminus = $Nterminus is not valid. Check .pHmdp file" ;;
             esac
         fi

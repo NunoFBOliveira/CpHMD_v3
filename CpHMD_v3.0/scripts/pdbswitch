@@ -73,12 +73,13 @@ function define_states()#copied from groswitch, SC 20-12-2011
     s["SU",0] = "SU0 " ;  s["SU",1] = "SU1 " ; #res SUN
     s["NI",0] = "NI0 " ;  s["NI",1] = "NI1 " ; #res NIN
     s["SC",0] = "SC0 " ;  s["SC",1] = "SC1 " ; s["SC",2] = "SC2 " ;  s["SC",3] = "SC3 " ; s["SC",4] = "SC4 " ; #res SCD
+    s["NC",0] = "NC0 " ;  s["NC",1] = "NC1 " ; s["NC",2] = "NC2 " ;  s["NC",3] = "NC3 " ; s["NC",4] = "NC4 " ; #res NCD
     s["VN",0] = "VN0 " ;  s["VN",1] = "VN1 " ; #res VNC
     s["ST",0] = "ST0 " ;  s["ST",1] = "ST1 " ;  s["ST",2] = "ST2 " ; #res STE
     s["CO",0] = "CO0 " ;  s["CO",1] = "CO1 " ;  s["CO",2] = "CO2 " ; #res COB
     s["CX",0] = "CX0 " ;  s["CX",1] = "CX1 " ;  s["CX",2] = "CX2 " ; #res CXB
     s["LD",0] = "LD0 " ;  s["LD",1] = "LD1 " ;  s["LD",2] = "LD2 " ;  s["LD",3] = "LD3 " ; #res LDX
-    s["NC",0] = "NC0 " ;  s["NC",1] = "NC1 " ; s["NC",2] = "NC2 " ;  s["NC",3] = "NC3 " ; s["NC",4] = "NC4 " ; #res NCD
+
   }
   else
  {

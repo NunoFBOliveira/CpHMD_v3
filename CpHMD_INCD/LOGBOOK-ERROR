@@ -1,0 +1,11 @@
+Error 1
+###########################
+###########################
+Fatal error - File CpHMD.top
+
+Last line read:
+'[ moleculetype ]'
+
+Invalid order for directive moleculetype
+###########################
+Resolution:

@@ -1033,3 +1033,49 @@ LYL     2
 DYL     2
 1       1       H       N       -C      CA
 1       1       HZ      NZ      CE      CD
+PA0     2
+2       3       H1A     O1A     CGA     O2A
+2       3       H2A     O2A     CGA     O1A
+PA1     2
+2       3       H1A     O1A     CGA     O2A
+2       3       H2A     O2A     CGA     O1A
+PA2     2
+2       3       H1A     O1A     CGA     O2A
+2       3       H2A     O2A     CGA     O1A
+PA3     2
+2       3       H1A     O1A     CGA     O2A
+2       3       H2A     O2A     CGA     O1A
+PA4     2
+2       3       H1A     O1A     CGA     O2A
+2       3       H2A     O2A     CGA     O1A
+PD0     2
+2       3       H1D     O1D     CGD     O2D
+2       3       H2D     O2D     CGD     O1D
+PD1     2
+2       3       H1D     O1D     CGD     O2D
+2       3       H2D     O2D     CGD     O1D
+PD2     2
+2       3       H1D     O1D     CGD     O2D
+2       3       H2D     O2D     CGD     O1D
+PD3     2
+2       3       H1D     O1D     CGD     O2D
+2       3       H2D     O2D     CGD     O1D
+PD4     2
+2       3       H1D     O1D     CGD     O2D
+2       3       H2D     O2D     CGD     O1D
+HKP     7
+1       1       HHA     CHA     C1A     C4D
+1       1       HHB     CHB     C1B     C4A
+1       1       HHC     CHC     C1C     C4B
+1       1       HHD     CHD     C1D     C4C
+1       1       HD1     ND1     CG      CE1
+1       1       HD2     CD2     CG      NE2
+1       1       HE1     CE1     ND1     NE2
+HKO     7
+1       1       HHA     CHA     C1A     C4D
+1       1       HHB     CHB     C1B     C4A
+1       1       HHC     CHC     C1C     C4B
+1       1       HHD     CHD     C1D     C4C
+1       1       HD1     ND1     CG      CE1
+1       1       HD2     CD2     CG      NE2
+1       1       HE1     CE1     ND1     NE2

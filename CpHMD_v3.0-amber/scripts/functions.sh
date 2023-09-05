@@ -223,7 +223,7 @@ make_auxiliary_files ()
 make_sites () 
 {
 
-    "$CpHDIR"/scripts/make_sites $1 TMP_protein.pdb > ./${runname}.sites
+    "$CpHDIR"/scripts/make_sites $1 TMP_protein.pdb 
     #
     # Correct TMP_CpHMD.top with NTR and CTR
     #
@@ -456,6 +456,7 @@ set_termini()
                             TAU4 )          CTer[$i]=3 ;;
                             * ) message E "Cterminus = ${Cterminus[$n]} is not valid. Check .pHmdp file" ;;
 			esac
+			((++n))
 		    fi
                 fi
             done
@@ -469,31 +470,62 @@ set_termini()
             if [[ ${#Nterminus[@]} -ne 1 ]]; then #SC 30-11-2011
                 message E  "Nterminus array contains wrong number of elements (${#Nterminus[@]}). One element was expected. Please check ${blockname}.pHmdp."   
             fi
-            case $Nterminus in 
-                CAP )           nter=6 ;;
-                CAPpro )        nter=11 ;; 
-                CHG )           nter=3 ;; 
-                NEU | TAU1 )    nter=0 ;;
-                TAU2 )          nter=1 ;;
-                TAU3 | TAU4 )    nter=2 ;;
-                * ) message E "Nterminus = $Nterminus is not valid. Check .pHmdp file" ;;
-            esac
-        fi
+	    if [[ $ffID == "G54a7pH" ]] ;then
+		case ${Nterminus} in
+                    CAP )           nter=6 ;;
+                    CAPpro )        nter=11 ;; 
+                    CHG )           nter=3 ;; 
+                    NEU | TAU1 )    nter=0 ;;
+                    TAU2 )          nter=1 ;;
+                    TAU3 | TAU4 )   nter=2 ;;
+                    * ) message E "Nterminus = ${Nterminus[$n]} is not valid. Check .pHmdp file" ;;
+		esac	   
+	    elif [[ $ffID == "Amber14SBpH" ]] ;then
+		case ${Nterminus} in
+                    CAP )           nter=4 ;;
+                    CAPpro )        nter=7 ;; #needs rechecking 
+                    CHG )           nter=3 ;;
+		    CHGpro)         nter=2 ;;
+                    NEU | TAU1 )    nter=0 ;;
+                    TAU2 )          nter=1 ;;
+                    TAU3 | TAU4 )   nter=2 ;;
+                    * ) message E "Nterminus = ${Nterminus[$n]} is not valid. Check .pHmdp file" ;;
+		esac
+	    fi
+	fi
+	
         if ! egrep CT ${runname}.sites; then 
             if [[ ${#Cterminus[@]} -ne 1 ]]; then #SC 30-11-2011
                 message E  "Cterminus array contains wrong number of elements (${#Cterminus[@]}). One element was expected. Please check ${blockname}.pHmdp."
-            fi	    
-            case $Cterminus in 
-                CAP | CAPpro )  cter=8 ;; 
-                CHG )           cter=4 ;; 
-                NEU | TAU1 )    cter=0 ;;
-                TAU2 )          cter=1 ;;
-                TAU3 )          cter=2 ;;
-                TAU4 )          cter=3 ;;
-                * ) echo message E "Cterminus = $Cterminus is not valid. Check .pHmdp file" ;;
-            esac
+            fi
+
+	    if [[ $ffID == "G54a7pH" ]] ;then
+		case ${Cterminus} in 
+                    CAP | CAPpro )  cter=8 ;;
+		    SPB )           cter=7 ;; 
+                    CHG )           cter=4 ;; 
+                    NEU | TAU1 )    cter=0 ;;
+                    TAU2 )          cter=1 ;;
+                    TAU3 )          cter=2 ;;
+                    TAU4 )          cter=3 ;;
+                    REGC )          cter=6 ;;
+                    REGN )          cter=5 ;;
+                    * ) message E "Cterminus = ${Cterminus[$n]} is not valid. Check .pHmdp file" ;;
+		esac
+		((++n))
+	    elif [[ $ffID == "Amber14SBpH" ]] ;then
+		case ${Cterminus} in 
+                    CAP | CAPpro )  cter=5 ;;
+                    CHG )           cter=4 ;; 
+                    NEU | TAU1 )    cter=0 ;;
+                    TAU2 )          cter=1 ;;
+                    TAU3 )          cter=2 ;;
+                    TAU4 )          cter=3 ;;
+                    * ) message E "Cterminus = ${Cterminus[$n]} is not valid. Check .pHmdp file" ;;
+		esac
+	    fi
         fi
-fi
+    fi
 }
 
 run_PBMC()
@@ -670,11 +702,15 @@ build_topology ()
         sed -i "s/`awk '/moleculetype/{getline;getline; print $1}' TMP_CpHMD.top`/Protein        /g" TMP_CpHMD.top
     else
 	#
+	echo ""
+	echo ""
+	echo "Entering the pdb2gmx after PB"
+	echo $nter $cter
         echo -e "$nter\n$cter"  | \
 	    "$GroDIR" pdb2gmx -f TMP_aux1.pdb \
 		      -p TMP_CpHMD.top -o TMP_aux3.gro -i TMP_posre.itp \
 		      -ignh -ter -ff $ffID -water $water \
-		      -quiet -merge all
+		      -merge all
     fi
     #
     ######################################################################

@@ -31,48 +31,48 @@ H2    NTR       0.330
 H3    NTR       0.330
 CA    NTR       0.210
 HA    NTR       0.100
-CT    CT0       0.720
-OT1   CT0      -0.550
-HT11  CT0       0.440
-HT12  CT0       0.000
-OT2   CT0      -0.610
-HT21  CT0       0.000
-HT22  CT0       0.000
-CT    CT1       0.720
-OT1   CT1      -0.550
-HT11  CT1       0.000
-HT12  CT1       0.000
-OT2   CT1      -0.610
-HT21  CT1       0.440
-HT22  CT1       0.000
-CT    CT2       0.720
-OT1   CT2      -0.550
-HT11  CT2       0.000
-HT12  CT2       0.440
-OT2   CT2      -0.610
-HT21  CT2       0.000
-HT22  CT2       0.000
-CT    CT3       0.720
-OT1   CT3      -0.550
-HT11  CT3       0.000
-HT12  CT3       0.000
-OT2   CT3      -0.610
-HT21  CT3       0.000
-HT22  CT3       0.440
-CT    CT4       0.340
-OT1   CT4      -0.670
-HT11  CT4       0.000
-HT12  CT4       0.000
-OT2   CT4      -0.670
-HT21  CT4       0.000
-HT22  CT4       0.000
-CT    CTR       0.340
-OT1   CTR      -0.670
-HT11  CTR       0.000
-HT12  CTR       0.000
-OT2   CTR      -0.670
-HT21  CTR       0.000
-HT22  CTR       0.000
+C     CT0       0.720
+OC1   CT0      -0.550
+HC11  CT0       0.440
+HC12  CT0       0.000
+OC2   CT0      -0.610
+HC21  CT0       0.000
+HC22  CT0       0.000
+C     CT1       0.720
+OC1   CT1      -0.550
+HC11  CT1       0.000
+HC12  CT1       0.000
+OC2   CT1      -0.610
+HC21  CT1       0.440
+HC22  CT1       0.000
+C     CT2       0.720
+OC1   CT2      -0.550
+HC11  CT2       0.000
+HC12  CT2       0.440
+OC2   CT2      -0.610
+HC21  CT2       0.000
+HC22  CT2       0.000
+C     CT3       0.720
+OC1   CT3      -0.550
+HC11  CT3       0.000
+HC12  CT3       0.000
+OC2   CT3      -0.610
+HC21  CT3       0.000
+HC22  CT3       0.440
+C     CT4       0.340
+OC1   CT4      -0.670
+HC11  CT4       0.000
+HC12  CT4       0.000
+OC2   CT4      -0.670
+HC21  CT4       0.000
+HC22  CT4       0.000
+C     CTR       0.340
+OC1   CTR      -0.670
+HC11  CTR       0.000
+HC12  CTR       0.000
+OC2   CTR      -0.670
+HC21  CTR       0.000
+HC22  CTR       0.000
 N     ALA      -0.470
  H    ALA       0.310
 CA    ALA       0.070
@@ -108,7 +108,7 @@ HH22  ARG       0.460
    C  ARG       0.510
    O  ARG      -0.510
    N  ASP      -0.470
-  HN  ASP       0.310
+   H  ASP       0.310
   CA  ASP       0.070
   HA  ASP       0.090
   CB  ASP      -0.280
@@ -120,7 +120,7 @@ HH22  ARG       0.460
    C  ASP       0.510
    O  ASP      -0.510
    N  AS0      -0.470
-  HN  AS0       0.310
+   H  AS0       0.310
   CA  AS0       0.070
   HA  AS0       0.090
   CB  AS0      -0.210
@@ -136,7 +136,7 @@ HD22  AS0       0.000
    C  AS0       0.510
    O  AS0      -0.510
    N  AS1      -0.470
-  HN  AS1       0.310
+   H  AS1       0.310
   CA  AS1       0.070
   HA  AS1       0.090
   CB  AS1      -0.210
@@ -152,7 +152,7 @@ HD22  AS1       0.000
    C  AS1       0.510
    O  AS1      -0.510
    N  AS2      -0.470
-  HN  AS2       0.310
+   H  AS2       0.310
   CA  AS2       0.070
   HA  AS2       0.090
   CB  AS2      -0.210
@@ -168,7 +168,7 @@ HD22  AS2       0.000
    C  AS2       0.510
    O  AS2      -0.510
    N  AS3      -0.470
-  HN  AS3       0.310
+   H  AS3       0.310
   CA  AS3       0.070
   HA  AS3       0.090
   CB  AS3      -0.210
@@ -184,7 +184,7 @@ HD22  AS3       0.440
    C  AS3       0.510
    O  AS3      -0.510
    N  AS4      -0.470
-  HN  AS4       0.310
+   H  AS4       0.310
   CA  AS4       0.070
   HA  AS4       0.090
   CB  AS4      -0.280
@@ -200,7 +200,7 @@ HD22  AS4       0.000
    C  AS4       0.510
    O  AS4      -0.510
    N  ASN      -0.470
-  HN  ASN       0.310
+   H  ASN       0.310
   CA  ASN       0.070
   HA  ASN       0.090
   CB  ASN      -0.180
@@ -214,7 +214,7 @@ HD22  ASN       0.300
    C  ASN       0.510
    O  ASN      -0.510
    N  CYS      -0.470
-  HN  CYS       0.310
+   H  CYS       0.310
   CA  CYS       0.070
   HA  CYS       0.090
   CB  CYS      -0.100
@@ -224,7 +224,7 @@ HD22  ASN       0.300
    C  CYS       0.510
    O  CYS      -0.510
    N  CY0      -0.470
-  HN  CY0       0.310
+   H  CY0       0.310
   CA  CY0       0.070
   HA  CY0       0.090
   CB  CY0      -0.110
@@ -237,7 +237,7 @@ HD22  ASN       0.300
    C  CY0       0.510
    O  CY0      -0.510
    N  CY1      -0.470
-  HN  CY1       0.310
+   H  CY1       0.310
   CA  CY1       0.070
   HA  CY1       0.090
   CB  CY1      -0.110
@@ -250,7 +250,7 @@ HD22  ASN       0.300
    C  CY1       0.510
    O  CY1      -0.510
    N  CY2      -0.470
-  HN  CY2       0.310
+   H  CY2       0.310
   CA  CY2       0.070
   HA  CY2       0.090
   CB  CY2      -0.110
@@ -263,7 +263,7 @@ HD22  ASN       0.300
    C  CY2       0.510
    O  CY2      -0.510
    N  CY3      -0.470
-  HN  CY3       0.310
+   H  CY3       0.310
   CA  CY3       0.070
   HA  CY3       0.090
   CB  CY3      -0.380
@@ -276,7 +276,7 @@ HD22  ASN       0.300
    C  CY3       0.510
    O  CY3      -0.510
    N  GLU      -0.470
-  HN  GLU       0.310
+   H  GLU       0.310
   CA  GLU       0.070
   HA  GLU       0.090
   CB  GLU      -0.180
@@ -291,7 +291,7 @@ HD22  ASN       0.300
    C  GLU       0.510
    O  GLU      -0.510
    N  GL0      -0.470
-  HN  GL0       0.310
+   H  GL0       0.310
   CA  GL0       0.070
   HA  GL0       0.090
   CB  GL0      -0.180
@@ -310,7 +310,7 @@ HE22  GL0       0.000
    C  GL0       0.510
    O  GL0      -0.510
    N  GL1      -0.470
-  HN  GL1       0.310
+   H  GL1       0.310
   CA  GL1       0.070
   HA  GL1       0.090
   CB  GL1      -0.180
@@ -329,7 +329,7 @@ HE22  GL1       0.000
    C  GL1       0.510
    O  GL1      -0.510
    N  GL2      -0.470
-  HN  GL2       0.310
+   H  GL2       0.310
   CA  GL2       0.070
   HA  GL2       0.090
   CB  GL2      -0.180
@@ -348,7 +348,7 @@ HE22  GL2       0.000
    C  GL2       0.510
    O  GL2      -0.510
    N  GL3      -0.470
-  HN  GL3       0.310
+   H  GL3       0.310
   CA  GL3       0.070
   HA  GL3       0.090
   CB  GL3      -0.180
@@ -367,7 +367,7 @@ HE22  GL3       0.440
    C  GL3       0.510
    O  GL3      -0.510
    N  GL4      -0.470
-  HN  GL4       0.310
+   H  GL4       0.310
   CA  GL4       0.070
   HA  GL4       0.090
   CB  GL4      -0.180
@@ -386,7 +386,7 @@ HE22  GL4       0.000
    C  GL4       0.510
    O  GL4      -0.510
    N  GLN      -0.470
-  HN  GLN       0.310
+   H  GLN       0.310
   CA  GLN       0.070
   HA  GLN       0.090
   CB  GLN      -0.180
@@ -403,14 +403,14 @@ HE22  GLN       0.300
    C  GLN       0.510
    O  GLN      -0.510
    N  GLY      -0.470
-  HN  GLY       0.310
+   H  GLY       0.310
   CA  GLY      -0.020
  HA1  GLY       0.090
  HA2  GLY       0.090
    C  GLY       0.510
    O  GLY      -0.510
    N  HSD      -0.470
-  HN  HSD       0.310
+   H  HSD       0.310
   CA  HSD       0.070
   HA  HSD       0.090
   CB  HSD      -0.090
@@ -427,7 +427,7 @@ HE22  GLN       0.300
    C  HSD       0.510
    O  HSD      -0.510
    N  HSE      -0.470
-  HN  HSE       0.310
+   H  HSE       0.310
   CA  HSE       0.070
   HA  HSE       0.090
   CB  HSE      -0.080
@@ -444,7 +444,7 @@ HE22  GLN       0.300
    C  HSE       0.510
    O  HSE      -0.510
    N  HSP      -0.470
-  HN  HSP       0.310
+   H  HSP       0.310
   CA  HSP       0.070
   HA  HSP       0.090
   CB  HSP      -0.050
@@ -516,7 +516,7 @@ HE22  GLN       0.300
    C  HI2       0.510
    O  HI2      -0.510
    N  ILE      -0.470
-  HN  ILE       0.310
+   H  ILE       0.310
   CA  ILE       0.070
   HA  ILE       0.090
   CB  ILE      -0.090
@@ -535,7 +535,7 @@ HG12  ILE       0.090
    C  ILE       0.510
    O  ILE      -0.510
    N  LEU      -0.470
-  HN  LEU       0.310
+   H  LEU       0.310
   CA  LEU       0.070
   HA  LEU       0.090
   CB  LEU      -0.180
@@ -554,7 +554,7 @@ HD23  LEU       0.090
    C  LEU       0.510
    O  LEU      -0.510
    N  LYS      -0.470
-  HN  LYS       0.310
+   H  LYS       0.310
   CA  LYS       0.070
   HA  LYS       0.090
   CB  LYS      -0.180
@@ -576,7 +576,7 @@ HD23  LEU       0.090
    C  LYS       0.510
    O  LYS      -0.510
    N  LY0      -0.470
-  HN  LY0       0.310
+   H  LY0       0.310
   CA  LY0       0.070
   HA  LY0       0.090
   CB  LY0      -0.180
@@ -598,7 +598,7 @@ HD23  LEU       0.090
    C  LY0       0.510
    O  LY0      -0.510
    N  LY1      -0.470
-  HN  LY1       0.310
+   H  LY1       0.310
   CA  LY1       0.070
   HA  LY1       0.090
   CB  LY1      -0.180
@@ -620,7 +620,7 @@ HD23  LEU       0.090
    C  LY1       0.510
    O  LY1      -0.510
    N  LY2      -0.470
-  HN  LY2       0.310
+   H  LY2       0.310
   CA  LY2       0.070
   HA  LY2       0.090
   CB  LY2      -0.180
@@ -642,7 +642,7 @@ HD23  LEU       0.090
    C  LY2       0.510
    O  LY2      -0.510
    N  LY3      -0.470
-  HN  LY3       0.310
+   H  LY3       0.310
   CA  LY3       0.070
   HA  LY3       0.090
   CB  LY3      -0.180
@@ -664,7 +664,7 @@ HD23  LEU       0.090
    C  LY3       0.510
    O  LY3      -0.510
    N  MET      -0.470
-  HN  MET       0.310
+   H  MET       0.310
   CA  MET       0.070
   HA  MET       0.090
   CB  MET      -0.180
@@ -681,7 +681,7 @@ HD23  LEU       0.090
    C  MET       0.510
    O  MET      -0.510
    N  PHE      -0.470
-  HN  PHE       0.310
+   H  PHE       0.310
   CA  PHE       0.070
   HA  PHE       0.090
   CB  PHE      -0.180
@@ -715,7 +715,7 @@ HD23  LEU       0.090
    C  PRO       0.510
    O  PRO      -0.510
    N  SER      -0.470
-  HN  SER       0.310
+   H  SER       0.310
   CA  SER       0.070
   HA  SER       0.090
   CB  SER       0.050
@@ -726,7 +726,7 @@ HD23  LEU       0.090
    C  SER       0.510
    O  SER      -0.510
    N  THR      -0.470
-  HN  THR       0.310
+   H  THR       0.310
   CA  THR       0.070
   HA  THR       0.090
   CB  THR       0.140
@@ -740,7 +740,7 @@ HG23  THR       0.090
    C  THR       0.510
    O  THR      -0.510
    N  TRP      -0.470
-  HN  TRP       0.310
+   H  TRP       0.310
   CA  TRP       0.070
   HA  TRP       0.090
   CB  TRP      -0.180
@@ -764,7 +764,7 @@ HG23  THR       0.090
    C  TRP       0.510
    O  TRP      -0.510
    N  TYR      -0.470
-  HN  TYR       0.310
+   H  TYR       0.310
   CA  TYR       0.070
   HA  TYR       0.090
   CB  TYR      -0.180
@@ -785,7 +785,7 @@ HG23  THR       0.090
    C  TYR       0.510
    O  TYR      -0.510
    N  TY0      -0.470
-  HN  TY0       0.310
+   H  TY0       0.310
   CA  TY0       0.070
   HA  TY0       0.090
   CB  TY0      -0.180
@@ -807,7 +807,7 @@ HG23  THR       0.090
    C  TY0       0.510
    O  TY0      -0.510
    N  TY1      -0.470
-  HN  TY1       0.310
+   H  TY1       0.310
   CA  TY1       0.070
   HA  TY1       0.090
   CB  TY1      -0.180
@@ -829,7 +829,7 @@ HG23  THR       0.090
    C  TY1       0.510
    O  TY1      -0.510
    N  TY2      -0.470
-  HN  TY2       0.310
+   H  TY2       0.310
   CA  TY2       0.070
   HA  TY2       0.090
   CB  TY2      -0.180
@@ -851,7 +851,7 @@ HG23  THR       0.090
    C  TY2       0.510
    O  TY2      -0.510
    N  VAL      -0.470
-  HN  VAL       0.310
+   H  VAL       0.310
   CA  VAL       0.070
   HA  VAL       0.090
   CB  VAL      -0.090

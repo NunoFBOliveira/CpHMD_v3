@@ -16,13 +16,14 @@ if [ -z  ${StDIR} ] ;then
     StDIR="/home/noliveira/CpHMD/CpHMD_v3.0/St-54a7_Fit_DelPHi/"
 fi
 
+## remove .sites if exists ##
+rm -rf ./${SysName}.sites
+
 #at this point we have the TMP_protein.pdb which is the pdb with only the titrable
 #portion of our molecules!
 if [[ $sites == *(" ") ]]; then
-    echo "" 
+    echo "" >> ./${SysName}.sites
 elif [[ $sites == "all"* ]]; then
-    rm -rf ./aux_site.dat
-    
     list=`awk '/ATOM/ {if (substr($0,20,1) ~ /^[0-9]/)  {print substr($0,23,5)+0, substr($0,18,3)}}' $2 | uniq `
     while read line; do
 	ind=`echo $line | awk '{print $1}'`
@@ -32,7 +33,7 @@ elif [[ $sites == "all"* ]]; then
 	if [[ $stname != "ARG" ]] ;then
 	    if  [[ ! -z `ls -a $StDIR | grep $stname ` ]] ;then
 		tau=`ls -a $StDIR | grep $stname | sed -e 's/.st//' | awk 1 ORS=" "`
-		awk -v i="$ind" -v t="$tau" 'BEGIN{printf("%-5s%s\n",i,t)}' >> ./aux_site.dat
+		awk -v i="$ind" -v t="$tau" 'BEGIN{printf("%-5s%s\n",i,t)}' >> ./${SysName}.sites
 	    else
 		echo message E  "Residue $ind $res not present in STs."
 	    fi
@@ -55,15 +56,13 @@ elif [[ $sites == "all"* ]]; then
 	    
 	    if [[ ! -z `ls -a $StDIR | grep $stname ` ]];then
 		tau=`ls -a $StDIR | grep $stname | sed -e 's/.st//' | awk 1 ORS=" "`
-		awk -v i="$ind" -v t="$tau" 'BEGIN{printf("%-5s%s\n",i,t)}' >> ./aux_site.dat
+		awk -v i="$ind" -v t="$tau" 'BEGIN{printf("%-5s%s\n",i,t)}' >> ./${SysName}.sites
 	    else
 		echo message E  "Residue $ind $res not present in STs."
 	    fi		    
 	done
     fi
-    sort -nk 1 ./aux_site.dat
-    
-
+    sort -nk 1 ./${SysName}.sites
     
 else    
     for ndx in $sites;do
@@ -77,7 +76,7 @@ else
 	    stname="CTR"
 	else
 	    ind=$ndx
-	    res=`awk -v i=$ndx 'substr($0,23,5)+0==i {a=substr($0,18,3)}END{print a}' $2`
+	    res=`awk -v i=$ndx 'substr($0,23,5)+0==i && substr($0,18,3)!="SOL" {a=substr($0,18,3)}END{print a}' $2`
 	    stname=`awk -v n=$res '/#res/ && $0~n {print $NF}' $CpHDIR/scripts/pdbswitch `
 	fi
 	#replace the case with pdbswitch search 
@@ -85,8 +84,8 @@ else
 	if [[ ! -z `ls -a $StDIR | grep $stname ` ]]
 	then
 	    tau=`ls -a $StDIR | grep $stname | sed -e 's/.st//' | awk 1 ORS=" "`
-	    awk -v i="$ind" -v t="$tau" 'BEGIN{printf("%-5s%s\n",i,t)}'
-	    else
+	    awk -v i="$ind" -v t="$tau" 'BEGIN{printf("%-5s%s\n",i,t)}' >> ./${SysName}.sites
+	else
 		echo message E  "Residue $ind $res not present in STs."
 	fi
     done

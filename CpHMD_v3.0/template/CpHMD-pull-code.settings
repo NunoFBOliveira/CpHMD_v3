@@ -114,7 +114,7 @@ export dielp=4 # dielectric constant for protein environment (4 is default)
 #mdp#  rlist               = 1.4
 #mdp#  fourierspacing      = 0.12
 #mdp#  rcoulomb            = 1.4
-#mdp#  pme_order           = 4
+#mdp#  pme-order           = 4
 #mdp#  rvdw                = 1.4
 #mdp#  cutoff-scheme       = verlet
 #mdp# 

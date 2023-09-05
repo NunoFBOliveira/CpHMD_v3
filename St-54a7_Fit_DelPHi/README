@@ -24,7 +24,12 @@ Observed shifts of the sites considering an initial pKmod of 0.000
 Res    Shift   Exp.  pKmod      pKmod+entropic(-0.47712)
 ATP    5.97    6.50   0.53      0.05288
 ADP    1.48    6.26   4.78      4.30288
-STE   -0.07206 5.50   5.57206   5.2710  
+Res    Shift   Exp.  pKmod      pKmod+entropic(-0.30102)
+### Instead of using -0.30102 in the calibration, 0.30102 was used therefore to correctly use the shift we have to do 0.53-0.60204
+       0.53
+STE   -0.07206 5.50   5.57206   5.2710
+
+
 
 Observed shifts of the sites considering an initial pKmod of 0.000
 

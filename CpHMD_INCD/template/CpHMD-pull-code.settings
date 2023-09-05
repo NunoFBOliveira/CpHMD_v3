@@ -1,0 +1,187 @@
+########################################
+#
+###  Start of Slurm parameters       ###
+#
+########################################
+nCPU=4 # Number of CPUs to be used in parallel
+Partition=MD32f,MD32c,LOW # MD32f/MD32c: 32 cores/threads for 8/16 cores submissions
+#
+########################################
+#
+###  Start of CpHMD settings (pHmdp) ###
+#
+########################################
+export SysName="Penta-GLU" # Name of our protein or system
+export Segments=25 # Number of MD/CpHMD Segments
+export Seg_size=1 # Size of each Segment in nanoseconds
+export ffID=G54a7pH # Force fields: G54a7pH/CHARMM36pH  --> GROMOS 54a7/CHARMM 36m
+export water=spc # Water model used
+export pH=3.25 # Solution pH
+export sites="4" # list of residues to titrate or "all" to titrate every residue
+export temp=310.0 # Temperature (Kelvin)
+export ionicstr=0.1 # Ionic Strength (moles/litre)
+export RelaxSteps=100 # Solvent relaxation time in steps 
+export EffectiveSteps=10000 # Effective time in steps (real simulation time)
+# Define the molecules terminal groups when not in titration site list.
+# N/C-ter: CAP & CAPpro=capped ; CHG=charged ; NEU=Neutral.
+export Nterminus=CAP  # multiple non-titrating chains: Nterminus=(CHG CHG)
+export Cterminus=CAP  # multiple non-titrating chains: Cterminus=(CHG CHG)
+#
+export dendrimers=1 # flag to use dendrimers on CpHMD (1 or 0)
+export fixgro=0 # Force fixbox to correct PBC in multiple solutes.
+#
+# PB/MC settings
+export epsin=2.0 # Dielectric constant of molecular interior
+export epssol=80.0 # Dielectric constant of the solvent 
+export PBdim=0 # dimensions in the PB PBC settings (0 for protein; 2 for membrane)
+export cutoff=-1 # Cutoff (in nm) for background and pairwise interactions (-1 will not cutoff)
+export GridSize=81 # PB grid size (multiply by ~1 Angstr) (was 81)
+export scaleP=1.0 # scale large box (1.0 -> 1 Angstrm)
+export scaleM=4.0 # scale focusing box (4.0 -> 1/4 Angstrm)
+export bndcon=4 # Potential at Boundary of large box (4 -> Coul)
+export maxc=0.01 # The convergence threshold values
+export pot=0.0 # Electrostatic potential (mV).
+export offset=1000 # Integer higher than residue number .gro 
+export seed=1234567 # Monte Carlo seed used in program petit.
+#
+# -- Input File Location (full PATHs) --
+# 
+export TOPin="/home/noliveira/CpHMD/CpHMD_v3.0/test-systems/glu-penta/penta.top" # The topology of your system
+export GROin="/home/noliveira/CpHMD/CpHMD_v3.0/test-systems/glu-penta/init2.gro" # The initial (gro) file
+export PDBin="/home/noliveira/CpHMD/CpHMD_v3.0/test-systems/glu-penta/init2.pdb" # GROin with corrected PBC and chainIDs (when needed)
+export NDXin="/home/noliveira/CpHMD/CpHMD_v3.0/test-systems/glu-penta/index.ndx" # Index must contain "System/Protein/Solute/SOL" and "Onetail/Monotail/Bitail" when PBdim=2
+export RULEin="/programs/CpH-MD/Programs/fix_topology/placebo.rules" # Rules for fix_topology 
+export RULEdendr="fix_dendrimer_G3.rules"  # Rules for dendrimers in fix_topology 
+export PosRe="" # File to use position restraints in production
+#
+# -- Input Directories Location --
+export CpHDIR="/home/noliveira/CpHMD/CpHMD_v3.0" # CpHMD distribution
+export GroDIR="/gromacs/gromacs-5.1.5_pH_I/bin/gmx" # GROMACS Binaries
+export DelphiDir="/home/noliveira/CpHMD/DelphiTools_v3.0" # DELPHI Programs and scripts
+export StDIR="/home/noliveira/CpHMD/St-54a7_Fit_DelPHi" # Location of .st files
+export PetitDIR="/programs/petit1.6.1" # Petit program
+#
+# -- Block Specific Parameters --
+#
+export InitCycle=1 # Define beginning of the Cycle
+export EndCycle=50 # Define end of the Cycle
+#
+export mdrun="$GroDIR mdrun -nt $nCPU -pin auto -rcon 0.0" # Define which command should be used for parallel run
+#
+# -- Block PyBindE calculation Parameters --
+#
+export energy=1 # flag to run calculation or not (1 for yes 0 for no)
+export mol1="1 4064" # number of first and last atom of the first molecule
+export mol2="4065 4102"# number of first and last atom of the second molecule
+export dielp=4 # dielectric constant for protein environment (4 is default)
+#
+# -- End of Parameters File --
+#
+########################################
+#
+###  Start of mdp file for CpHMD     ###
+#
+########################################
+#mdp# 
+#mdp# define              = 
+#mdp# integrator          =  md
+#mdp# tinit               =  0.0 ; Overridden with the value calculated by CpHMD
+#mdp# dt                  =  0.002    ; ps !
+#mdp# nsteps              =  10000 ; Overridden with the value from settings
+#mdp# nstcalcenergy          =  5
+#mdp# nstcomm                =  5
+#mdp# nstxout-compressed     =  5000
+#mdp# compressed-x-precision =  1000
+#mdp# nstenergy              =  5000
+#mdp# nstxout                =  0
+#mdp# nstvout                =  0
+#mdp# nstfout                =  0
+#mdp# nstlog                 =  0
+#mdp# ns_type		     =  grid
+#mdp# 
+#mdp# ;GRF (with external ionic strength - modified code)
+#mdp# ;coulombtype         = Generalized-Reaction-Field 
+#mdp# ;nstlist             = 5
+#mdp# ;rlist               = 1.4
+#mdp# ;rcoulomb            = 1.4
+#mdp# ;epsilon_rf          = 54.0      ; in previous version it was called "epsilon_r"
+#mdp# ;rvdw                = 1.4
+#mdp# ;ionicstrength       = 0.1       ; Overridden with the value from settings
+#mdp# 
+#mdp# ; ;PME (to use PME uncomment this section and comment the GRF section)
+#mdp#  coulombtype         = PME
+#mdp#  nstlist             = 10
+#mdp#  rlist               = 1.4
+#mdp#  fourierspacing      = 0.12
+#mdp#  rcoulomb            = 1.4
+#mdp#  pme_order           = 4
+#mdp#  rvdw                = 1.4
+#mdp#  cutoff-scheme       = verlet
+#mdp# 
+#mdp# vdwtype             = cut-off
+#mdp# 
+#mdp# ; Energy monitoring 
+#mdp# ; (ions - when present - should be added to the SOL group in the index file)
+#mdp# energygrps          =  Solute SOL
+#mdp# 
+#mdp# ; v-rescaletemperature coupling is on available groups
+#mdp# ; This thermostat is similar to Berendsen coupling, but the stochastic 
+#mdp# ; term ensures that a proper canonical ensemble is generated.
+#mdp# Tcoupl              =  v-rescale
+#mdp# tc-grps             =  Solute  SOL
+#mdp# tau_t               =  0.10     0.10
+#mdp# ref_t               =  310.0    310.0 ; Overridden with the value from settings   
+#mdp# 
+#mdp# ; Isotropic pressure coupling is now on
+#mdp# Pcoupl              =  Parrinello-Rahman
+#mdp# Pcoupltype          =  isotropic
+#mdp# tau_p               =  1.0
+#mdp# compressibility     =  4.5e-5
+#mdp# ref_p               =  1.0
+#mdp# 
+#mdp# ; lincs_order value of 8 works better than 4
+#mdp# constraint_algorithm = lincs
+#mdp# lincs_order          = 8
+#mdp# constraints          = all-bonds
+#mdp# lincs-warnangle      = 90
+#mdp# 
+#mdp# ;start of pull code 
+#mdp# pull                 = yes 
+#mdp# pull-coord1-type     = umbrella     ; can be umbrella, constraint, constant-force, flat-bottom
+#mdp# pull-coord1-geometry = direction    ; can be distance, direction or cylinder
+#mdp# pull-coord1-dim      = N N Y        ; vector to pull
+#mdp# 
+#mdp# pull-ngroups         = 2            ; number of pull groups
+#mdp# pull_ncoords         = 1            ; 
+#mdp# pull-group1-name     = Center_of_Interest 
+#mdp# pull-group2-name     = Monolayer2 
+#mdp# pull_coord1_groups   = 1 2          ; group indices on which this pull coordinate will operate
+#mdp# pull-group1-pbcatom  = 0        ; atom to be used as reference for pbc, 0 uses the middle atom of COM
+#mdp# pull-coord1-start    = no           ; (no) uses coord1-init (yes) uses starting conformation distance
+#mdp# pull-coord1-vec      = 0.0 0.0 -1.0 ; defines the vector on which to pull
+#mdp# pull-coord1-k        = 1000         ; force constant (kJ mol-1 nm-2)
+#mdp# pull-coord1-rate     = 0.0          ; rate change of the reference position or angle (steered MD)
+#mdp# pull-coord1-init     = 0.0          ; Reference value of the reaction coordinate 
+#mdp# 
+#mdp# pull-nstxout             = 500     ; frequency to write COM the pull groups
+#mdp# pull-nstfout             = 500     ; frequency to write the force of the pull groups
+#mdp# 
+########################################
+#
+###  Start of fixgro file for CpHMD     ###
+#
+########################################
+# This file will only be used when 2 chains are present or if 
+# fixgro=1 flag is given! 
+#
+#fixgro# G Protein
+#fixgro# a 1 1367
+#fixgro# 
+#fixgro# # Groups to be (sequentially) assembled:
+#fixgro# A Protein
+#fixgro# 
+#fixgro# # Groups to be centered along each of the three box vectors:
+#fixgro# C Protein Protein Protein W W W
+#fixgro# 
+#fixgro# # Use PBC "P System System None" along each of the three box vectors:
+#fixgro# P Protein Protein Protein

@@ -32377,3 +32377,817 @@ CLCl2 CLCl4    gb_52
   C11   C12   C13   C14     gd_34
   C12   C13   C14   C15     gd_34
   C13   C14   C15   C16     gd_34
+
+; ##### Blocks for HEME group type b without proprionate ####
+; ##### This works with KatG and pp Dyps
+
+[ HKP ]
+; Penta coordinated heme (HIS) in ferric state (III) and high spin
+; without the proprianates 
+; This is from KatG
+ [ atoms ]
+   FE    FE     1.01000     0
+   NA    NR    -0.45000     0
+   NB    NR    -0.47000     0
+   NC    NR    -0.52000     0
+   ND    NR    -0.51000     0
+  CHA     C    -0.20000     1
+  HHA    HC     0.13000     1
+  C1A     C     0.17000     2
+  C2A     C     0.07000     2
+  C3A     C     0.07000     2
+  C4A     C     0.18000     2
+  CMA   CH3     0.00000     3
+  CAA   CH2    -0.01000     4
+  CHB     C    -0.22000     5
+  HHB    HC     0.12000     5
+  C1B     C     0.14000     6
+  C2B     C     0.21000     6
+  C3B     C    -0.07000     6
+  C4B     C     0.28000     6
+  CMB   CH3    -0.05000     7
+  CAB   CH1     0.02000     8
+  CBB   CH3     0.01000     8
+  CHC     C    -0.32000     9
+  HHC    HC     0.15000     9
+  C1C     C     0.25000    10
+  C2C     C     0.13000    10
+  C3C     C    -0.14000    10
+  C4C     C     0.40000    10
+  CMC   CH3     0.00000    11
+  CAC   CH1     0.05000    12
+  CBC   CH3     0.00000    12
+  CHD     C    -0.35000    13
+  HHD    HC     0.15000    13
+  C1D     C     0.28000    14
+  C2D     C     0.08000    14
+  C3D     C     0.06000    14
+  C4D     C     0.18000    14
+  CMD   CH3    -0.01000    15
+  CAD   CH2     0.00000    16
+  CB    CH2    -0.02000    17
+  CG      C     0.29000    18
+  ND1    NR    -0.36000    18
+  HD1     H     0.37000    18
+  CD2   CR1    -0.12000    18
+  HD2    HC     0.14000    18
+  CE1   CR1     0.17000    18
+  HE1    HC     0.11000    18
+  NE2    NR    -0.40000    18
+ [ bonds ]
+   FE    NA    gb_35   
+   FE    NB    gb_35   
+   FE    NC    gb_35   
+   FE    ND    gb_35   
+   NA   C1A    gb_14   
+   NA   C4A    gb_14   
+   NB   C1B    gb_14   
+   NB   C4B    gb_14   
+   NC   C1C    gb_14   
+   NC   C4C    gb_14   
+   ND   C1D    gb_14   
+   ND   C4D    gb_14   
+  CHA   HHA    gb_3    
+  CHA   C1A    gb_17   
+  CHA   C4D    gb_17   
+  C1A   C2A    gb_17   
+  C2A   C3A    gb_17   
+  C2A   CAA    gb_27   
+  C3A   C4A    gb_17   
+  C3A   CMA    gb_27   
+  C4A   CHB    gb_17   
+  CHB   HHB    gb_3    
+  CHB   C1B    gb_17   
+  C1B   C2B    gb_17   
+  C2B   C3B    gb_17   
+  C2B   CMB    gb_27   
+  C3B   C4B    gb_17   
+  C3B   CAB    gb_27   
+  C4B   CHC    gb_17   
+  CAB   CBB    gb_12   
+  CHC   HHC    gb_3    
+  CHC   C1C    gb_17   
+  C1C   C2C    gb_17   
+  C2C   C3C    gb_17   
+  C2C   CMC    gb_27   
+  C3C   C4C    gb_17   
+  C3C   CAC    gb_27   
+  C4C   CHD    gb_17   
+  CAC   CBC    gb_12   
+  CHD   HHD    gb_3    
+  CHD   C1D    gb_17   
+  C1D   C2D    gb_17   
+  C2D   C3D    gb_17   
+  C2D   CMD    gb_27   
+  C3D   C4D    gb_17   
+  C3D   CAD    gb_27
+   CB    CG    gb_27   
+   CG   ND1    gb_10    
+   CG   CD2    gb_10   
+  ND1   HD1    gb_2    
+  ND1   CE1    gb_10   
+  CD2   NE2    gb_10   
+  CD2   HD2    gb_3
+  CE1   NE2    gb_10   
+  CE1   HE1    gb_3
+   FE   NE2    gb_35    
+ [ exclusions ]
+;  ai    aj
+   FE   CHA
+   FE   C2A
+   FE   C3A
+   FE   CHB
+   FE   C2B
+   FE   C3B
+   FE   CHC
+   FE   C2C
+   FE   C3C
+   FE   CHD
+   FE   C2D
+   FE   C3D
+   NA   HHA
+   NA   CMA
+   NA   CAA
+   NA   HHB
+   NA   C1B
+   NA   C4B
+   NA   C1C
+   NA   C4C
+   NA   C1D
+   NA   C4D
+   NB   C1A
+   NB   C4A
+   NB   HHB
+   NB   CMB
+   NB   CAB
+   NB   HHC
+   NB   C1C
+   NB   C4C
+   NB   C1D
+   NB   C4D
+   NC   C1A
+   NC   C4A
+   NC   C1B
+   NC   C4B
+   NC   HHC
+   NC   CMC
+   NC   CAC
+   NC   HHD
+   NC   C1D
+   NC   C4D
+   ND   HHA
+   ND   C1A
+   ND   C4A
+   ND   C1B
+   ND   C4B
+   ND   C1C
+   ND   C4C
+   ND   HHD
+   ND   CMD
+   ND   CAD
+  CHA   C3A
+  CHA   C4A
+  CHA   CAA
+  CHA   C1D
+  CHA   C2D
+  CHA   CAD
+  HHA   C2A
+  HHA   C3D
+  C1A   CMA
+  C1A   CHB
+  C1A   C3D
+  C2A   CHB
+  C3A   HHB
+  C3A   C1B
+  C4A   CAA
+  C4A   C2B
+  CMA   CAA
+  CMA   CHB
+  CHB   C3B
+  CHB   C4B
+  CHB   CMB
+  HHB   C2B
+  C1B   CAB
+  C1B   CHC
+  C2B   CHC
+  C3B   HHC
+  C3B   C1C
+  C4B   CMB
+  C4B   C2C
+  CMB   CAB
+  CAB   CHC
+  CHC   C3C
+  CHC   C4C
+  CHC   CMC
+  HHC   C2C
+  C1C   CAC
+  C1C   CHD
+  C2C   CHD
+  C3C   HHD
+  C3C   C1D
+  C4C   CMC
+  C4C   C2D
+  CMC   CAC
+  CAC   CHD
+  CHD   C3D
+  CHD   C4D
+  CHD   CMD
+  HHD   C2D
+  C1D   CAD
+  C4D   CMD
+  CMD   CAD
+   CB   HD1
+   CB   CE1
+   CB   NE2
+   CB   HD2
+   CG   HE1
+  CD2   HE1
+  CD2   HD1
+  ND1   HD2
+  HD1   NE2
+  HD1   HE1
+   FE    CG
+   FE   ND1
+   FE   HD2
+   FE   HE1
+ [ angles ]
+;  ai    aj    ak   gromos type
+   NA    FE    NB     ga_2    
+   NB    FE    NC     ga_2    
+   NC    FE    ND     ga_2    
+   NA    FE    ND     ga_2    
+   FE    NA   C1A     ga_36   
+   FE    NA   C4A     ga_36   
+  C1A    NA   C4A     ga_6    
+   FE    NB   C1B     ga_36   
+   FE    NB   C4B     ga_36   
+  C1B    NB   C4B     ga_6    
+   FE    NC   C1C     ga_36   
+   FE    NC   C4C     ga_36   
+  C1C    NC   C4C     ga_6    
+   FE    ND   C1D     ga_36   
+   FE    ND   C4D     ga_36   
+  C1D    ND   C4D     ga_6    
+  C1A   CHA   HHA     ga_20   
+  C1A   CHA   C4D     ga_37   
+  HHA   CHA   C4D     ga_20   
+   NA   C1A   CHA     ga_33   
+   NA   C1A   C2A     ga_15   
+  CHA   C1A   C2A     ga_38   
+  C1A   C2A   C3A     ga_7   
+  C1A   C2A   CAA     ga_37   
+  C3A   C2A   CAA     ga_37   
+  C2A   C3A   C4A     ga_7   
+  C2A   C3A   CMA     ga_37   
+  C4A   C3A   CMA     ga_37   
+   NA   C4A   C3A     ga_15   
+   NA   C4A   CHB     ga_33   
+  C3A   C4A   CHB     ga_38   
+  C4A   CHB   HHB     ga_20   
+  C4A   CHB   C1B     ga_37  
+  HHB   CHB   C1B     ga_20   
+   NB   C1B   CHB     ga_33   
+   NB   C1B   C2B     ga_15   
+  CHB   C1B   C2B     ga_38   
+  C1B   C2B   C3B     ga_7   
+  C1B   C2B   CMB     ga_37   
+  C3B   C2B   CMB     ga_37   
+  C2B   C3B   C4B     ga_7   
+  C2B   C3B   CAB     ga_37   
+  C4B   C3B   CAB     ga_37   
+   NB   C4B   C3B     ga_15   
+   NB   C4B   CHC     ga_33   
+  C3B   C4B   CHC     ga_38   
+  C3B   CAB   CBB     ga_37   
+  C4B   CHC   HHC     ga_20   
+  C4B   CHC   C1C     ga_37   
+  HHC   CHC   C1C     ga_20   
+   NC   C1C   CHC     ga_33   
+   NC   C1C   C2C     ga_15   
+  CHC   C1C   C2C     ga_38   
+  C1C   C2C   C3C     ga_7    
+  C1C   C2C   CMC     ga_37   
+  C3C   C2C   CMC     ga_37   
+  C2C   C3C   C4C     ga_7   
+  C2C   C3C   CAC     ga_37   
+  C4C   C3C   CAC     ga_37   
+   NC   C4C   C3C     ga_15   
+   NC   C4C   CHD     ga_33   
+  C3C   C4C   CHD     ga_38   
+  C3C   CAC   CBC     ga_37   
+  C4C   CHD   HHD     ga_20   
+  C4C   CHD   C1D     ga_37   
+  HHD   CHD   C1D     ga_20   
+   ND   C1D   CHD     ga_33   
+   ND   C1D   C2D     ga_15   
+  CHD   C1D   C2D     ga_38   
+  C1D   C2D   C3D     ga_7    
+  C1D   C2D   CMD     ga_37   
+  C3D   C2D   CMD     ga_37   
+  C2D   C3D   C4D     ga_7    
+  C2D   C3D   CAD     ga_37   
+  C4D   C3D   CAD     ga_37   
+   ND   C4D   CHA     ga_33   
+   ND   C4D   C3D     ga_15   
+  CHA   C4D   C3D     ga_38   
+   CB    CG   ND1     ga_37   
+   CB    CG   CD2     ga_37   
+  ND1    CG   CD2     ga_7    
+   CG   ND1   HD1     ga_36   
+   CG   CD2   HD2     ga_36   
+   CG   ND1   CE1     ga_7    
+  HD1   ND1   CE1     ga_36   
+   CG   CD2   NE2     ga_7    
+  ND1   CE1   NE2     ga_7    
+  CD2   NE2   CE1     ga_7    
+  HD2   CD2   NE2     ga_36   
+  ND1   CE1   HE1     ga_36
+  HE1   CE1   NE2     ga_36   
+  NE2    FE    NA     ga_2
+  NE2    FE    NB     ga_2
+  NE2    FE    NC     ga_2
+  NE2    FE    ND     ga_2
+  CD2   NE2    FE     ga_34
+  CE1   NE2    FE     ga_34
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+   FE   C1A   C4A    NA     gi_3    
+   FE   C1B   C4B    NB     gi_3    
+   FE   C1C   C4C    NC     gi_3    
+   FE   C1D   C4D    ND     gi_3    
+  CHA    NA   C2A   C1A     gi_1    
+  CHB    NA   C3A   C4A     gi_1    
+  CHB    NB   C2B   C1B     gi_1    
+  CHC    NB   C3B   C4B     gi_1    
+  CHC    NC   C2C   C1C     gi_1    
+  CHD    NC   C3C   C4C     gi_1    
+  CHD    ND   C2D   C1D     gi_1    
+  CHA    ND   C3D   C4D     gi_1    
+  C2A   C1A   C3A   CAA     gi_1    
+  C3A   C2A   C4A   CMA     gi_1    
+  C2B   C1B   C3B   CMB     gi_1    
+  C3B   C2B   C4B   CAB     gi_1    
+  C2C   C1C   C3C   CMC     gi_1    
+  C3C   C2C   C4C   CAC     gi_1    
+  C2D   C1D   C3D   CMD     gi_1    
+  C3D   C2D   C4D   CAD     gi_1    
+  CHA   C4D   C1A   HHA     gi_1    
+  CHB   C4A   C1B   HHB     gi_1    
+  CHC   C4B   C1C   HHC     gi_1    
+  CHD   C4C   C1D   HHD     gi_1    
+   NA   C1A   C2A   C3A     gi_1    
+  C1A   C2A   C3A   C4A     gi_1    
+  C2A   C3A   C4A    NA     gi_1    
+  C1A    NA   C4A   C3A     gi_1    
+  C2A   C1A    NA   C4A     gi_1    
+   NB   C1B   C2B   C3B     gi_1    
+  C1B   C2B   C3B   C4B     gi_1    
+   NB   C4B   C3B   C2B     gi_1    
+  C4B    NB   C1B   C2B     gi_1    
+  C1B    NB   C4B   C3B     gi_1    
+   NC   C1C   C2C   C3C     gi_1    
+  C1C   C2C   C3C   C4C     gi_1    
+   NC   C4C   C3C   C2C     gi_1    
+  C4C    NC   C1C   C2C     gi_1    
+  C1C    NC   C4C   C3C     gi_1    
+   ND   C1D   C2D   C3D     gi_1    
+  C1D   C2D   C3D   C4D     gi_1    
+   ND   C4D   C3D   C2D     gi_1    
+  C4D    ND   C1D   C2D     gi_1    
+  C1D    ND   C4D   C3D     gi_1    
+   CG   ND1   CD2    CB     gi_1    
+  CD2    CG   ND1   CE1     gi_1    
+  ND1    CG   CD2   NE2     gi_1    
+   CG   ND1   CE1   NE2     gi_1    
+   CG   CD2   NE2   CE1     gi_1    
+  CD2   NE2   CE1   ND1     gi_1    
+  CD2    CG   NE2   HD2     gi_1    
+  ND1    CG   CE1   HD1     gi_1    
+  CE1   ND1   NE2   HE1     gi_1    
+  NE2    FE   CE1   CD2     gi_3
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+   NA   C4A   CHB   C1B     gd_15    
+  C4A   CHB   C1B    NB     gd_15    
+   NB   C4B   CHC   C1C     gd_15    
+  C4B   CHC   C1C    NC     gd_15    
+   NC   C4C   CHD   C1D     gd_15    
+  C4C   CHD   C1D    ND     gd_15    
+   ND   C4D   CHA   C1A     gd_15    
+  C4D   CHA   C1A    NA     gd_15    
+  C2B   C3B   CAB   CBB     gd_12    
+  C2C   C3C   CAC   CBC     gd_12   
+  CD2   NE2    FE    NA     gd_38
+   ND    FE    NA   C1A     gd_38
+   NA    FE    NB   C1B     gd_38
+   NB    FE    NC   C1C     gd_38
+   NC    FE    ND   C1D     gd_38
+
+[ HKO ]
+; Exa coordinated heme (HIS) in ferric state (IV) and low spin
+; This is from KatG (Compund I) - without Propianates
+ [ atoms ]
+   FE    FE     0.73000     0
+   OO     O    -0.47000     0
+   NA    NR    -0.01000     0
+   NB    NR    -0.08000     0
+   NC    NR    -0.11000     0
+   ND    NR    -0.07000     0
+  CHA     C     0.00000     1
+  HHA    HC     0.11000     1
+  C1A     C    -0.19000     2
+  C2A     C     0.14000     2
+  C3A     C     0.12000     2
+  C4A     C    -0.14000     2
+  CMA   CH3    -0.06000     3
+  CAA   CH2    -0.06000     4
+  CHB     C     0.01000     6
+  HHB    HC     0.09000     6
+  C1B     C    -0.18000     7
+  C2B     C     0.25000     7
+  C3B     C    -0.07000     7
+  C4B     C     0.04000     7
+  CMB   CH3    -0.08000     8
+  CAB   CH1     0.04000     9
+  CBB   CH3    -0.07000     9
+  CHC     C    -0.12000    10
+  HHC    HC     0.13000    10
+  C1C     C    -0.07000    11
+  C2C     C     0.18000    11
+  C3C     C    -0.08000    11
+  C4C     C     0.03000    11
+  CMC   CH3    -0.06000    12
+  CAC   CH1     0.05000    13
+  CBC   CH3    -0.06000    13
+  CHD     C    -0.04000    14
+  HHD    HC     0.09000    14
+  C1D     C    -0.13000    15
+  C2D     C     0.16000    15
+  C3D     C     0.08000    15
+  C4D     C    -0.09000    15
+  CMD   CH3    -0.06000    16
+  CAD   CH2    -0.05000    17
+  CB    CH2    -0.06000    19
+  CG      C     0.31000    20
+  ND1    NR    -0.42000    20
+  HD1     H     0.37000    20
+  CD2   CR1    -0.16000    20
+  HD2    HC     0.14000    20
+  CE1   CR1     0.18000    20
+  HE1    HC     0.08000    20
+  NE2    NR    -0.34000    20
+ [ bonds ]
+   FE    OO    gb_28    ; P - OA has the closest distance to the optimized geom.
+   FE    NA    gb_35   
+   FE    NB    gb_35   
+   FE    NC    gb_35   
+   FE    ND    gb_35   
+   NA   C1A    gb_14   
+   NA   C4A    gb_14   
+   NB   C1B    gb_14   
+   NB   C4B    gb_14   
+   NC   C1C    gb_14   
+   NC   C4C    gb_14   
+   ND   C1D    gb_14   
+   ND   C4D    gb_14   
+  CHA   HHA    gb_3    
+  CHA   C1A    gb_17   
+  CHA   C4D    gb_17   
+  C1A   C2A    gb_17   
+  C2A   C3A    gb_17   
+  C2A   CAA    gb_27   
+  C3A   C4A    gb_17   
+  C3A   CMA    gb_27   
+  C4A   CHB    gb_17   
+  CHB   HHB    gb_3    
+  CHB   C1B    gb_17   
+  C1B   C2B    gb_17   
+  C2B   C3B    gb_17   
+  C2B   CMB    gb_27   
+  C3B   C4B    gb_17   
+  C3B   CAB    gb_27   
+  C4B   CHC    gb_17   
+  CAB   CBB    gb_12   
+  CHC   HHC    gb_3    
+  CHC   C1C    gb_17   
+  C1C   C2C    gb_17   
+  C2C   C3C    gb_17   
+  C2C   CMC    gb_27   
+  C3C   C4C    gb_17   
+  C3C   CAC    gb_27   
+  C4C   CHD    gb_17   
+  CAC   CBC    gb_12   
+  CHD   HHD    gb_3    
+  CHD   C1D    gb_17   
+  C1D   C2D    gb_17   
+  C2D   C3D    gb_17   
+  C2D   CMD    gb_27   
+  C3D   C4D    gb_17   
+  C3D   CAD    gb_27
+   CB    CG    gb_27   
+   CG   ND1    gb_10    
+   CG   CD2    gb_10   
+  ND1   HD1    gb_2    
+  ND1   CE1    gb_10   
+  CD2   NE2    gb_10   
+  CD2   HD2    gb_3
+  CE1   NE2    gb_10   
+  CE1   HE1    gb_3
+   FE   NE2    gb_35    
+ [ exclusions ]
+;  ai    aj
+   FE   CHA
+   FE   C2A
+   FE   C3A
+   FE   CHB
+   FE   C2B
+   FE   C3B
+   FE   CHC
+   FE   C2C
+   FE   C3C
+   FE   CHD
+   FE   C2D
+   FE   C3D
+   NA   HHA
+   NA   CMA
+   NA   CAA
+   NA   HHB
+   NA   C1B
+   NA   C4B
+   NA   C1C
+   NA   C4C
+   NA   C1D
+   NA   C4D
+   NB   C1A
+   NB   C4A
+   NB   HHB
+   NB   CMB
+   NB   CAB
+   NB   HHC
+   NB   C1C
+   NB   C4C
+   NB   C1D
+   NB   C4D
+   NC   C1A
+   NC   C4A
+   NC   C1B
+   NC   C4B
+   NC   HHC
+   NC   CMC
+   NC   CAC
+   NC   HHD
+   NC   C1D
+   NC   C4D
+   ND   HHA
+   ND   C1A
+   ND   C4A
+   ND   C1B
+   ND   C4B
+   ND   C1C
+   ND   C4C
+   ND   HHD
+   ND   CMD
+   ND   CAD
+  CHA   C3A
+  CHA   C4A
+  CHA   CAA
+  CHA   C1D
+  CHA   C2D
+  CHA   CAD
+  HHA   C2A
+  HHA   C3D
+  C1A   CMA
+  C1A   CHB
+  C1A   C3D
+  C2A   CHB
+  C3A   HHB
+  C3A   C1B
+  C4A   CAA
+  C4A   C2B
+  CMA   CAA
+  CMA   CHB
+  CHB   C3B
+  CHB   C4B
+  CHB   CMB
+  HHB   C2B
+  C1B   CAB
+  C1B   CHC
+  C2B   CHC
+  C3B   HHC
+  C3B   C1C
+  C4B   CMB
+  C4B   C2C
+  CMB   CAB
+  CAB   CHC
+  CHC   C3C
+  CHC   C4C
+  CHC   CMC
+  HHC   C2C
+  C1C   CAC
+  C1C   CHD
+  C2C   CHD
+  C3C   HHD
+  C3C   C1D
+  C4C   CMC
+  C4C   C2D
+  CMC   CAC
+  CAC   CHD
+  CHD   C3D
+  CHD   C4D
+  CHD   CMD
+  HHD   C2D
+  C1D   CAD
+  C4D   CMD
+  CMD   CAD
+   CB   HD1
+   CB   CE1
+   CB   NE2
+   CB   HD2
+   CG   HE1
+  CD2   HE1
+  CD2   HD1
+  ND1   HD2
+  HD1   NE2
+  HD1   HE1
+   FE    CG
+   FE   ND1
+   FE   HD2
+   FE   HE1
+ [ angles ]
+;  ai    aj    ak   gromos type
+   OO    FE    NA     ga_2    
+   OO    FE    NB     ga_2    
+   OO    FE    NC     ga_2    
+   OO    FE    ND     ga_2    
+   NA    FE    NB     ga_2    
+   NB    FE    NC     ga_2    
+   NC    FE    ND     ga_2    
+   NA    FE    ND     ga_2    
+   FE    NA   C1A     ga_36   
+   FE    NA   C4A     ga_36   
+  C1A    NA   C4A     ga_6    
+   FE    NB   C1B     ga_36   
+   FE    NB   C4B     ga_36   
+  C1B    NB   C4B     ga_6    
+   FE    NC   C1C     ga_36   
+   FE    NC   C4C     ga_36   
+  C1C    NC   C4C     ga_6    
+   FE    ND   C1D     ga_36   
+   FE    ND   C4D     ga_36   
+  C1D    ND   C4D     ga_6    
+  C1A   CHA   HHA     ga_20   
+  C1A   CHA   C4D     ga_37   
+  HHA   CHA   C4D     ga_20   
+   NA   C1A   CHA     ga_33   
+   NA   C1A   C2A     ga_15   
+  CHA   C1A   C2A     ga_38   
+  C1A   C2A   C3A     ga_7   
+  C1A   C2A   CAA     ga_37   
+  C3A   C2A   CAA     ga_37   
+  C2A   C3A   C4A     ga_7   
+  C2A   C3A   CMA     ga_37   
+  C4A   C3A   CMA     ga_37   
+   NA   C4A   C3A     ga_15   
+   NA   C4A   CHB     ga_33   
+  C3A   C4A   CHB     ga_38   
+  C4A   CHB   HHB     ga_20   
+  C4A   CHB   C1B     ga_37  
+  HHB   CHB   C1B     ga_20   
+   NB   C1B   CHB     ga_33   
+   NB   C1B   C2B     ga_15   
+  CHB   C1B   C2B     ga_38   
+  C1B   C2B   C3B     ga_7   
+  C1B   C2B   CMB     ga_37   
+  C3B   C2B   CMB     ga_37   
+  C2B   C3B   C4B     ga_7   
+  C2B   C3B   CAB     ga_37   
+  C4B   C3B   CAB     ga_37   
+   NB   C4B   C3B     ga_15   
+   NB   C4B   CHC     ga_33   
+  C3B   C4B   CHC     ga_38   
+  C3B   CAB   CBB     ga_37   
+  C4B   CHC   HHC     ga_20   
+  C4B   CHC   C1C     ga_37   
+  HHC   CHC   C1C     ga_20   
+   NC   C1C   CHC     ga_33   
+   NC   C1C   C2C     ga_15   
+  CHC   C1C   C2C     ga_38   
+  C1C   C2C   C3C     ga_7    
+  C1C   C2C   CMC     ga_37   
+  C3C   C2C   CMC     ga_37   
+  C2C   C3C   C4C     ga_7   
+  C2C   C3C   CAC     ga_37   
+  C4C   C3C   CAC     ga_37   
+   NC   C4C   C3C     ga_15   
+   NC   C4C   CHD     ga_33   
+  C3C   C4C   CHD     ga_38   
+  C3C   CAC   CBC     ga_37   
+  C4C   CHD   HHD     ga_20   
+  C4C   CHD   C1D     ga_37   
+  HHD   CHD   C1D     ga_20   
+   ND   C1D   CHD     ga_33   
+   ND   C1D   C2D     ga_15   
+  CHD   C1D   C2D     ga_38   
+  C1D   C2D   C3D     ga_7    
+  C1D   C2D   CMD     ga_37   
+  C3D   C2D   CMD     ga_37   
+  C2D   C3D   C4D     ga_7    
+  C2D   C3D   CAD     ga_37   
+  C4D   C3D   CAD     ga_37   
+   ND   C4D   CHA     ga_33   
+   ND   C4D   C3D     ga_15   
+  CHA   C4D   C3D     ga_38   
+   CB    CG   ND1     ga_37   
+   CB    CG   CD2     ga_37   
+  ND1    CG   CD2     ga_7    
+   CG   ND1   HD1     ga_36   
+   CG   CD2   HD2     ga_36   
+   CG   ND1   CE1     ga_7    
+  HD1   ND1   CE1     ga_36   
+   CG   CD2   NE2     ga_7    
+  ND1   CE1   NE2     ga_7    
+  CD2   NE2   CE1     ga_7    
+  HD2   CD2   NE2     ga_36   
+  ND1   CE1   HE1     ga_36
+  HE1   CE1   NE2     ga_36   
+  NE2    FE    NA     ga_2
+  NE2    FE    NB     ga_2
+  NE2    FE    NC     ga_2
+  NE2    FE    ND     ga_2
+  CD2   NE2    FE     ga_34
+  CE1   NE2    FE     ga_34
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+   FE   C1A   C4A    NA     gi_3    
+   FE   C1B   C4B    NB     gi_3    
+   FE   C1C   C4C    NC     gi_3    
+   FE   C1D   C4D    ND     gi_3    
+  CHA    NA   C2A   C1A     gi_1    
+  CHB    NA   C3A   C4A     gi_1    
+  CHB    NB   C2B   C1B     gi_1    
+  CHC    NB   C3B   C4B     gi_1    
+  CHC    NC   C2C   C1C     gi_1    
+  CHD    NC   C3C   C4C     gi_1    
+  CHD    ND   C2D   C1D     gi_1    
+  CHA    ND   C3D   C4D     gi_1    
+  C2A   C1A   C3A   CAA     gi_1    
+  C3A   C2A   C4A   CMA     gi_1    
+  C2B   C1B   C3B   CMB     gi_1    
+  C3B   C2B   C4B   CAB     gi_1    
+  C2C   C1C   C3C   CMC     gi_1    
+  C3C   C2C   C4C   CAC     gi_1    
+  C2D   C1D   C3D   CMD     gi_1    
+  C3D   C2D   C4D   CAD     gi_1    
+  CHA   C4D   C1A   HHA     gi_1    
+  CHB   C4A   C1B   HHB     gi_1    
+  CHC   C4B   C1C   HHC     gi_1    
+  CHD   C4C   C1D   HHD     gi_1    
+   NA   C1A   C2A   C3A     gi_1    
+  C1A   C2A   C3A   C4A     gi_1    
+  C2A   C3A   C4A    NA     gi_1    
+  C1A    NA   C4A   C3A     gi_1    
+  C2A   C1A    NA   C4A     gi_1    
+   NB   C1B   C2B   C3B     gi_1    
+  C1B   C2B   C3B   C4B     gi_1    
+   NB   C4B   C3B   C2B     gi_1    
+  C4B    NB   C1B   C2B     gi_1    
+  C1B    NB   C4B   C3B     gi_1    
+   NC   C1C   C2C   C3C     gi_1    
+  C1C   C2C   C3C   C4C     gi_1    
+   NC   C4C   C3C   C2C     gi_1    
+  C4C    NC   C1C   C2C     gi_1    
+  C1C    NC   C4C   C3C     gi_1    
+   ND   C1D   C2D   C3D     gi_1    
+  C1D   C2D   C3D   C4D     gi_1    
+   ND   C4D   C3D   C2D     gi_1    
+  C4D    ND   C1D   C2D     gi_1    
+  C1D    ND   C4D   C3D     gi_1    
+   CG   ND1   CD2    CB     gi_1    
+  CD2    CG   ND1   CE1     gi_1    
+  ND1    CG   CD2   NE2     gi_1    
+   CG   ND1   CE1   NE2     gi_1    
+   CG   CD2   NE2   CE1     gi_1    
+  CD2   NE2   CE1   ND1     gi_1    
+  CD2    CG   NE2   HD2     gi_1    
+  ND1    CG   CE1   HD1     gi_1    
+  CE1   ND1   NE2   HE1     gi_1    
+  NE2    FE   CE1   CD2     gi_3
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+   NA   C4A   CHB   C1B     gd_15    
+  C4A   CHB   C1B    NB     gd_15    
+   NB   C4B   CHC   C1C     gd_15    
+  C4B   CHC   C1C    NC     gd_15    
+   NC   C4C   CHD   C1D     gd_15    
+  C4C   CHD   C1D    ND     gd_15    
+   ND   C4D   CHA   C1A     gd_15    
+  C4D   CHA   C1A    NA     gd_15    
+  C2B   C3B   CAB   CBB     gd_12    
+  C2C   C3C   CAC   CBC     gd_12   
+  CD2   NE2    FE    NA     gd_38
+   ND    FE    NA   C1A     gd_38
+   NA    FE    NB   C1B     gd_38
+   NB    FE    NC   C1C     gd_38
+   NC    FE    ND   C1D     gd_38
+
+; ## End Hemes
