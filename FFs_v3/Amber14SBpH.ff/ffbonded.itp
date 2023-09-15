@@ -825,6 +825,10 @@ C   O2  HOB          1   113.000     418.400
 HO  OH  HOB          1   134.000     418.400
 HO  O2  HOB          1   134.000     418.400
 ;  charged Tyrosine
+C   CA  CA           1   120.000     527.184
+C   CA  HA           1   120.000     418.400
+CA  C   O2           1   120.000     585.760
+CA  C   CA           1   120.000     527.184
 CO  CA  CA           1   120.000     527.184
 CO  CA  HA           1   120.000     418.400
 CA  CO  O2           1   120.000     585.760
@@ -933,7 +937,12 @@ NA  CW  CC  CT       4      180.00     4.60240     2
 NA  CV  CC  CT       4      180.00     4.60240     2    
 ;  neutral C-terminus
 CX  O   C   OH       4      180.00    43.93200     2
+; c.tdb terminal dihedrals
+C   CX  OH  O        4      180.00    43.93200     2
+C   CX  O   OH       4      180.00    43.93200     2
+CO  CX  O2  O2       4      180.00    43.93200     2
 ;  charged Tyrosine
+CA  CA  C   O2       4      180.00     4.60240     2
 CA  CA  CO  O2       4      180.00     4.60240     2
 ;  Carboxylic + Tyr + C-ter
 X   HOB X   HO       4      180.00     4.18400     2

@@ -134,11 +134,8 @@ fi
       echo "Doing makepqr without topology with includes" 
       ${DelphiDir}/makepqr W 2RT ${CpHDIR}/top/${ffID}.ff/ffnonbonded.itp ../TMP_CpHMD_charge.top TMP_auxD1.gro >TMP_auxD1.pqr
   fi
-  
-  
-${DelphiDir}/stmodels ${offset} TMP_auxD1.pqr ../${run_n}.sites
+  ${DelphiDir}/stmodels ${offset} TMP_auxD1.pqr ../${run_n}.sites
 mv ../${run_n}_stmod.sites TMP_auxD1.sites
-
 
 #
 ############    END COMMON STUFF    ############
@@ -194,7 +191,6 @@ for (( cpu=0 ; cpu<$ncpus ; cpu++ )); do
 	-n ../TMP_CpHMD.ndx -o TMP_delphi${sn}.gro -pbc atom -quiet
 
     ###  Creating pqr and sites file for each site
-
     if [[ $fixgro == 1 ]]
     then
 	echo "Doing makepqr with topology with includes"	
@@ -428,7 +424,7 @@ for i in delphiT$$/tmp/*.out
 do
 awk '$2=="WARNING:" && $3=="no" && $5=="record"' ${i} >>ERROR
 grep --before-context=1 "finished qdiffx" ${i} | \
-  awk 'NR==1 {if ($2>0.5 || $1 == "NaN" || $1 == "Inf" || $2 == "NaN" || $2 == "Inf" || $2 == 0 ){print "One PB calculation did not converge. Check relaxation parameters!"}}' >>ERROR
+  awk 'NR==1 {if ($2>0.1 || $1 == "NaN" || $1 == "Inf" || $2 == "NaN" || $2 == "Inf" || $2 == 0 ){print "One PB calculation did not converge. Check relaxation parameters!"}}' >>ERROR
 done
 
 if [[ -s ERROR ]]

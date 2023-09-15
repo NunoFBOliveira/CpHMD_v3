@@ -1,0 +1,161 @@
+  ______   ______   ______   ______   ______   ______   ______   ______  
+ |______| |______| |______| |______| |______| |______| |______| |______| 
+  ______   ______   ______   ______   ______   ______   ______   ______  
+ |______| |______| |______| |______| |______| |______| |______| |______| 
+                                                                         
+                 _____           _    _   __  __   _____                 
+                / ____|         | |  | | |  \/  | |  __ \                
+               | |       _ __   | |__| | | \  / | | |  | |               
+               | |      | '_ \  |  __  | | |\/| | | |  | |               
+               | |____  | |_) | | |  | | | |  | | | |__| |               
+                \_____| | .__/  |_|  |_| |_|  |_| |_____/                
+                        | |                                              
+                        |_|                                              
+  ______   ______   ______   ______   ______   ______   ______   ______  
+ |______| |______| |______| |______| |______| |______| |______| |______| 
+  ______   ______   ______   ______   ______   ______   ______   ______  
+ |______| |______| |______| |______| |______| |______| |______| |______|
+
+
+Welcome to CpHMD program revamped! Our version derived from the previous
+with the adition of support for all 3 Force-fields (GROMOS, AMBER and
+CHARMM) and has pushed us to reformulate code and improve on user QOL.
+
+In this document you can find a logbook of all versions detailing what
+systems they are running on and what systems there is still work to be
+done.
+
+Aditionally, for bug report it is asked for tickets to be registered in
+our asana project:
+https://app.asana.com/0/1205421859606923/1205421835244035
+
+_______________________________________________________________________
+
+██    ██ ███████ ██████  ███████ ██  ██████  ███    ██     ██████     ██████  
+██    ██ ██      ██   ██ ██      ██ ██    ██ ████   ██          ██         ██ 
+██    ██ █████   ██████  ███████ ██ ██    ██ ██ ██  ██      █████      █████  
+ ██  ██  ██      ██   ██      ██ ██ ██    ██ ██  ██ ██          ██    ██      
+  ████   ███████ ██   ██ ███████ ██  ██████  ██   ████     ██████  ██ ███████ 
+                                                                              
+                                                                              
+This version added the support for CHARMM forcefield and is still being
+developed currently. Therefore it is unsafe to use for production still!
+
+Several changes already done:
+- force field directory is no longer inserted inside the CpHMD folder,
+through the top link. Now the FF directory is given inside the settings
+avoiding unnecessary linking within the program's folder
+
+- Added a workaround when setting the number of chains to edit the .pdb
+in order to remove the dangerous atoms of the Cter. O1/OC1/OT1 replaced
+by O so pdb2gmx can build the termini and OC2 removed on AMBER (needs
+a lot of testing to see if it works correctly)
+It is therefore dangerous to build molecules containing these atom names!
+be mindful of these names (O1, O2, OC1, OC2, OT1, OT2)
+
+- Modified make_sites so it detects when termini are PRO and GLY so it
+chooses the correct st block! All sts need to have these blocks (currently
+only AMBER unfitted has them)
+
+
+This version works for:
+
+- GROMOS:
+  .pentapeptides
+  .
+  
+- AMBER:
+  .
+
+- CHARMM
+  .
+  
+This version should work:
+
+- GROMOS:
+
+Version not suited for: (all still testing)
+- AMBER
+  .
+
+-CHARMM
+  .
+
+
+_______________________________________________________________________
+
+██    ██ ███████ ██████  ███████ ██  ██████  ███    ██     ██████      ██ 
+██    ██ ██      ██   ██ ██      ██ ██    ██ ████   ██          ██    ███ 
+██    ██ █████   ██████  ███████ ██ ██    ██ ██ ██  ██      █████      ██ 
+ ██  ██  ██      ██   ██      ██ ██ ██    ██ ██  ██ ██          ██     ██ 
+  ████   ███████ ██   ██ ███████ ██  ██████  ██   ████     ██████  ██  ██ 
+
+The spiritual successor of version 3.0 with a lot of new aditions to the
+code! Support for AMBER was brought into the scene! Automatic sites creation
+was improved when the flag all is given now recognizing only residues in
+pdbswitch (you can name you ligands with a number on the third character
+safely now).
+A new adition was made to the roster enabling pybindE to be run along our
+simulations with the flag energy=1 however this takes quite sometime to run
+and is not advised!! 
+
+This version works for:
+
+- GROMOS:
+  .Protein in water
+  .Protein ligand
+  .Protein with ligand via include
+
+- AMBER:
+  .Pentapeptides
+  .Protein - Capped!
+  .Dendrimers
+
+This version should work:
+
+- GROMOS:
+  .Membrane
+  .Protein and Membrane
+
+Version not suited for:
+- All FF:
+  .Uncapped multiple solutes (not tested) 
+  
+- AMBER
+  .Uncapped residues (still in testing!!!!!)
+  
+
+-CHARMM
+
+_______________________________________________________________________
+
+██    ██ ███████ ██████  ███████ ██  ██████  ███    ██     ██████      ██████  
+██    ██ ██      ██   ██ ██      ██ ██    ██ ████   ██          ██    ██  ████ 
+██    ██ █████   ██████  ███████ ██ ██    ██ ██ ██  ██      █████     ██ ██ ██ 
+ ██  ██  ██      ██   ██      ██ ██ ██    ██ ██  ██ ██          ██    ████  ██ 
+  ████   ███████ ██   ██ ███████ ██  ██████  ██   ████     ██████  ██  ██████
+
+Where it all began! Everything from MEAD and reduced titration was cleaned,
+unused portions of code were removed, database treatment was automatized,
+avoiding all the need for building by hand databases with less than 1000 lines
+and a huge reduction to all the files needed for the simulations to run which
+are now all condensed on CpHMD.settings!
+
+This version works for:
+
+- GROMOS:
+  .Protein in water
+  .Protein ligand
+  .Protein with ligand via include
+  .Dendrimers
+
+This version should work:
+
+- GROMOS:
+  .Membrane
+  .Protein and Membrane
+
+Version not suited for:
+-AMBER
+
+-CHARMM

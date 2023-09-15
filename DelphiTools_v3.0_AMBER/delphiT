@@ -137,11 +137,9 @@ fi
 ${DelphiDir}/stmodels ${offset} TMP_auxD1.pqr ../${run_n}.sites
 mv ../${run_n}_stmod.sites TMP_auxD1.sites
 
-
 #
 ############    END COMMON STUFF    ############
 #
-
 
 if [[ $dimension -eq 2 ]] ; then
 ###  Getting the box vectors from initial gro file
@@ -195,10 +193,10 @@ for (( cpu=0 ; cpu<$ncpus ; cpu++ )); do
     if [[ $fixgro == 1 ]]
     then
 	echo "Doing makepqr with topology with includes"
-	${DelphiDir}/makepqr W 2RT  ../TMP_pqr.top ../TMP_pqr.top TMP_auxD1.gro > TMP_aux${sn}.pqr
+	${DelphiDir}/makepqr W 2RT  ../TMP_pqr.top ../TMP_pqr.top TMP_delphi${sn}.gro > TMP_aux${sn}.pqr
     else
 	echo "Doing makepqr without topology with includes"
-	${DelphiDir}/makepqr W 2RT ${CpHDIR}/top/${ffID}.ff/ffnonbonded.itp ../TMP_CpHMD_charge.top TMP_auxD1.gro >TMP_aux${sn}.pqr
+	${DelphiDir}/makepqr W 2RT ${CpHDIR}/top/${ffID}.ff/ffnonbonded.itp ../TMP_CpHMD_charge.top TMP_delphi${sn}.gro >TMP_aux${sn}.pqr
     fi
 
     awk -v a=${sn} 'NR==a' ../${run_n}.sites >TMP_delphi${sn}.sites

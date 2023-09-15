@@ -1,41 +1,85 @@
 [ None ]
 
-[ NH2_0 ]
+[ CpH_NH2_0 ]
 [ replace ]
 N		N3	14.011	-1.0358
-H1		HGL	 1.008	 0.0000
-H2		H	 1.008	 0.3860
-H3		H	 1.008	 0.3860
 CA		CX	12.011	 0.1603
 HA		HP	 1.008	 0.0603
 C		C	12.011	 0.6200
 O		O	    16	-0.5768
+[ Add ]
+ 1       4      H1               N               CA              C
+       HGL        1.008   0.0000    -1
+ 1       4      H2               N               CA             CB
+         H        1.008   0.3860    -1
+ 1       4      H3               N               CA             HA
+         H        1.008   0.3860    -1
+[ bonds ]
+ N	H1
+ N      H2
+ N      H3
+[ delete ]
+ H
 
-[ NH2_1 ]
+[ CpH_NH2_1 ] 
+[ delete ] 
+ H
 [ replace ]
 N		N3	14.011	-1.0358
-H1		H	 1.008	 0.3860
-H2		HGL	 1.008	 0.0000
-H3		H	 1.008	 0.3860
 CA		CX	12.011	 0.1603
 HA		HP	 1.008	 0.0603
 C		C	12.011	 0.6200
 O		O	    16	-0.5768
+[ Add ]
+ 1       4      H1               N               CA              C
+         H        1.008   0.3860    -1
+ 1       4      H2               N               CA             CB
+       HGL        1.008   0.0000    -1
+ 1       4      H3               N               CA             HA
+         H        1.008   0.3860    -1
+[ bonds ]
+ N      H2
+ N      H3
 
-[ NH2_2 ]
+[ CpH_NH2_2 ] 
+[ delete ]
+ H
 [ replace ]
 N		N3	14.011	-1.0358
-H1		H	 1.008	 0.3860
-H2		H	 1.008	 0.3860
-H3		HGL	 1.008	 0.0000
 CA		CX	12.011	 0.1603
 HA		HP	 1.008	 0.0603
 C		C	12.011	 0.6200
 O		O	    16	-0.5768
+[ Add ]
+ 1       4      H1               N               CA              C
+         H        1.008   0.3860    -1
+ 1       4      H2               N               CA             CB
+         H        1.008   0.3860    -1
+ 1       4      H3               N               CA             HA
+       HGL        1.008   0.0000    -1
+[ bonds ]
+ N      H2
+ N      H3
 
-[ NH3+ ]
+[ CpH_NH3+ ] 
+[ delete ]
+ H
 [ replace ]
 N		N3	14.011	 0.1295
+CA		CX	12.011	 0.0674
+HA		HP	 1.008	 0.1425
+C		C	12.011	 0.6200
+O		O	    16	-0.5768
+[ Add ]
+ 1       4      H1               N               CA              C
+         H        1.008   0.2058    -1
+ 1       4      H2               N               CA             CB
+         H        1.008   0.2058    -1
+ 1       4      H3               N               CA             HA
+         H        1.008   0.2058    -1
+[ bonds ]
+ N      H2
+ N      H3
 
 [ PRO-NH_0 ]
 [ replace ]
