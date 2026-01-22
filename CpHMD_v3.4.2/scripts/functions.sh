@@ -605,9 +605,9 @@ run_PBMC()
             #
 	    #DEBUG - store PDB trajectory format for later analysis
         
-            "$GroDIR" editconf -f TMP_${runname}.gro \
-                   -o TMP_aux_debug.pdb
-            cat TMP_aux_debug.pdb >> ${blockname}_PQR.pdb
+            #"$GroDIR" editconf -f TMP_${runname}.gro \
+            #       -o TMP_aux_debug.pdb
+            #cat TMP_aux_debug.pdb >> ${blockname}_PQR.pdb
         
 	fi
     #
