@@ -1,4 +1,4 @@
-543
+597
 CYS	SG	1	CYS	SG	1	0.2	CYS2	CYS2
 CYS	SG	1	HEM 	FE	2	0.25	CYS2	HEME
 CYS	SG	1	HEM 	CAB	1	0.18	CYS2	HEME
@@ -584,3 +584,15 @@ HKO     CAA     1       PA3     CBA     1       0.150   HKO     PA3
 HKO     CAD     1       PD4     CBD     1       0.150   HKO     PD4
 HKO     CAA     1       PA4     CBA     1       0.150   HKO     PA4
 HSX	CA	1	HKO	CB	1	0.153	HSX	HKO
+CQ0     CM      1       CN0     CN      1       0.154   CQ0     CN0
+CQ1     CM      1       CN0     CN      1       0.154   CQ1     CN0
+CQ2     CM      1       CN0     CN      1       0.154   CQ2     CN0
+CQ0     CM      1       CN1     CN      1       0.154   CQ0     CN1
+CQ1     CM      1       CN1     CN      1       0.154   CQ1     CN1
+CQ2     CM      1       CN1     CN      1       0.154   CQ2     CN1
+HQ0     CM      1       HN0     CN      1       0.154   HQ0     HN0
+HQ1     CM      1       HN0     CN      1       0.154   HQ1     HN0
+HQ2     CM      1       HN0     CN      1       0.154   HQ2     HN0
+HQ0     CM      1       HN1     CN      1       0.154   HQ0     HN1
+HQ1     CM      1       HN1     CN      1       0.154   HQ1     HN1
+HQ2     CM      1       HN1     CN      1       0.154   HQ2     HN1

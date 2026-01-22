@@ -1,0 +1,210 @@
+########################################
+#
+###  Start of Slurm parameters       ###
+#
+########################################
+GPU=0                       # Tag for GPU use (1) or not (0) 
+nCPU=8                     # Number of CPUs to be used in parallel
+Partition=MD32f,MD32c,LOW   # MD32f/MD32c: 32 cores/threads for 8/16 cores submissions
+#
+########################################
+#
+###  Start of CpHMD settings (pHmdp) ###
+#
+########################################
+export SysName="Protein"    # Name of our protein or system
+export Segments=25          # Number of MD/CpHMD Segments
+export Seg_size=1           # Size of each Segment in nanoseconds
+export ffID=G54a7pH         # Force fields: G54a7pH or CHARMM36pH or Amber14SBpH
+export water=spc            # Water model used
+export pH=3.25              # Solution pH
+export sites="4"            # list of residues to titrate or "all" to titrate every residue
+export temp=310.0           # Temperature (Kelvin)
+export ionicstr=0.1         # Ionic Strength (moles/litre)
+export RelaxSteps=100       # Solvent relaxation time in steps 
+export EffectiveSteps=10000 # Effective time in steps (real simulation time)
+#
+export memb=0               # Flag needed when on membrane systems 
+export include_itp=0        # Correctly treats systems with multiple solute systems as include itp instead of FF added molecules.
+export multiple_solutes=0 # Force fixbox to correct PBC in multiple solutes.
+
+##################
+# PB/MC settings #
+##################
+export epsin=2.0            # Dielectric constant of molecular interior
+export epssol=80.0          # Dielectric constant of the solvent 
+export PBdim=0              # dimensions in the PB PBC settings (0 for protein; 2 for membrane)
+export cutoff=-1            # Cutoff (in nm) for background and pairwise interactions (-1 will not cutoff)
+export GridSize=81          # PB grid size (multiply by ~1 Angstr) (was 81)
+export scaleP=1.0           # scale large box (1.0 -> 1 Angstrm)
+export scaleM=4.0           # scale focusing box (4.0 -> 1/4 Angstrm)
+export bndcon=4             # Potential at Boundary of large box (4 -> Coul)
+export maxc=0.01            # The convergence threshold values
+export pot=0.0              # Electrostatic potential (mV).
+export offset=2000          # Integer higher than residue number .gro 
+export seed=1234567         # Monte Carlo seed used in program petit.
+
+##############################
+# Reduced titration settings #
+##############################
+export ReduceTitration=1
+export RTThreshold=0.001
+export RTInterval=5
+## RT debug ##
+export write_states="y"
+
+################################
+# Plumed integration variables #
+################################
+export plumed=0        # turn plumed on or off (1/0)
+export plumedtype=grid #static/grid/hill
+export colvar_name="colvar"
+export colvar_stride=1000        #Should be equal to the nstxtcout-compressed number of timesteps (ex.: 1000 * 0.002 = 2 ps)
+export grid_name="GRIDS"
+export hills="HILLS"
+
+##########################################
+#
+# -- Input File Location (full PATHs) -- #
+#
+##########################################
+export TOPin="penta.top"    # The topology of your system
+export GROin="penta.gro"    # The initial (gro) file
+export NDXin="index.ndx"    # Index must contain "System/Protein/Solute/SOL" and "Onetail/Monotail/Bitail" when PBdim=2
+export PosRe=""             # File to use position restraints in production
+export LigItp=""            # File for itp ligands that are not in FF 
+
+####################################
+#
+# -- Input Directories Location -- #
+#
+####################################
+export CpHDIR="/home/noliveira/CpHMD/CpHMD_v3.4-test"          # CpHMD distribution
+export GroDIR="/gromacs/gromacs-2024.2/bin/gmx"             # GROMACS Binaries
+export DelphiDir="/home/noliveira/CpHMD/DelphiTools_v3.4" # DELPHI Programs and scripts
+export StDIR="/home/noliveira/CpHMD/St-54a7_Fit_DelPHi"     # Location of .st files
+export PetitDIR="/programs/petit1.6.1"                      # Petit program
+export ffDIR="/home/noliveira/CpHMD/FFs_v3"                 # Forcefield folder
+
+###################################
+#
+# -- Block Specific Parameters -- #
+#
+###################################
+export InitCycle=1       # Define beginning of the Cycle
+export EndCycle=50       # Define end of the Cycle
+
+export mdruncpu="$GroDIR mdrun -nt $nCPU -pin auto -rcon 0.0" # Define which command should be used for parallel run
+export mdrungpu="$GroDIR mdrun -ntmpi 1 -ntomp $nCPU -gpu_id $GPUid -pin auto -rcon 0.0"
+
+###################################
+#
+# -- End of Parameters File --
+#
+########################################
+#
+###  Start of mdp file for CpHMD     ###
+#
+########################################
+#mdp# 
+#mdp# define                 = 
+#mdp# integrator             =  md
+#mdp# tinit                  =  0.0 ; Overridden with the value calculated by CpHMD
+#mdp# dt                     =  0.002    ; ps !
+#mdp# nsteps                 =  10000 ; Overridden with the value from settings
+#mdp# nstcalcenergy          =  5
+#mdp# nstcomm                =  5
+#mdp# nstxout-compressed     =  5000
+#mdp# compressed-x-precision =  1000
+#mdp# nstenergy              =  5000
+#mdp# nstxout                =  0
+#mdp# nstvout                =  0
+#mdp# nstfout                =  0
+#mdp# nstlog                 =  0
+#mdp# ns_type		     =  grid
+#mdp# 
+#mdp# ; ;PME (to use PME uncomment this section and comment the GRF section)
+#mdp# coulombtype         = PME
+#mdp# nstlist             = 10
+#mdp# rlist               = 1.4
+#mdp# fourierspacing      = 0.12
+#mdp# rcoulomb            = 1.4
+#mdp# pme-order           = 4
+#mdp# rvdw                = 1.4
+#mdp# cutoff-scheme       = verlet
+#mdp# 
+#mdp# vdwtype             = cut-off
+#mdp# 
+#mdp# ; Energy monitoring 
+#mdp# ; (ions - when present - should be added to the SOL group in the index file)
+#mdp# energygrps          =  Protein SOL
+#mdp# 
+#mdp# ; v-rescaletemperature coupling is on available groups
+#mdp# ; This thermostat is similar to Berendsen coupling, but the stochastic 
+#mdp# ; term ensures that a proper canonical ensemble is generated.
+#mdp# Tcoupl              =  v-rescale
+#mdp# tc-grps             =  Protein  SOL
+#mdp# tau_t               =  1       1
+#mdp# ref_t               =  310.0   310.0 ; Overridden with the value from settings   
+#mdp# 
+#mdp# ; Isotropic pressure coupling is now on
+#mdp# Pcoupl              =  Parrinello-Rahman
+#mdp# Pcoupltype          =  isotropic
+#mdp# tau_p               =  5.0
+#mdp# compressibility     =  4.5e-5
+#mdp# ref_p               =  1.0
+#mdp# 
+#mdp# ; lincs_order value of 8 works better than 4
+#mdp# constraint_algorithm = lincs
+#mdp# lincs_order          = 8
+#mdp# constraints          = all-bonds
+#mdp# lincs-warnangle      = 90
+########################################
+#
+###  Start of fixgro file for CpHMD     ###
+#
+########################################
+# This file will only be used when 2 chains are present or if 
+# include_itp=1 flag is given! 
+#
+#fixgro# G Protein
+#fixgro# a 1 1367
+#fixgro# 
+#fixgro# # Groups to be (sequentially) assembled:
+#fixgro# A Protein
+#fixgro# 
+#fixgro# # Groups to be centered along each of the three box vectors:
+#fixgro# C Protein Protein Protein W W W
+#fixgro# 
+#fixgro# # Use PBC "P System System None" along each of the three box vectors:
+#fixgro# P Protein Protein Protein
+
+########################################
+#
+###  Start of plumed file for CpHMD  ###
+# Example from original implementation #
+########################################
+# Check if the timesteps and temperature values are consistent with previous settings
+#plumed# # Activate MOLINFO functionalities
+#plumed# MOLINFO STRUCTURE=./rep1.pdb
+#plumed# RESTART # Do not remove this line. This is ignored for the first cycle in each block
+#plumed# chi: TORSION ATOMS=68,69,77,91
+#plumed# ade:  GROUP ATOMS=88,82,91
+#plumed# uri1: GROUP ATOMS=26,22,18
+#plumed# uri2: GROUP ATOMS=56,52,48
+#plumed# uri3: GROUP ATOMS=120,116,112
+#plumed# uri4: GROUP ATOMS=152,148,144
+#plumed# eRMSD: ERMSD REFERENCE=./rep1.pdb ATOMS=ade,uri1,uri2,uri3,uri4 
+#plumed# # Activate well-tempered metadynamics in phi
+#plumed# metad: METAD ARG=chi,eRMSD PACE=500 HEIGHT=2.0 SIGMA=0.35,0.5 BIASFACTOR=15 TEMP=300 FILE=&hills GRID_MIN=-pi,0 GRID_MAX=pi,3 GRID_WSTRIDE=500 GRID_WFILE=&grid_name GRID_RFILE=&grid_name
+#plumed#    # Deposit a Gaussian every 500 time steps, with initial height 
+#plumed#    # equal to 1.2 kJ/mol and bias factor equal to 10 
+#plumed#    
+#plumed#    # Gaussian width (sigma) should be chosen based on the CV fluctuations in unbiased run 
+#plumed#    # try 1/2 or 1/3 of the estimated fluctuations 
+#plumed#    
+#plumed#    # Gaussians will be written to file and also stored on grid 
+#plumed# 
+#plumed# # Print both collective variables on COLVAR file every colvar_stride steps (Xps)
+#plumed# PRINT ARG=chi,eRMSD,metad.bias  STRIDE=&colvar_stride FILE=&colvar_name 
+

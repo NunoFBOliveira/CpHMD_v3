@@ -164,7 +164,15 @@
 ; HMet  -   CMet         820    
 ;
 #define gb_52     0.287407  3.0400e+06
-; CLCl4 -   CLCl4       1200    
+; CLCl4 -   CLCl4       1200
+;
+; Start of Tetrazole defenition
+; 
+#define gb_53       0.1410  6.5389e+06
+; Cring -   Ntet with H
+;
+#define gb_54       0.1280   1.3428e+07
+; Ntet -   Ntet
 ;
 ;---
 ;       Table 2.5.3.1.

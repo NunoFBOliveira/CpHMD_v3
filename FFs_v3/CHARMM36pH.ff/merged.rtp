@@ -34667,7 +34667,7 @@
            C5   H51
            C5   H52
 
-[ DLEU ]
+[ LED ]
   [ atoms ]
             N   NH1   -0.470  0
            HN     H    0.310  1
@@ -35723,7 +35723,7 @@
           C31   O31   C32   O32
           C13   C12  O13B  O13A
 
-[ DLYS ]
+[ LYD ]
   [ atoms ]
             N   NH1   -0.470  0
            HN     H    0.310  1
@@ -66047,7 +66047,7 @@
            O4   HO4
            C4   H42
 
-[ LYR ]
+[ LYT ] ; OLD LYR block, regarding retinal-Lysine adduct
   [ atoms ]
             N   NH1   -0.470  0
            HN     H    0.310  1
@@ -124261,3 +124261,462 @@ C5      C4      C6      C5M
   [ impropers ]
             N    -C  H1  H2
             N    -C  H2  H1
+
+[ LD0 ]
+  [ atoms ]
+            N   NH1   -0.470  0
+           HN     H    0.310  1
+           CA  CTD1    0.070  2
+           HA   HB1    0.090  3
+           CB   CT2   -0.180  4
+          HB1   HA2    0.090  5
+          HB2   HA2    0.090  6
+           CG   CT2   -0.180  7
+          HG1   HA2    0.090  8
+          HG2   HA2    0.090  9
+           CD   CT2   -0.180 10
+          HD1   HA2    0.090 11
+          HD2   HA2    0.090 12
+           CE   CT2    0.130 13
+          HE1   HA2    0.075 14
+          HE2   HA2    0.075 15
+           NZ   NH2   -0.960 16
+          HZ1  HCLJ    0.000 17
+          HZ2    HC    0.340 18
+          HZ3    HC    0.340 19
+            C     C    0.510 20
+            O     O   -0.510 21
+  [ bonds ]
+           CB    CA
+           CG    CB
+           CD    CG
+           CE    CD
+           NZ    CE
+            N    HN
+            N    CA
+            C    CA
+            C    +N
+           CA    HA
+           CB   HB1
+           CB   HB2
+           CG   HG1
+           CG   HG2
+           CD   HD1
+           CD   HD2
+           CE   HE1
+           CE   HE2
+           NZ   HZ1
+           NZ   HZ2
+           NZ   HZ3
+            O     C
+  [ impropers ]
+            N    -C    CA    HN
+            C    CA    +N     O
+  [ cmap ]
+           -C     N    CA     C    +N
+
+[ LD1 ]
+  [ atoms ]
+            N   NH1   -0.470  0
+           HN     H    0.310  1
+           CA  CTD1    0.070  2
+           HA   HB1    0.090  3
+           CB   CT2   -0.180  4
+          HB1   HA2    0.090  5
+          HB2   HA2    0.090  6
+           CG   CT2   -0.180  7
+          HG1   HA2    0.090  8
+          HG2   HA2    0.090  9
+           CD   CT2   -0.180 10
+          HD1   HA2    0.090 11
+          HD2   HA2    0.090 12
+           CE   CT2    0.130 13
+          HE1   HA2    0.075 14
+          HE2   HA2    0.075 15
+           NZ   NH2   -0.960 16
+          HZ1    HC    0.340 17
+          HZ2  HCLJ    0.000 18
+          HZ3    HC    0.340 19
+            C     C    0.510 20
+            O     O   -0.510 21
+  [ bonds ]
+           CB    CA
+           CG    CB
+           CD    CG
+           CE    CD
+           NZ    CE
+            N    HN
+            N    CA
+            C    CA
+            C    +N
+           CA    HA
+           CB   HB1
+           CB   HB2
+           CG   HG1
+           CG   HG2
+           CD   HD1
+           CD   HD2
+           CE   HE1
+           CE   HE2
+           NZ   HZ1
+           NZ   HZ2
+           NZ   HZ3
+            O     C
+  [ impropers ]
+            N    -C    CA    HN
+            C    CA    +N     O
+  [ cmap ]
+           -C     N    CA     C    +N
+
+[ LD2 ]
+  [ atoms ]
+            N   NH1   -0.470  0
+           HN     H    0.310  1
+           CA  CTD1    0.070  2
+           HA   HB1    0.090  3
+           CB   CT2   -0.180  4
+          HB1   HA2    0.090  5
+          HB2   HA2    0.090  6
+           CG   CT2   -0.180  7
+          HG1   HA2    0.090  8
+          HG2   HA2    0.090  9
+           CD   CT2   -0.180 10
+          HD1   HA2    0.090 11
+          HD2   HA2    0.090 12
+           CE   CT2    0.130 13
+          HE1   HA2    0.075 14
+          HE2   HA2    0.075 15
+           NZ   NH2   -0.960 16
+          HZ1    HC    0.340 17
+          HZ2    HC    0.340 18
+          HZ3  HCLJ    0.000 19
+            C     C    0.510 20
+            O     O   -0.510 21
+  [ bonds ]
+           CB    CA
+           CG    CB
+           CD    CG
+           CE    CD
+           NZ    CE
+            N    HN
+            N    CA
+            C    CA
+            C    +N
+           CA    HA
+           CB   HB1
+           CB   HB2
+           CG   HG1
+           CG   HG2
+           CD   HD1
+           CD   HD2
+           CE   HE1
+           CE   HE2
+           NZ   HZ1
+           NZ   HZ2
+           NZ   HZ3
+            O     C
+  [ impropers ]
+            N    -C    CA    HN
+            C    CA    +N     O
+  [ cmap ]
+           -C     N    CA     C    +N
+
+[ LD3 ]
+  [ atoms ]
+            N   NH1   -0.470  0
+           HN     H    0.310  1
+           CA  CTD1    0.070  2
+           HA   HB1    0.090  3
+           CB   CT2   -0.180  4
+          HB1   HA2    0.090  5
+          HB2   HA2    0.090  6
+           CG   CT2   -0.180  7
+          HG1   HA2    0.090  8
+          HG2   HA2    0.090  9
+           CD   CT2   -0.180 10
+          HD1   HA2    0.090 11
+          HD2   HA2    0.090 12
+           CE   CT2    0.210 13
+          HE1   HA2    0.050 14
+          HE2   HA2    0.050 15
+           NZ   NH3   -0.300 16
+          HZ1    HC    0.330 17
+          HZ2    HC    0.330 18
+          HZ3    HC    0.330 19
+            C     C    0.510 20
+            O     O   -0.510 21
+  [ bonds ]
+           CB    CA
+           CG    CB
+           CD    CG
+           CE    CD
+           NZ    CE
+            N    HN
+            N    CA
+            C    CA
+            C    +N
+           CA    HA
+           CB   HB1
+           CB   HB2
+           CG   HG1
+           CG   HG2
+           CD   HD1
+           CD   HD2
+           CE   HE1
+           CE   HE2
+           NZ   HZ1
+           NZ   HZ2
+           NZ   HZ3
+            O     C
+  [ impropers ]
+            N    -C    CA    HN
+            C    CA    +N     O
+  [ cmap ]
+           -C     N    CA     C    +N
+
+[ LYR ]  ; based on neutral lysine (LSN in charmm force field), with the NZ changed to have the same charge as N termini (with the matching hydrogen atom)
+  [ atoms ]
+                N               NH1            -0.47    0
+                HN              H               0.31    1
+                CA              CT1             0.07    2
+                HA              HB1             0.09    3
+                CB              CT2            -0.18    4
+                HB1             HA2             0.09    5
+                HB2             HA2             0.09    6
+                CG              CT2            -0.18    7
+                HG1             HA2             0.09    8
+                HG2             HA2             0.09    9
+                CD              CT2            -0.18    10
+                HD1             HA2             0.09    11
+                HD2             HA2             0.09    12
+                CE              CT2             0.07    13
+                HE1             HA2             0.045   14
+                HE2             HA2             0.045   15
+                NZ              NH1            -0.47    16
+                HZ              H               0.31    17
+                C               C               0.51    18
+                O               O              -0.51    19
+  [ bonds ]
+                CB              CA
+                CG              CB
+                CD              CG
+                CE              CD
+                NZ              CE
+                N               HN
+                N               CA
+                C               CA
+                C               +N
+                CA              HA
+                CB              HB1
+                CB              HB2
+                CG              HG1
+                CG              HG2
+                CD              HD1
+                CD              HD2
+                CE              HE1
+                CE              HE2
+                O               C
+                NZ              HZ
+  [ impropers ]
+                N               -C              CA         HN
+                C               CA              +N              O
+  [ cmap ]
+                -C              N               CA              C               +N
+
+[ LRD ]  
+  [ atoms ]
+                N               NH1             -0.47   0
+                HN              H               0.31    1
+                CA             CTD1             0.07    2
+                HA              HB1             0.09    3
+                CB              CT2             -0.18   4
+                HB1             HA2             0.09    5
+                HB2             HA2             0.09    6
+                CG              CT2             -0.18   7
+                HG1             HA2             0.09    8
+                HG2             HA2             0.09    9
+                CD              CT2             -0.18   10
+                HD1             HA2             0.09    11
+                HD2             HA2             0.09    12
+                CE              CT2             0.13    13
+                HE1             HA2             0.075   14
+                HE2             HA2             0.075   15
+                NZ              NH1             -0.47   16
+                HZ              H               0.31    17
+                C               C               0.51    18
+                O               O               -0.51   19
+  [ bonds ]
+                CB              CA
+                CG              CB
+                CD              CG
+                CE              CD
+                NZ              CE
+                N               HN
+                N               CA
+                C               CA
+                C               +N
+                CA              HA
+                CB              HB1
+                CB              HB2
+                CG              HG1
+                CG              HG2
+                CD              HD1
+                CD              HD2
+                CE              HE1
+                CE              HE2
+                O               C
+                NZ              HZ
+  [ impropers ]
+                N               -C              CA         HN
+                C               CA              +N              O
+  [ cmap ]
+                -C              N               CA              C               +N
+
+
+[ LYL ] ;Adapted from the LYR and PLPC blocks, using the chain with 16 carbons from PLPC;  
+  [ atoms ]
+                N               NH1             -0.47   0
+                HN              H               0.31    1
+                CA              CT1             0.07    2
+                HA              HB1             0.09    3
+                CB              CT2             -0.18   4
+                HB1             HA2             0.09    5
+                HB2             HA2             0.09    6
+                CG              CT2             -0.18   7
+                HG1             HA2             0.09    8
+                HG2             HA2             0.09    9
+                CD              CT2             -0.18   10
+                HD1             HA2             0.09    11
+                HD2             HA2             0.09    12
+                CE              CT2             0.13    13
+                HE1             HA2             0.075   14
+                HE2             HA2             0.075   15
+                NZ              NH1             -0.47   16
+                HZ              H               0.31    17
+                C               C               0.51    18
+                O               O               -0.51   19
+		C31             CL               0.900  39
+                O32             OBL             -0.630  40
+                C32            CTL2             -0.220  41
+                H2X            HAL2              0.090  42
+                H2Y            HAL2              0.090  43
+                C33            CTL2             -0.180  89
+                H3X            HAL2              0.090  90
+                H3Y            HAL2              0.090  91
+                C34            CTL2             -0.180  92
+                H4X            HAL2              0.090  93
+                H4Y            HAL2              0.090  94
+                C35            CTL2             -0.180  95
+                H5X            HAL2              0.090  96
+                H5Y            HAL2              0.090  97
+                C36            CTL2             -0.180  98
+                H6X            HAL2              0.090  99
+                H6Y            HAL2              0.090  100
+                C37            CTL2             -0.180  101
+                H7X            HAL2              0.090  102
+                H7Y            HAL2              0.090  103
+                C38            CTL2             -0.180  104
+                H8X            HAL2              0.090  105
+                H8Y            HAL2              0.090  106
+                C39            CTL2             -0.180  107
+                H9X            HAL2              0.090  108
+                H9Y            HAL2              0.090  109
+               C310            CTL2             -0.180  110
+               H10X            HAL2              0.090  111
+               H10Y            HAL2              0.090  112
+               C311            CTL2             -0.180  113
+               H11X            HAL2              0.090  114
+               H11Y            HAL2              0.090  115
+               C312            CTL2             -0.180  116
+               H12X            HAL2              0.090  117
+               H12Y            HAL2              0.090  118
+               C313            CTL2             -0.180  119
+               H13X            HAL2              0.090  120
+               H13Y            HAL2              0.090  121
+               C314            CTL2             -0.180  122
+               H14X            HAL2              0.090  123
+               H14Y            HAL2              0.090  124
+               C315            CTL2             -0.180  125
+               H15X            HAL2              0.090  126
+               H15Y            HAL2              0.090  127
+               C316            CTL3             -0.270  128
+               H16X            HAL3              0.090  129
+               H16Y            HAL3              0.090  130
+               H16Z            HAL3              0.090  131
+  [ bonds ]
+                CB              CA
+                CG              CB
+                CD              CG
+                CE              CD
+                NZ              CE
+                N               HN
+                N               CA
+                C               CA
+                C               +N
+                CA              HA
+                CB              HB1
+                CB              HB2
+                CG              HG1
+                CG              HG2
+                CD              HD1
+                CD              HD2
+                CE              HE1
+                CE              HE2
+                O               C
+                NZ              HZ
+                NZ              C31   ;needs to be added to ffbonded.itp probably
+                C31             C32
+                C32             H2X
+                C32             H2Y
+                C32             C33
+                C33             H3X
+                C33             H3Y
+                C33             C34
+                C34             H4X
+                C34             H4Y
+                C34             C35
+                C35             H5X
+                C35             H5Y
+                C35             C36
+                C36             H6X
+                C36             H6Y
+                C36             C37
+                C37             H7X
+                C37             H7Y
+                C37             C38
+                C38             H8X
+                C38             H8Y
+                C38             C39
+                C39             H9X
+                C39             H9Y
+                C39             C310
+               C310             H10X
+               C310             H10Y
+               C310             C311
+               C311             H11X
+               C311             H11Y
+               C311             C312
+               C312             H12X
+               C312             H12Y
+               C312             C313
+               C313             H13X
+               C313             H13Y
+               C313             C314
+               C314             H14X
+               C314             H14Y
+               C314             C315
+               C315             H15X
+               C315             H15Y
+               C315             C316
+               C316             H16X
+               C316             H16Y
+               C316             H16Z
+               C31              O32
+  [ impropers ]
+                N               -C              CA         HN
+                C               CA              +N              O
+              C31               NZ             C32         O32 ;needs to be added to ffbonded.itp probably
+
+  [ cmap ]
+                -C              N               CA              C               +N
+

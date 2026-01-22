@@ -119,6 +119,7 @@
      OH1      CT2     1   0.14200000    358150.40
      OH1      CT3     1   0.14200000    358150.40
      OH1        H     1   0.09600000    456056.00
+       C        H     1   0.09600000    456056.00 ;added for special bonds with HX
       OS       CD     1   0.13340000    125520.00
       OS      CT3     1   0.14300000    284512.00
        S      CT2     1   0.18180000    165686.40
@@ -915,6 +916,7 @@
      OCL       CL     1   0.12600000    439320.00
      OCL      CCL     1   0.12600000    439320.00
      OSL       CL     1   0.13340000    125520.00
+     NH1       CL     1   0.13450000    309616.00 ;added for the LYL block, OSL switched to NH1
     OSLP       CL     1   0.13340000    125520.00
      OHL       CL     1   0.14000000    192464.00
      HOL      OHL     1   0.09600000    456056.00
@@ -1341,6 +1343,7 @@ CT3            HSLJ   2         0.233942
      NH2      CT1      CT2     5   110.000000   566.513600   0.00000000         0.00
      NH2      CT1      CT3     5   110.000000   566.513600   0.00000000         0.00
      CT1       CD      OH1     5   110.500000   460.240000   0.00000000         0.00
+     CP1       CD      OH1     5   110.500000   460.240000   0.00000000         0.00 ; PRO in the C-terminus
      CT3      CT1       CD     5   108.000000   435.136000   0.00000000         0.00
      NH2      CT1      HB1     5   109.500000   317.984000   0.21400000     41840.00
      NH2      CT1        C     5   107.000000   418.400000   0.00000000         0.00
@@ -1619,6 +1622,7 @@ CT3            HSLJ   2         0.233942
        O        C      CT3     5   121.000000   669.440000   0.00000000         0.00
        O        C        H     5   121.700000   418.400000   0.00000000         0.00
        O        C        N     5   122.500000   669.440000   0.00000000         0.00
+       H        C      NH1     5   122.500000   669.440000   0.00000000         0.00 ; added for special bonds with HX
        O        C      NH1     5   122.500000   669.440000   0.00000000         0.00
        O       CC      CP1     5   118.000000   669.440000   0.00000000         0.00
        O       CC      CT1     5   121.000000   125.520000   0.24400000     41840.00
@@ -1634,6 +1638,7 @@ CT3            HSLJ   2         0.233942
       OC       CA       CA     5   120.000000   334.720000   0.00000000         0.00
       OC       CC      CP1     5   118.000000   334.720000   0.23880000     41840.00
       OC       CC      CT1     5   118.000000   334.720000   0.23880000     41840.00
+       H        C      CT1     5   118.000000   334.720000   0.23880000     41840.00 ; added for special bonds with HX
       OC       CC      CT2     5   118.000000   334.720000   0.23880000     41840.00
       OC       CC      CT3     5   118.000000   334.720000   0.23880000     41840.00
       OC       CC       OC     5   124.000000   836.800000   0.22250000     58576.00
@@ -1691,6 +1696,7 @@ CT3            HSLJ   2         0.233942
      HA2     CT2A       CC     5   109.500000   276.144000   0.21630000     25104.00
       OC       CC     CT2A     5   118.000000   334.720000   0.23880000     41840.00
      NH3      CT1     CT2A     5   110.000000   566.513600   0.00000000         0.00
+     NH2      CT1     CT2A     5   110.000000   566.513600   0.00000000         0.00 ; adapted for neutral N-terminus
     CT2A      CT1       CD     5   108.000000   435.136000   0.00000000         0.00
      NH2      CT1       CS     5   110.000000   566.513600   0.00000000         0.00
       CS      CT1        C     5   108.000000   435.136000   0.00000000         0.00
@@ -4010,7 +4016,10 @@ CT3            HSLJ   2         0.233942
      OBL       CL     CTL2     5   125.000000   585.760000   0.24420000     16736.00
      OBL       CL     CTL1     5   125.000000   585.760000   0.24420000     16736.00
      OSL       CL      OBL     5   125.900000   753.120000   0.22576000    133888.00
-      CL      OSL     CTL1     5   109.600000   334.720000   0.22651000     25104.00
+     OBL       CL      NH1     5   122.500000   669.440000   0.00000000         0.00 ;added for LYL block; OSL switched to NH1
+     NH1       CL     CTL2     5   116.500000   669.440000   0.00000000         0.00 ;added for LYL block; OSL switched to NH1    
+      CL      NH1      CT2     5   120.000000   418.400000   0.00000000         0.00 ;added for LYL block; OSL switched to NH1, and CTL2 switched to CT2
+      CL      OSL     CTL1     5   109.600000   334.720000   0.22651000     25104.00 
       CL      OSL     CTL2     5   109.600000   334.720000   0.22651000     25104.00
       CL      OSL     CTL3     5   109.600000   334.720000   0.22651000     25104.00
     HAL2     CTL2       CL     5   109.500000   276.144000   0.21630000     25104.00
@@ -5513,6 +5522,7 @@ CT3            HSLJ   2         0.233942
      CP3        N        C      CP1     9     0.000000     1.255200     4
      CP3        N      CP1        C     9     0.000000     0.418400     3
      CP3        N      CP1       CC     9     0.000000     0.418400     3
+     CP3        N      CP1       CD     9     0.000000     0.418400     3 ; PRO at C-terminus/neutral
      CP3        N      CP1      CP2     9     0.000000     0.418400     3
      CP3       NP      CP1        C     9     0.000000     0.334720     3
      CP3       NP      CP1       CC     9     0.000000     0.334720     3
@@ -5712,16 +5722,24 @@ CT3            HSLJ   2         0.233942
      NH1        C      CP1        N     9     0.000000    -1.255200     4
      NH1        C      CT1      CT1     9     0.000000     0.000000     1
      NH1        C      CT1      CT2     9     0.000000     0.000000     1
+     NH2        C      CT1      CT2     9     0.000000     0.000000     1 ;added for capped C-ter with an amide group
+     NH2        C      CT1      CT2A    9     0.000000     0.000000     1 ;added extra for capped C-ter with an amide group
      NH1        C      CT1      CT3     9     0.000000     0.000000     1
      NH1        C      CT1      HB1     9     0.000000     0.000000     1
      NH1        C      CT1      NH1     9     0.000000     2.510400     1
      NH1        C      CT2      CT2     9     0.000000     0.000000     1
+     CT2      CT2      NH1       CL     9   180.000000     0.836800     1 ;added for the LYL block
+    CTL2       CL      NH1      CT2     9     0.000000     6.694400     1 ;added for the LYL block
+    CTL2       CL      NH1      CT2     9   180.000000    10.460000     2 ;added for the LYL block
+     OBL       CL      NH1      CT2     9   180.000000    10.460000     2 ;added for the LYL block
+     NH1       CL     CTL2     CTL2     9     0.000000     0.000000     1 ;added for the LYL block
      NH1        C      CT2      HA2     9     0.000000     0.000000     3
      NH1        C      CT2      HB2     9     0.000000     0.000000     1
      NH1        C      CT2      NH1     9     0.000000     2.510400     1
      NH1        C      CT3      HA3     9     0.000000     0.000000     3
      NH1      CT1        C        N     9     0.000000     1.673600     1
      NH1      CT1        C      NH2     9     0.000000     1.673600     1 ;added
+     NH2      CT1        C        N     9     0.000000     1.673600     1 ; added for N-terminus
      NH1      CT2        C        N     9     0.000000     1.673600     1
      NH2       CC      CP1      CP2     9     0.000000     1.673600     1
      NH2       CC      CP1      CP2     9     0.000000     2.510400     2
@@ -5775,9 +5793,13 @@ CT3            HSLJ   2         0.233942
        O        C      CP1        N     9     0.000000    -1.255200     4
        O        C      CT1      CT1     9     0.000000     5.857600     1
        O        C      CT1      CT2     9     0.000000     5.857600     1
+;       H        C      CT1      CT2     9     0.000000     5.857600     1 ;added for special bonds with HX
+       H        C      CT1      CT2     9     0.000000     0.000000     1 ;added for special bonds with HX
        O        C      CT1      CT3     9     0.000000     5.857600     1
        O        C      CT1      HB1     9     0.000000     0.000000     1
+       H        C      CT1      HB1     9     0.000000     0.000000     1 ;added for special bonds with HX
        O        C      CT1      NH1     9     0.000000     0.000000     1
+       H        C      CT1      NH1     9     0.000000     0.000000     1 ;added for special bonds with HX
        O        C      CT1      NH3     9     0.000000     0.000000     1
        O        C      CT2      CT2     9     0.000000     5.857600     1
        O        C      CT2      HA2     9   180.000000     0.000000     3
@@ -5791,8 +5813,12 @@ CT3            HSLJ   2         0.233942
        O        C        N      CP3     9     0.000000     1.255200     4
        O        C      NH1      CT1     9   180.000000    10.460000     2
        O        C      NH1      CT2     9   180.000000    10.460000     2
+;       H        C      NH1      CT2     9   180.000000    10.460000     2 ;added for special bonds with HX 
+       H        C      NH1      CT2     9   180.000000     0.000000     2 ;added for special bonds with HX 
        O        C      NH1      CT3     9   180.000000    10.460000     2
        O        C      NH1        H     9   180.000000    10.460000     2
+;       H        C      NH1        H     9   180.000000    10.460000     2 ;added for special bonds with HX 
+       H        C      NH1        H     9   180.000000     0.000000     2 ;added for special bonds with HX
        O       CC      CP1      CP2     9   180.000000     1.673600     1
        O       CC      CP1      CP2     9     0.000000     2.510400     2
        O       CC      CP1      HB1     9     0.000000     1.673600     1
@@ -5878,6 +5904,7 @@ CT3            HSLJ   2         0.233942
      CT2      CT2       CC       OC     9   180.000000     0.209200     6
      NH1      CT1     CT2A      HA2     9     0.000000     0.836800     3
      NH3      CT1     CT2A      CT2     9     0.000000     0.836800     3
+     NH2      CT1     CT2A      CT2     9     0.000000     0.836800     3 ; adapted for neutral N-terminus
      CT1     CT2A      CT2      HA2     9     0.000000     0.794960     3
      HB1      CT1     CT2A      HA2     9     0.000000     0.836800     3
      HB1      CT1     CT2A      CT2     9     0.000000     0.836800     3
@@ -5888,6 +5915,7 @@ CT3            HSLJ   2         0.233942
      HB1      CT1     CT2A     CPH1     9     0.000000     0.836800     3
        C      NH1      CT1     CT2A     9     0.000000     7.531200     1
        H      NH1      CT1     CT2A     9     0.000000     0.000000     1
+       H      NH2      CT1     CT2A     9     0.000000     0.000000     1 ; adapted for neutral N-terminus
     CT2A      CT1        C        O     9     0.000000     5.857600     1
     CT2A      CT1        C      NH1     9     0.000000     0.000000     1
     CT2A      CT1        C        N     9     0.000000     0.000000     1
@@ -6050,6 +6078,8 @@ CT3            HSLJ   2         0.233942
      HA2     CT2A       CC       OC     9   180.000000     0.209200     6
      NH3      CT1     CT2A      HA2     9     0.000000     0.836800     3
      NH3      CT1     CT2A       CC     9     0.000000     0.836800     3
+     NH2      CT1     CT2A      HA2     9     0.000000     0.836800     3 ; adapted for neutral N-terminus
+     NH2      CT1     CT2A       CC     9     0.000000     0.836800     3 ; adapted for neutral N-terminus
       CC     CT2A      CT1       CC     9     0.000000     0.836800     3
       CC     CT2A      CT1       CD     9     0.000000     0.836800     3
     CPH1     CT2A      CT1       CC     9     0.000000     0.836800     3

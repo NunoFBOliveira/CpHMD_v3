@@ -555,3 +555,11 @@ CY3             4
 3       4       HG      SG      CB      CA
 NH2             1
 2       3       H       N       -C      -CA    
+LYR             7
+1       1       HN      N       -C      CA
+1       5       HA      CA      N       C       CB
+2       6       HB      CB      CG      CA
+2       6       HG      CG      CD      CB
+2       6       HD      CD      CE      CG
+2       6       HE      CE      NZ      CD
+1       4       HZ      NZ      CE      CD

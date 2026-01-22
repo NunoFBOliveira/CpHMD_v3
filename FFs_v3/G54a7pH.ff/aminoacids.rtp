@@ -15414,7 +15414,7 @@ CLCl2 CLCl4    gb_52
   CBA   CGA   O1A  H1A1     gd_CTrCCOH    
   CBA   CGA   O2A  H2A1     gd_CTrCCOH    
 
-[ PA1]
+[ PA1 ]
  [ atoms ]
   CBA   CH2     0.00000     0
   CGA     C     0.33000     1
@@ -17048,9 +17048,9 @@ CLCl2 CLCl4    gb_52
   +CB    CD   OE1  HE11     gd_CTrCCOH    
   +CB    CD   OE2  HE21     gd_CTrCCOH    
 
-[ COX ]
 ; Central C-OH from Glycerol for Cardiolipin (CL) formation
 ; The value of the dihedral formed with CL defines the L or D glycerol
+[ COX ]
  [ atoms ]
     C   CH1     0.18000     0
     O    OA    -0.71000     0
@@ -17080,12 +17080,12 @@ CLCl2 CLCl4    gb_52
    -P   -OA   -CA     C     gd_29
     C   +CA   +OA    +P     gd_29
 
-[ CH2 ]
 ; Central CH2 from Glycerol for deoxy-Cardiolipin (dCL) formation
 ; The value of the dihedral formed with CL defines the L or D glycerol
 ;
 ;    NOT FINAL 
 ;
+[ CH2 ]
  [ atoms ]
     C   CH1    -0.20000     0
     H     H     0.10000     0
@@ -18860,8 +18860,8 @@ CLCl2 CLCl4    gb_52
    CB    CA   OA1  HA11     gd_CTrCCOH    
    CB    CA   OA2  HA21     gd_CTrCCOH    
 
-[ MC0 ]
 ; DMPC  block used for CpHMD
+[ MC0 ]
  [ atoms ]
   CN1  CH3L     0.42000     0
   CN2  CH3L     0.42000     0
@@ -20319,8 +20319,8 @@ CLCl2 CLCl4    gb_52
   C2J   C2K   C2L   C2M     gd_34
   C2K   C2L   C2M   C2N     gd_34
 
-[ MC6 ]
 ; DMPC  block used for CpHMD
+[ MC6 ]
  [ atoms ]
   CN1  CH3L     0.42000     0
   CN2  CH3L     0.42000     0
@@ -21423,7 +21423,6 @@ CLCl2 CLCl4    gb_52
  [ atoms ]
     CA   CH3   0.00  0
  [ bonds ]
-
  [ angles ]
 
 ; End of PEI blocks
@@ -23220,7 +23219,6 @@ CLCl2 CLCl4    gb_52
 ; End  of Galantamine blocks
 
 ; Start ADP/ATP CpHMD blocks
-
 [ AT0 ]
  [ atoms ]
    N9    NR    -0.20000     0
@@ -24992,12 +24990,10 @@ CLCl2 CLCl4    gb_52
   O3A    PB   O2B   H2B     gd_22
   O3A    PB   O3B   H3B     gd_19   
   O3A    PB   O3B   H3B     gd_22   
-
 ; End ADP/ATP CpHMD blocks
 
 ; Blocks for anti-tumoral compounds: Sunitinib (SU0 and SU1)
 ; & Nintedanib (NI0, NI1, and NI2)
-
 [ SU0 ]
  [ atoms ]
   F29     F    -0.200       0
@@ -29321,7 +29317,6 @@ CLCl2 CLCl4    gb_52
   C13   C4
 
 ; start of the tetrazole block
-
 [ ST0 ]
  [ atoms ]
   F29     F    -0.200       0
@@ -29396,14 +29391,14 @@ CLCl2 CLCl4    gb_52
     C6   H5      0.1090   1.2300e+07
     C6   C5      0.1390   8.6600e+06
     C5   H4      0.1100   1.2100e+07
-   C38   CD      0.1480   5.7300e+06 ;gb_22
-    CD	NE1	 0.1410   6.5389e+06 	 
-    CD	NE4	 0.1360   1.0200e+07 ;gb_13 (C-OA ???)
-    NE1	NE2	 0.1340   1.0500e+07 ;gb_11 (C-N ??)
-    NE1	HE11     0.1000   1.8700e+07 ;gb_2 (H-N)
-    NE2	NE3	 0.1280   1.3428e+07 ;
-    NE3	NE4      0.1330   8.8700e+06 ;gb_8 (H-S ???) 	 
-    NE4	HE41	 0.1000   1.8700e+07 ;gb_2 (H-N)
+   C38   CD      0.1480   5.7300e+06 
+    CD	NE1	 0.1410   6.5389e+06 ;gb_53
+    CD	NE4	 0.1360   1.0200e+07 ;gb_13
+    NE1	NE2	 0.1340   1.0500e+07 ;gb_11 
+    NE1	HE11     0.1000   1.8700e+07 ;gb_2
+    NE2	NE3	 0.1280   1.3428e+07 ;gb_54
+    NE3	NE4      0.1330   8.8700e+06 ;gb_8 	 
+    NE4	HE41	 0.1000   1.8700e+07 ;gb_2
 [ angles ]
 ;  ai    aj    ak   gromos type
   F29  C15   C7      120.00   560.00
@@ -29459,17 +29454,17 @@ CLCl2 CLCl4    gb_52
   C15   C5   H4      120.00   505.00
    C6   C5   H4      120.00   505.00
   C37  C38   CD      ga_15
-  C38   CD  NE1      126.00   640.00 ;ga_37 (X(noH)  - 5-ring)
-  C38   CD  NE4	     126.00   640.00 ;ga_37 (X(noH)  - 5-ring)
-  CD   NE1  NE2	     108.00   465.00 ;ga_7  (NR, C, CR1(5-ring))
-  CD   NE4  NE3	     107.00   503.00 ;ga_46 (CDmso  - SDmso  -  ODmso)
-  NE1   CD  NE4	     104.00   490.00 ;ga_6  (CH2  -  S  -  S)
-  NE2  NE3  NE4	     113.00   545.00 ;ga_16 (CHn  -  CH2  -  S)
-  NE3  NE2  NE1      108.00   507.00 ;ga_49 (FTFE  -  CTFE  -  FTFE)
-  HE11 NE1   CD	     130.00  3398.91 ;
-  HE11 NE1  NE2	     123.00   415.00 ;ga_32 (H  - N  - C)
-  HE41 NE4   CD	     130.00  3398.91 ;
-  HE41 NE4  NE3	     123.00   415.00 ;ga_32 (H  - N  - C)
+  C38   CD  NE1      126.00   640.00 ;ga_37 
+  C38   CD  NE4	     126.00   640.00 ;ga_37 
+  CD   NE1  NE2	     108.00   465.00 ;ga_7  
+  CD   NE4  NE3	     107.00   503.00 ;
+  NE1   CD  NE4	     104.00   490.00 ;ga_6 
+  NE2  NE3  NE4	     113.00   545.00 ;ga_16
+  NE3  NE2  NE1      108.00   507.00 ;
+  HE11 NE1   CD	     130.00  3398.91 ; ???
+  HE11 NE1  NE2	     123.00   415.00 ;
+  HE41 NE4   CD	     130.00  3398.91 ; ???
+  HE41 NE4  NE3	     123.00   415.00 ;ga_32
 [ impropers ]
 ;  ai    aj    ak    al   gromos type
    C5  C15   C6   H4        0.00   167.36
@@ -30088,7 +30083,6 @@ CLCl2 CLCl4    gb_52
   C38 HE41
 ; Cobimetinib (COBI) blocks 1 charged (CO2) + 2 neutral tautomers (CO0 + CO1)
 ;
-
 [ CO0 ]
  [ atoms ]
    I1     I      -0.03      1
@@ -32380,7 +32374,6 @@ CLCl2 CLCl4    gb_52
 
 ; ##### Blocks for HEME group type b without proprionate ####
 ; ##### This works with KatG and pp Dyps
-
 [ HKP ]
 ; Penta coordinated heme (HIS) in ferric state (III) and high spin
 ; without the proprianates 
@@ -33191,3 +33184,2347 @@ CLCl2 CLCl4    gb_52
    NC    FE    ND   C1D     gd_38
 
 ; ## End Hemes
+
+; Start block for Diamino propionic acid (titrating)
+[ DP0 ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2    -0.24000     2
+   NG    NT    -0.64000     2
+  HG1     H     0.00000     2
+  HG2     H     0.44000     2
+  HG3     H     0.44000     2
+    C     C       0.450     3
+    O     O      -0.450     3
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    NG    gb_21
+   NG   HG1    gb_2    
+   NG   HG2    gb_2    
+   NG   HG3    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    NG     ga_15   
+   CB    NG   HG1     ga_11   
+   CB    NG   HG2     ga_11   
+   CB    NG   HG3     ga_11   
+  HG1    NG   HG2     ga_10   
+  HG1    NG   HG3     ga_10   
+  HG2    NG   HG3     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_2    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    NG     gd_34   
+   CA    CB    NG    HG     gd_29
+    N    CA     C    +N     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+
+[ DP1 ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2    -0.24000     2
+   NG    NT    -0.64000     2
+  HG1     H     0.44000     2
+  HG2     H     0.00000     2
+  HG3     H     0.44000     2
+    C     C       0.450     3
+    O     O      -0.450     3
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    NG    gb_21
+   NG   HG1    gb_2    
+   NG   HG2    gb_2    
+   NG   HG3    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    NG     ga_15   
+   CB    NG   HG1     ga_11   
+   CB    NG   HG2     ga_11   
+   CB    NG   HG3     ga_11   
+  HG1    NG   HG2     ga_10   
+  HG1    NG   HG3     ga_10   
+  HG2    NG   HG3     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_2    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    NG     gd_34   
+   CA    CB    NG    HG     gd_29
+    N    CA     C    +N     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+
+[ DP2 ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2    -0.24000     2
+   NG    NT    -0.64000     2
+  HG1     H     0.44000     2
+  HG2     H     0.44000     2
+  HG3     H     0.00000     2
+    C     C       0.450     3
+    O     O      -0.450     3
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    NG    gb_21
+   NG   HG1    gb_2    
+   NG   HG2    gb_2    
+   NG   HG3    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    NG     ga_15   
+   CB    NG   HG1     ga_11   
+   CB    NG   HG2     ga_11   
+   CB    NG   HG3     ga_11   
+  HG1    NG   HG2     ga_10   
+  HG1    NG   HG3     ga_10   
+  HG2    NG   HG3     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_2    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    NG     gd_34   
+   CA    CB    NG    HG     gd_29
+    N    CA     C    +N     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+
+[ DP3 ]
+ [ atoms ]
+    N     N    -0.31000     0
+    H     H     0.31000     0
+   CA   CH1     0.00000     1
+   CB   CH2     0.12700     2
+   NG    NL     0.12900     2
+  HG1     H     0.24800     2
+  HG2     H     0.24800     2
+  HG3     H     0.24800     2
+    C     C       0.450     3
+    O     O      -0.450     3
+ [ bonds ]
+    N     H    gb_2    
+    N    CA    gb_21   
+   CA    CB    gb_27   
+   CA     C    gb_27   
+   CB    NG    gb_21
+   NG   HG1    gb_2    
+   NG   HG2    gb_2    
+   NG   HG3    gb_2    
+    C     O    gb_5    
+    C    +N    gb_10   
+ [ angles ]
+;  ai    aj    ak   gromos type
+   -C     N     H     ga_32   
+   -C     N    CA     ga_31   
+    H     N    CA     ga_18   
+    N    CA    CB     ga_13   
+    N    CA     C     ga_13   
+   CB    CA     C     ga_13   
+   CA    CB    NG     ga_15   
+   CB    NG   HG1     ga_11   
+   CB    NG   HG2     ga_11   
+   CB    NG   HG3     ga_11   
+  HG1    NG   HG2     ga_10   
+  HG1    NG   HG3     ga_10   
+  HG2    NG   HG3     ga_10   
+   CA     C     O     ga_30   
+   CA     C    +N     ga_19   
+    O     C    +N     ga_33   
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+    N    -C    CA     H     gi_1    
+   CA     N     C    CB     gi_2    
+    C    CA    +N     O     gi_1    
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+  -CA    -C     N    CA     gd_14   
+   -C     N    CA     C     gd_42 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+   -C     N    CA     C     gd_43 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+    N    CA    CB    NG     gd_34   
+   CA    CB    NG    HG     gd_29
+    N    CA     C    +N     gd_44 ;backbone dihedral, changed by Ying Xue Sep 29. 2009
+    N    CA     C    +N     gd_45 ;backbone dihedral, changed by Ying Xue Sep 29. 2009   
+; End block for Diamino propionic acid (titrating)
+
+; Start Yehuda compounds blocks
+[ PF0 ]
+[ atoms ]
+CZ1    C  -0.07 0
+HZ1   HC   0.16 0
+CH1    C  -0.25 0
+HH1   HC   0.16 0
+CZ2    C  -0.07 1
+HZ2   HC   0.16 1
+CH2    C  -0.25 1
+HH2   HC   0.16 1
+CT1    C  -0.02 2
+HT1   HC   0.16 2
+CI1    C  -0.07 2
+CT2    C  -0.02 2
+HT2   HC   0.16 2
+CI2    C  -0.07 2
+  S    S  -0.14 2
+CD1    C   0.26 3
+CE1    C  -0.33 3
+HE1   HC   0.16 3
+CD2    C   0.26 3
+CE2    C  -0.33 3
+HE2   HC   0.16 3
+ N2   NR  -0.35 3
+ CG  CH2   0.17 3
+CB3  CH3   0.00 4
+CA3  CH1   0.31 4
+ N1   NT  -0.73 4
+ H1    H   0.00 4
+CA1  CH2   0.21 4
+CB1  CH3   0.00 4
+CA2  CH2   0.21 4
+CB2  CH3   0.00 4
+[ bonds ]
+  CB3 CA3   0.1530   7.1500e+06
+  CA3  CG   0.1560   3.0819e+06
+  CA3  N1   0.1540   4.2166e+06
+   CG  N2   0.1460   4.6913e+06
+   N2 CD1   0.1420   3.2236e+06
+   N2 CD2   0.1420   3.2236e+06
+  CD1 CE1   0.1400   8.5400e+06
+  CD1 CI1   0.1410   6.5389e+06
+  CE1 HE1   0.1090   1.2300e+07
+  CE1 CZ1   0.1390   8.6600e+06
+  CZ1 HZ1   0.1090   1.2300e+07
+  CZ1 CH1   0.1390   8.6600e+06
+  CH1 HH1   0.1090   1.2300e+07
+  CH1 CT1   0.1390   8.6600e+06
+  CT1 HT1   0.1090   1.2300e+07
+  CT1 CI1   0.1390   8.6600e+06
+  CI1   S   0.1780   5.9400e+06
+    S CI2   0.1780   5.9400e+06
+  CI2 CT2   0.1390   8.6600e+06
+  CI2 CD2   0.1410   6.5389e+06
+  CT2 HT2   0.1090   1.2300e+07
+  CT2 CH2   0.1390   8.6600e+06
+  CH2 HH2   0.1090   1.2300e+07
+  CH2 CZ2   0.1390   8.6600e+06
+  CZ2 HZ2   0.1090   1.2300e+07
+  CZ2 CE2   0.1390   8.6600e+06
+  CE2 HE2   0.1090   1.2300e+07
+  CE2 CD2   0.1400   8.5400e+06
+   N1  H1   0.1030   3.2991e+06
+   N1 CA1   0.1530   7.1500e+06
+   N1 CA2   0.1540   4.2166e+06
+  CA1 CB1   0.1520   5.4300e+06
+  CA2 CB2   0.1520   5.4300e+06
+[ angles ]
+  CB3 CA3  CG    111.00   530.00
+  CB3 CA3  N1    108.00   465.00
+   CG CA3  N1    111.00   530.00
+  CA3  CG  N2    111.00   530.00
+   CG  N2 CD1    120.00   560.00
+   CG  N2 CD2    120.00   560.00
+  CD1  N2 CD2    117.00   635.00
+   N2 CD1 CE1    120.00   560.00
+   N2 CD1 CI1    120.00   560.00
+  CE1 CD1 CI1    120.00   560.00
+  CD1 CE1 HE1    120.00   505.00
+  CD1 CE1 CZ1    120.00   560.00
+  HE1 CE1 CZ1    120.00   505.00
+  CE1 CZ1 HZ1    120.00   505.00
+  CE1 CZ1 CH1    120.00   560.00
+  HZ1 CZ1 CH1    120.00   505.00
+  CZ1 CH1 HH1    120.00   505.00
+  CZ1 CH1 CT1    120.00   560.00
+  HH1 CH1 CT1    120.00   505.00
+  CH1 CT1 HT1    120.00   505.00
+  CH1 CT1 CI1    120.00   560.00
+  HT1 CT1 CI1    120.00   505.00
+  CD1 CI1 CT1    120.00   560.00
+  CD1 CI1   S    120.00   560.00
+  CT1 CI1   S    120.00   560.00
+  CI1   S CI2    100.00   475.00
+    S CI2 CT2    120.00   560.00
+    S CI2 CD2    120.00   560.00
+  CT2 CI2 CD2    120.00   560.00
+  CI2 CT2 HT2    120.00   505.00
+  CI2 CT2 CH2    120.00   560.00
+  HT2 CT2 CH2    120.00   505.00
+  CT2 CH2 HH2    120.00   505.00
+  CT2 CH2 CZ2    120.00   560.00
+  HH2 CH2 CZ2    120.00   505.00
+  CH2 CZ2 HZ2    120.00   505.00
+  CH2 CZ2 CE2    120.00   560.00
+  HZ2 CZ2 CE2    120.00   505.00
+  CZ2 CE2 HE2    120.00   505.00
+  CZ2 CE2 CD2    120.00   560.00
+  HE2 CE2 CD2    120.00   505.00
+   N2 CD2 CI2    120.00   560.00
+   N2 CD2 CE2    120.00   560.00
+  CI2 CD2 CE2    120.00   560.00
+  CA3  N1  H1    109.50   425.00
+  CA3  N1 CA1    116.00   620.00
+  CA3  N1 CA2    110.30   524.00
+   H1  N1 CA1    109.50   425.00
+   H1  N1 CA2    109.50   425.00
+  CA1  N1 CA2    116.00   620.00
+   N1 CA1 CB1    115.00   610.00
+   N1 CA2 CB2    111.00   530.00
+[ impropers ]
+; GROMOS improper dihedrals
+  CD2  N2 CI2 CE2      0.00   167.36
+  CD1  N2 CE1 CI1      0.00   167.36
+  CI2   S CT2 CD2      0.00   167.36
+  CI1 CD1 CT1   S      0.00   167.36
+  CE1 CD1 HE1 CZ1      0.00   167.36
+  CE2 CZ2 HE2 CD2      0.00   167.36
+  CT2 CI2 HT2 CH2      0.00   167.36
+  CT1 CH1 HT1 CI1      0.00   167.36
+  CZ1 CE1 HZ1 CH1      0.00   167.36
+  CZ2 CH2 HZ2 CE2      0.00   167.36
+  CH1 CZ1 HH1 CT1      0.00   167.36
+  CH2 CT2 HH2 CZ2      0.00   167.36
+  CA3  N1  CG CB3     35.26   334.72
+[ dihedrals ]
+  CA3  CG  N2 CD2    180.00     1.00    6
+  CA3  N1 CA1 CB1      0.00     1.05    3
+  CA3  N1 CA2 CB2    180.00     1.00    3
+   CG CA3  N1 CA2      0.00     1.05    3
+   CG  N2 CD1 CI1    180.00    33.50    2
+   CG  N2 CD2 CI2    180.00    33.50    2
+  CD1 CE1 CZ1 CH1    180.00    41.80    2
+  CD1 CI1   S CI2    180.00     5.86    2
+  CE1 CD1 CI1 CT1    180.00    41.80    2
+  CE1 CZ1 CH1 CT1    180.00    41.80    2
+  CZ1 CH1 CT1 CI1    180.00    41.80    2
+  CH1 CT1 CI1 CD1    180.00    41.80    2
+  CI1 CD1 CE1 CZ1    180.00    41.80    2
+  CI1   S CI2 CD2    180.00     5.86    2
+  CI2 CT2 CH2 CZ2    180.00    41.80    2
+  CT2 CI2 CD2 CE2    180.00    41.80    2
+  CT2 CH2 CZ2 CE2    180.00    41.80    2
+  CH2 CZ2 CE2 CD2    180.00    41.80    2
+  CZ2 CE2 CD2 CI2    180.00    41.80    2
+  CD2 CI2 CT2 CH2    180.00    41.80    2
+   N1 CA3  CG  N2      0.00     5.92    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+  CD1 CH1 
+  CD1 CI2 
+  CD1 CE2 
+  CI2 CZ2 
+  CI1 CT2 
+  CI1 CD2 
+  CE1 CT1 
+  CE1 CD2 
+  CT2 CE2 
+  CT1 CI2 
+  CZ1 CI1 
+  CH2 CD2
+    S  N2
+   N2 HE1
+   N2 HE2
+   N2 CT1
+   N2 CT2
+   N2 CZ1
+   N2 CZ2
+  CD1 HZ1
+  CD2 HZ2
+  CE1 HH1
+  CE2 HH2
+  HE1 HZ1
+  HE2 HZ2
+  CZ1 HT1
+  CZ2 HT2
+  HZ1 HH1
+  HZ2 HH2
+  CH1   S
+  CH2   S
+  HH1 HT1
+  HH2 HT2
+  HT1   S
+  HT2   S
+
+[ PF1 ]
+[ atoms ]
+CZ1    C  -0.07 0
+HZ1   HC   0.16 0
+CH1    C  -0.25 0
+HH1   HC   0.16 0
+CZ2    C  -0.07 1
+HZ2   HC   0.16 1
+CH2    C  -0.25 1
+HH2   HC   0.16 1
+CT1    C  -0.02 2
+HT1   HC   0.16 2
+CI1    C  -0.07 2
+CT2    C  -0.02 2
+HT2   HC   0.16 2
+CI2    C  -0.07 2
+  S    S  -0.14 2
+CD1    C   0.26 3
+CE1    C  -0.33 3
+HE1   HC   0.16 3
+CD2    C   0.26 3
+CE2    C  -0.33 3
+HE2   HC   0.16 3
+ N2   NR  -0.35 3
+ CG  CH2   0.17 3
+CB3  CH3   0.00 4
+CA3  CH1   0.34 4
+ N1   NL  -0.40 4
+ H1    H   0.40 4
+CA1  CH2   0.33 4
+CB1  CH3   0.00 4
+CA2  CH2   0.33 4
+CB2  CH3   0.00 4
+[ bonds ]
+  CB3 CA3   0.1530   7.1500e+06
+  CA3  CG   0.1560   3.0819e+06
+  CA3  N1   0.1540   4.2166e+06
+   CG  N2   0.1460   4.6913e+06
+   N2 CD1   0.1420   3.2236e+06
+   N2 CD2   0.1420   3.2236e+06
+  CD1 CE1   0.1400   8.5400e+06
+  CD1 CI1   0.1410   6.5389e+06
+  CE1 HE1   0.1090   1.2300e+07
+  CE1 CZ1   0.1390   8.6600e+06
+  CZ1 HZ1   0.1090   1.2300e+07
+  CZ1 CH1   0.1390   8.6600e+06
+  CH1 HH1   0.1090   1.2300e+07
+  CH1 CT1   0.1390   8.6600e+06
+  CT1 HT1   0.1090   1.2300e+07
+  CT1 CI1   0.1390   8.6600e+06
+  CI1   S   0.1780   5.9400e+06
+    S CI2   0.1780   5.9400e+06
+  CI2 CT2   0.1390   8.6600e+06
+  CI2 CD2   0.1410   6.5389e+06
+  CT2 HT2   0.1090   1.2300e+07
+  CT2 CH2   0.1390   8.6600e+06
+  CH2 HH2   0.1090   1.2300e+07
+  CH2 CZ2   0.1390   8.6600e+06
+  CZ2 HZ2   0.1090   1.2300e+07
+  CZ2 CE2   0.1390   8.6600e+06
+  CE2 HE2   0.1090   1.2300e+07
+  CE2 CD2   0.1400   8.5400e+06
+   N1  H1   0.1030   3.2991e+06
+   N1 CA1   0.1530   7.1500e+06
+   N1 CA2   0.1540   4.2166e+06
+  CA1 CB1   0.1520   5.4300e+06
+  CA2 CB2   0.1520   5.4300e+06
+[ angles ]
+  CB3 CA3  CG    111.00   530.00
+  CB3 CA3  N1    108.00   465.00
+   CG CA3  N1    111.00   530.00
+  CA3  CG  N2    111.00   530.00
+   CG  N2 CD1    120.00   560.00
+   CG  N2 CD2    120.00   560.00
+  CD1  N2 CD2    117.00   635.00
+   N2 CD1 CE1    120.00   560.00
+   N2 CD1 CI1    120.00   560.00
+  CE1 CD1 CI1    120.00   560.00
+  CD1 CE1 HE1    120.00   505.00
+  CD1 CE1 CZ1    120.00   560.00
+  HE1 CE1 CZ1    120.00   505.00
+  CE1 CZ1 HZ1    120.00   505.00
+  CE1 CZ1 CH1    120.00   560.00
+  HZ1 CZ1 CH1    120.00   505.00
+  CZ1 CH1 HH1    120.00   505.00
+  CZ1 CH1 CT1    120.00   560.00
+  HH1 CH1 CT1    120.00   505.00
+  CH1 CT1 HT1    120.00   505.00
+  CH1 CT1 CI1    120.00   560.00
+  HT1 CT1 CI1    120.00   505.00
+  CD1 CI1 CT1    120.00   560.00
+  CD1 CI1   S    120.00   560.00
+  CT1 CI1   S    120.00   560.00
+  CI1   S CI2    100.00   475.00
+    S CI2 CT2    120.00   560.00
+    S CI2 CD2    120.00   560.00
+  CT2 CI2 CD2    120.00   560.00
+  CI2 CT2 HT2    120.00   505.00
+  CI2 CT2 CH2    120.00   560.00
+  HT2 CT2 CH2    120.00   505.00
+  CT2 CH2 HH2    120.00   505.00
+  CT2 CH2 CZ2    120.00   560.00
+  HH2 CH2 CZ2    120.00   505.00
+  CH2 CZ2 HZ2    120.00   505.00
+  CH2 CZ2 CE2    120.00   560.00
+  HZ2 CZ2 CE2    120.00   505.00
+  CZ2 CE2 HE2    120.00   505.00
+  CZ2 CE2 CD2    120.00   560.00
+  HE2 CE2 CD2    120.00   505.00
+   N2 CD2 CI2    120.00   560.00
+   N2 CD2 CE2    120.00   560.00
+  CI2 CD2 CE2    120.00   560.00
+  CA3  N1  H1    109.50   425.00
+  CA3  N1 CA1    116.00   620.00
+  CA3  N1 CA2    110.30   524.00
+   H1  N1 CA1    109.50   425.00
+   H1  N1 CA2    109.50   425.00
+  CA1  N1 CA2    116.00   620.00
+   N1 CA1 CB1    115.00   610.00
+   N1 CA2 CB2    111.00   530.00
+[ impropers ]
+; GROMOS improper dihedrals
+  CD2  N2 CI2 CE2      0.00   167.36
+  CD1  N2 CE1 CI1      0.00   167.36
+  CI2   S CT2 CD2      0.00   167.36
+  CI1 CD1 CT1   S      0.00   167.36
+  CE1 CD1 HE1 CZ1      0.00   167.36
+  CE2 CZ2 HE2 CD2      0.00   167.36
+  CT2 CI2 HT2 CH2      0.00   167.36
+  CT1 CH1 HT1 CI1      0.00   167.36
+  CZ1 CE1 HZ1 CH1      0.00   167.36
+  CZ2 CH2 HZ2 CE2      0.00   167.36
+  CH1 CZ1 HH1 CT1      0.00   167.36
+  CH2 CT2 HH2 CZ2      0.00   167.36
+  CA3  N1  CG CB3     35.26   334.72
+[ dihedrals ]
+  CA3  CG  N2 CD2    180.00     1.00    6
+  CA3  N1 CA1 CB1      0.00     1.05    3
+  CA3  N1 CA2 CB2    180.00     1.00    3
+   CG CA3  N1 CA2      0.00     1.05    3
+   CG  N2 CD1 CI1    180.00    33.50    2
+   CG  N2 CD2 CI2    180.00    33.50    2
+  CD1 CE1 CZ1 CH1    180.00    41.80    2
+  CD1 CI1   S CI2    180.00     5.86    2
+  CE1 CD1 CI1 CT1    180.00    41.80    2
+  CE1 CZ1 CH1 CT1    180.00    41.80    2
+  CZ1 CH1 CT1 CI1    180.00    41.80    2
+  CH1 CT1 CI1 CD1    180.00    41.80    2
+  CI1 CD1 CE1 CZ1    180.00    41.80    2
+  CI1   S CI2 CD2    180.00     5.86    2
+  CI2 CT2 CH2 CZ2    180.00    41.80    2
+  CT2 CI2 CD2 CE2    180.00    41.80    2
+  CT2 CH2 CZ2 CE2    180.00    41.80    2
+  CH2 CZ2 CE2 CD2    180.00    41.80    2
+  CZ2 CE2 CD2 CI2    180.00    41.80    2
+  CD2 CI2 CT2 CH2    180.00    41.80    2
+   N1 CA3  CG  N2      0.00     5.92    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+  CD1 CH1 
+  CD1 CI2 
+  CD1 CE2 
+  CI2 CZ2 
+  CI1 CT2 
+  CI1 CD2 
+  CE1 CT1 
+  CE1 CD2 
+  CT2 CE2 
+  CT1 CI2 
+  CZ1 CI1 
+  CH2 CD2
+    S  N2
+   N2 HE1
+   N2 HE2
+   N2 CT1
+   N2 CT2
+   N2 CZ1
+   N2 CZ2
+  CD1 HZ1
+  CD2 HZ2
+  CE1 HH1
+  CE2 HH2
+  HE1 HZ1
+  HE2 HZ2
+  CZ1 HT1
+  CZ2 HT2
+  HZ1 HH1
+  HZ2 HH2
+  CH1   S
+  CH2   S
+  HH1 HT1
+  HH2 HT2
+  HT1   S
+  HT2   S
+  
+[ PM0 ]
+[ atoms ]
+;  nr  type
+  F1     F   -0.20   0
+ CA1     C    0.36   0 
+ CB1     C   -0.24   0
+ HB1    HC    0.16   0
+ CZ1     C   -0.24   0
+ HZ1    HC    0.16   0
+  F2     F   -0.20   1
+ CA2     C    0.36   1
+ CB2     C   -0.24   1
+ HB2    HC    0.16   1
+ CZ2     C   -0.24   1
+ HZ2    HC    0.16   1
+ CG1     C   -0.12   2
+ HG1    HC    0.16   2
+ CD1     C   -0.08   2
+ CE1     C   -0.12   2
+ HE1    HC    0.16   2
+ CG2     C   -0.12   3  
+ HG2    HC    0.16   3
+ CD2     C   -0.08   3
+ CE2     C   -0.12   3
+ HE2    HC    0.16   3
+  CH   CH1    0.00   4 
+  CT   CH2    0.00   4
+  CI   CH2    0.00   4
+  CK   CH2    0.16   5
+  N1    NT   -0.40   5
+  H1     H    0.00   5
+ CL1   CH2    0.12   5
+ CL2   CH2    0.12   5
+ CM1   CH2    0.00   6
+ CM2   CH2    0.00   6
+  CN   CH1    0.32   7
+  N2    NR   -0.32   7
+   C     C    0.62   8
+   O     O   -0.62   8
+  N3     N   -0.60   9
+  H3     H    0.40   9
+  CO     C    0.20   9
+  CP     C   -0.20  10
+  HP    HC    0.20  10
+  CQ     C   -0.16  11
+  HQ    HC    0.16  11
+  CR     C   -0.16  12
+  HR    HC    0.16  12
+  CS     C   -0.22  13
+  HS    HC    0.16  13
+  CV     C    0.06  13
+[ bonds ]
+   F2 CA2  0.1350   1.0300e+07
+  CA2 CB2  0.1410   6.5389e+06
+  CA2 CZ2  0.1410   6.5389e+06
+  CB2 HB2  0.1090   1.2300e+07
+  CB2 CG2  0.1390   8.6600e+06
+  CG2 HG2  0.1100   1.2100e+07
+  CG2 CD2  0.1390   8.6600e+06
+  CD2 CE2  0.1390   8.6600e+06
+  CD2  CH  0.1500   8.3700e+06
+  CE2 HE2  0.1100   1.2100e+07
+  CE2 CZ2  0.1390   8.6600e+06
+  CZ2 HZ2  0.1090   1.2300e+07
+   CH CD1  0.1500   8.3700e+06
+   CH  CT  0.1530   7.1500e+06
+  CD1 CE1  0.1390   8.6600e+06
+  CD1 CG1  0.1390   8.6600e+06
+  CE1 HE1  0.1100   1.2100e+07
+  CE1 CZ1  0.1390   8.6600e+06
+  CZ1 HZ1  0.1100   1.2100e+07
+  CZ1 CA1  0.1410   6.5389e+06
+  CA1 CB1  0.1410   6.5389e+06
+  CA1  F1  0.1350   1.0300e+07
+  CB1 HB1  0.1100   1.2100e+07
+  CB1 CG1  0.1390   8.6600e+06
+  CG1 HG1  0.1100   1.2100e+07
+   CT  CI  0.1520   5.4300e+06
+   CI  CK  0.1520   5.4300e+06
+   CK  N1  0.1500   8.3700e+06
+   N1  H1  0.1030   3.2991e+06
+   N1 CL1  0.1500   8.3700e+06
+   N1 CL2  0.1500   8.3700e+06
+  CL1 CM1  0.1520   5.4300e+06
+  CM1  CN  0.1540   4.2166e+06
+   CN CM2  0.1540   4.2166e+06
+   CN  N2  0.1435   6.1000e+06
+  CM2 CL2  0.1520   5.4300e+06
+   N2   C  0.1440   3.3758e+05
+   N2  CV  0.1420   3.2236e+06
+    C  N3  0.1400   8.5400e+06
+    C   O  0.1250   1.3400e+07
+   N3  H3  0.0985   8.2455e+07
+   N3  CO  0.1400   8.5400e+06
+   CO  CP  0.1390   8.6600e+06
+   CO  CV  0.1450   5.2319e+06
+   CP  HP  0.1090   1.2300e+07
+   CP  CQ  0.1390   8.6600e+06
+   CQ  HQ  0.1100   1.2100e+07
+   CQ  CR  0.1390   8.6600e+06
+   CR  HR  0.1100   1.2100e+07
+   CR  CS  0.1390   8.6600e+06
+   CS  HS  0.1090   1.2300e+07
+   CS  CV  0.1390   8.6600e+06
+[ angles ]
+   F2 CA2 CB2   120.00   560.00
+   F2 CA2 CZ2   120.00   560.00
+  CB2 CA2 CZ2   120.00   560.00
+  CA2 CB2 HB2   120.00   505.00
+  CA2 CB2 CG2   120.00   560.00
+  HB2 CB2 CG2   120.00   505.00
+  CB2 CG2 HG2   120.00   505.00
+  CB2 CG2 CD2   120.00   560.00
+  HG2 CG2 CD2   120.00   505.00
+  CG2 CD2 CE2   120.00   560.00
+  CG2 CD2  CH   120.00   560.00
+  CE2 CD2  CH   120.00   560.00
+  CD2 CE2 HE2   120.00   505.00
+  CD2 CE2 CZ2   120.00   560.00
+  HE2 CE2 CZ2   120.00   505.00
+  CA2 CZ2 CE2   120.00   560.00
+  CA2 CZ2 HZ2   120.00   505.00
+  CE2 CZ2 HZ2   120.00   505.00
+  CD2  CH CD1   111.00   530.00
+  CD2  CH  CT   111.00   530.00
+  CD1  CH  CT   109.50   520.00
+   CH CD1 CE1   120.00   560.00
+   CH CD1 CG1   120.00   560.00
+  CE1 CD1 CG1   120.00   560.00
+  CD1 CE1 HE1   120.00   505.00
+  CD1 CE1 CZ1   120.00   560.00
+  HE1 CE1 CZ1   120.00   505.00
+  CE1 CZ1 HZ1   120.00   505.00
+  CE1 CZ1 CA1   120.00   560.00
+  HZ1 CZ1 CA1   120.00   505.00
+  CZ1 CA1 CB1   120.00   560.00
+  CZ1 CA1  F1   120.00   560.00
+  CB1 CA1  F1   120.00   560.00
+  CA1 CB1 HB1   120.00   505.00
+  CA1 CB1 CG1   120.00   560.00
+  HB1 CB1 CG1   120.00   505.00
+  CD1 CG1 CB1   120.00   560.00
+  CD1 CG1 HG1   120.00   505.00
+  CB1 CG1 HG1   120.00   505.00
+   CH  CT  CI   111.00   530.00
+   CT  CI  CK   109.50   520.00
+   CI  CK  N1   115.00   610.00
+   CK  N1  H1   109.50   425.00
+   CK  N1 CL1   111.00   530.00
+   CK  N1 CL2   116.00   620.00
+   H1  N1 CL1   109.50   425.00
+   H1  N1 CL2   109.50   425.00
+  CL1  N1 CL2   109.50   285.00
+   N1 CL1 CM1   111.00   530.00
+  CL1 CM1  CN   111.00   530.00
+  CM1  CN CM2   109.50   520.00
+  CM1  CN  N2   111.00   530.00
+  CM2  CN  N2   111.00   530.00
+   CN CM2 CL2   111.00   530.00
+   N1 CL2 CM2   111.00   530.00
+   CN  N2   C   124.00   730.00
+   CN  N2  CV   124.00   730.00
+    C  N2  CV   108.00   465.00
+   N2   C  N3   108.00   465.00
+   N2   C   O   124.00   730.00
+   N3   C   O   124.00   730.00
+    C  N3  H3   123.00   415.00
+    C  N3  CO   109.00  1680.51
+   H3  N3  CO   123.00   415.00
+   N3  CO  CP   132.00   760.00
+   N3  CO  CV   108.00   465.00
+   CP  CO  CV   120.00   560.00
+   CO  CP  HP   120.00   505.00
+   CO  CP  CQ   120.00   560.00
+   HP  CP  CQ   120.00   505.00
+   CP  CQ  HQ   120.00   505.00
+   CP  CQ  CR   120.00   560.00
+   HQ  CQ  CR   120.00   505.00
+   CQ  CR  HR   120.00   505.00
+   CQ  CR  CS   120.00   560.00
+   HR  CR  CS   120.00   505.00
+   CR  CS  HS   120.00   505.00
+   CR  CS  CV   120.00   560.00
+   HS  CS  CV   120.00   505.00
+   N2  CV  CO   108.00   465.00
+   N2  CV  CS   132.00   760.00
+   CO  CV  CS   120.00   560.00
+[ impropers ]
+;  ai   aj   ak   al  funct   angle     fc
+   N2  CN   C  CV     0.00   167.36
+   N3   C  H3  CO     0.00   167.36
+   CV  N2  CO  CS     0.00   167.36
+    C  N2  N3   O     0.00   167.36
+   CO  N3  CP  CV     0.00   167.36
+   CS  CR  HS  CV     0.00   167.36
+  CD1  CH CE1 CG1     0.00   167.36
+  CD2 CG2 CE2  CH     0.00   167.36
+   CP  CO  HP  CQ     0.00   167.36
+   CR  CQ  HR  CS     0.00   167.36
+   CQ  CP  HQ  CR     0.00   167.36
+  CG1 CD1 CB1 HG1     0.00   167.36
+  CE2 CD2 HE2 CZ2     0.00   167.36
+  CE1 CD1 HE1 CZ1     0.00   167.36
+  CG2 CB2 HG2 CD2     0.00   167.36
+  CB1 CA1 HB1 CG1     0.00   167.36
+  CZ2 CA2 CE2 HZ2     0.00   167.36
+  CZ1 CE1 HZ1 CA1     0.00   167.36
+  CB2 CA2 HB2 CG2     0.00   167.36
+  CA1 CZ1 CB1  F1     0.00   167.36
+  CA2  F2 CB2 CZ2     0.00   167.36
+   CN  N2 CM2 CM1    35.26   334.72
+   CH CD1  CT CD2    35.26   334.72
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+  CA2 CB2 CG2 CD2   180.00    41.80    2
+  CB2 CA2 CZ2 CE2   180.00    41.80    2
+  CB2 CG2 CD2 CE2   180.00    41.80    2
+  CG2 CD2 CE2 CZ2   180.00    41.80    2
+  CD2 CE2 CZ2 CA2   180.00    41.80    2
+  CE2 CD2  CH  CT     0.00     1.00    6
+  CZ2 CA2 CB2 CG2   180.00    41.80    2
+   CH  CT  CI  CK     0.00     5.92    3
+  CD1  CH  CT  CI     0.00     5.92    3
+  CD1 CE1 CZ1 CA1   180.00    41.80    2
+  CE1 CD1 CG1 CB1   180.00    41.80    2
+  CE1 CZ1 CA1 CB1   180.00    41.80    2
+  CZ1 CA1 CB1 CG1   180.00    41.80    2
+  CA1 CB1 CG1 CD1   180.00    41.80    2
+  CG1 CD1 CE1 CZ1   180.00    41.80    2
+   CT  CH CD1 CG1   180.00     1.00    6
+   CT  CI  CK  N1     0.00     5.92    3
+   CI  CK  N1 CL2     0.00     1.05    3
+   N1 CL1 CM1  CN     0.00     5.92    3
+  CL1  N1 CL2 CM2     0.00     1.05    3
+  CL1 CM1  CN  N2     0.00     5.92    3
+   CN CM2 CL2  N1     0.00     5.92    3
+  CM2  CN  N2  CV   180.00     1.00    6
+  CL2  N1 CL1 CM1     0.00     1.05    3
+   N2  CN CM2 CL2     0.00     5.92    3
+   N2   C  N3  CO   180.00    41.80    2
+    C  N2  CV  CO   180.00    41.80    2
+    C  N3  CO  CV   180.00    41.80    2
+   CO  CP  CQ  CR   180.00    41.80    2
+   CP  CO  CV  CS   180.00    41.80    2
+   CP  CQ  CR  CS   180.00    41.80    2
+   CQ  CR  CS  CV   180.00    41.80    2
+   CR  CS  CV  CO   180.00    41.80    2
+   CV  N2   C  N3   180.00    41.80    2
+   CV  CO  CP  CQ   180.00    41.80    2
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+   F1 HB1
+   F1 HZ1
+   F1 CG1
+  CA1 HG1
+  CA1 HE1
+  HB1 HG1
+  HB1 CZ1
+  HB1 CD1
+  CB1 CE1
+  CB1  CH
+  CZ1  CH
+  HG1  CH
+  HG1 CE1
+  CD1 HZ1
+  HE1 HZ1
+  CE1  F1
+  CZ1 CG1
+  HE1 CG1
+  HE1  CH
+  CD1 CA1
+  CB1 HZ1
+   F2 HB2
+   F2 HZ2
+   F2 CG2
+  CA2 HG2
+  CA2 HE2
+  HB2 HG2
+  HB2 CZ2
+  HB2 CD2
+  CB2 CE2
+  CB2  CH
+  CZ2  CH
+  HG2  CH
+  HG2 CE2
+  CD2 HZ2
+  HE2 HZ2
+  CE2  F2
+  CZ2 CG2
+  HE2 CG2
+  HE2  CH
+  CD2 CA2
+  CB2 HZ2
+   CN   O
+   CN  CS
+   CN  N3
+   CN  CO
+   N2  H3
+   N2  CP
+   N2  HS
+   N2  CR
+    C  CP 
+    C  CS
+    O  H3
+    O  CO
+    O  CV
+   N3  HP
+   N3  CQ
+   N3  CS
+   H3  CP
+   H3  CV
+   CO  HQ
+   CO  CR
+   CO  HS
+   CV  HP
+   CV  CQ
+   CV  HR
+   CP  HR
+   CP  CS
+   HP  HQ
+   HP  CR
+   CQ  HS
+   HQ  HR
+   HQ  CS
+   HR  HS
+
+[ PM1 ]
+[ atoms ]
+;  nr  type
+  F1     F   -0.20   0
+ CA1     C    0.36   0 
+ CB1     C   -0.24   0
+ HB1    HC    0.16   0
+ CZ1     C   -0.24   0
+ HZ1    HC    0.16   0
+  F2     F   -0.20   1
+ CA2     C    0.36   1
+ CB2     C   -0.24   1
+ HB2    HC    0.16   1
+ CZ2     C   -0.24   1
+ HZ2    HC    0.16   1
+ CG1     C   -0.12   2
+ HG1    HC    0.16   2
+ CD1     C   -0.08   2
+ CE1     C   -0.12   2
+ HE1    HC    0.16   2
+ CG2     C   -0.12   3  
+ HG2    HC    0.16   3
+ CD2     C   -0.08   3
+ CE2     C   -0.12   3
+ HE2    HC    0.16   3
+  CH   CH1    0.00   4 
+  CT   CH2    0.00   4
+  CI   CH2    0.00   4
+  CK   CH2    0.10   5
+  N1    NL    0.16   5
+  H1     H    0.34   5
+ CL1   CH2    0.20   5
+ CL2   CH2    0.20   5
+ CM1   CH2    0.00   6
+ CM2   CH2    0.00   6
+  CN   CH1    0.32   7
+  N2    NR   -0.32   7
+   C     C    0.62   8
+   O     O   -0.62   8
+  N3     N   -0.60   9
+  H3     H    0.40   9
+  CO     C    0.20   9
+  CP     C   -0.20  10
+  HP    HC    0.20  10
+  CQ     C   -0.16  11
+  HQ    HC    0.16  11
+  CR     C   -0.16  12
+  HR    HC    0.16  12
+  CS     C   -0.22  13
+  HS    HC    0.16  13
+  CV     C    0.06  13
+[ bonds ]
+   F2 CA2  0.1350   1.0300e+07
+  CA2 CB2  0.1410   6.5389e+06
+  CA2 CZ2  0.1410   6.5389e+06
+  CB2 HB2  0.1090   1.2300e+07
+  CB2 CG2  0.1390   8.6600e+06
+  CG2 HG2  0.1100   1.2100e+07
+  CG2 CD2  0.1390   8.6600e+06
+  CD2 CE2  0.1390   8.6600e+06
+  CD2  CH  0.1500   8.3700e+06
+  CE2 HE2  0.1100   1.2100e+07
+  CE2 CZ2  0.1390   8.6600e+06
+  CZ2 HZ2  0.1090   1.2300e+07
+   CH CD1  0.1500   8.3700e+06
+   CH  CT  0.1530   7.1500e+06
+  CD1 CE1  0.1390   8.6600e+06
+  CD1 CG1  0.1390   8.6600e+06
+  CE1 HE1  0.1100   1.2100e+07
+  CE1 CZ1  0.1390   8.6600e+06
+  CZ1 HZ1  0.1100   1.2100e+07
+  CZ1 CA1  0.1410   6.5389e+06
+  CA1 CB1  0.1410   6.5389e+06
+  CA1  F1  0.1350   1.0300e+07
+  CB1 HB1  0.1100   1.2100e+07
+  CB1 CG1  0.1390   8.6600e+06
+  CG1 HG1  0.1100   1.2100e+07
+   CT  CI  0.1520   5.4300e+06
+   CI  CK  0.1520   5.4300e+06
+   CK  N1  0.1500   8.3700e+06
+   N1  H1  0.1030   3.2991e+06
+   N1 CL1  0.1500   8.3700e+06
+   N1 CL2  0.1500   8.3700e+06
+  CL1 CM1  0.1520   5.4300e+06
+  CM1  CN  0.1540   4.2166e+06
+   CN CM2  0.1540   4.2166e+06
+   CN  N2  0.1435   6.1000e+06
+  CM2 CL2  0.1520   5.4300e+06
+   N2   C  0.1440   3.3758e+05
+   N2  CV  0.1420   3.2236e+06
+    C  N3  0.1400   8.5400e+06
+    C   O  0.1250   1.3400e+07
+   N3  H3  0.0985   8.2455e+07
+   N3  CO  0.1400   8.5400e+06
+   CO  CP  0.1390   8.6600e+06
+   CO  CV  0.1450   5.2319e+06
+   CP  HP  0.1090   1.2300e+07
+   CP  CQ  0.1390   8.6600e+06
+   CQ  HQ  0.1100   1.2100e+07
+   CQ  CR  0.1390   8.6600e+06
+   CR  HR  0.1100   1.2100e+07
+   CR  CS  0.1390   8.6600e+06
+   CS  HS  0.1090   1.2300e+07
+   CS  CV  0.1390   8.6600e+06
+[ angles ]
+   F2 CA2 CB2   120.00   560.00
+   F2 CA2 CZ2   120.00   560.00
+  CB2 CA2 CZ2   120.00   560.00
+  CA2 CB2 HB2   120.00   505.00
+  CA2 CB2 CG2   120.00   560.00
+  HB2 CB2 CG2   120.00   505.00
+  CB2 CG2 HG2   120.00   505.00
+  CB2 CG2 CD2   120.00   560.00
+  HG2 CG2 CD2   120.00   505.00
+  CG2 CD2 CE2   120.00   560.00
+  CG2 CD2  CH   120.00   560.00
+  CE2 CD2  CH   120.00   560.00
+  CD2 CE2 HE2   120.00   505.00
+  CD2 CE2 CZ2   120.00   560.00
+  HE2 CE2 CZ2   120.00   505.00
+  CA2 CZ2 CE2   120.00   560.00
+  CA2 CZ2 HZ2   120.00   505.00
+  CE2 CZ2 HZ2   120.00   505.00
+  CD2  CH CD1   111.00   530.00
+  CD2  CH  CT   111.00   530.00
+  CD1  CH  CT   109.50   520.00
+   CH CD1 CE1   120.00   560.00
+   CH CD1 CG1   120.00   560.00
+  CE1 CD1 CG1   120.00   560.00
+  CD1 CE1 HE1   120.00   505.00
+  CD1 CE1 CZ1   120.00   560.00
+  HE1 CE1 CZ1   120.00   505.00
+  CE1 CZ1 HZ1   120.00   505.00
+  CE1 CZ1 CA1   120.00   560.00
+  HZ1 CZ1 CA1   120.00   505.00
+  CZ1 CA1 CB1   120.00   560.00
+  CZ1 CA1  F1   120.00   560.00
+  CB1 CA1  F1   120.00   560.00
+  CA1 CB1 HB1   120.00   505.00
+  CA1 CB1 CG1   120.00   560.00
+  HB1 CB1 CG1   120.00   505.00
+  CD1 CG1 CB1   120.00   560.00
+  CD1 CG1 HG1   120.00   505.00
+  CB1 CG1 HG1   120.00   505.00
+   CH  CT  CI   111.00   530.00
+   CT  CI  CK   109.50   520.00
+   CI  CK  N1   115.00   610.00
+   CK  N1  H1   109.50   425.00
+   CK  N1 CL1   111.00   530.00
+   CK  N1 CL2   116.00   620.00
+   H1  N1 CL1   109.50   425.00
+   H1  N1 CL2   109.50   425.00
+  CL1  N1 CL2   109.50   285.00
+   N1 CL1 CM1   111.00   530.00
+  CL1 CM1  CN   111.00   530.00
+  CM1  CN CM2   109.50   520.00
+  CM1  CN  N2   111.00   530.00
+  CM2  CN  N2   111.00   530.00
+   CN CM2 CL2   111.00   530.00
+   N1 CL2 CM2   111.00   530.00
+   CN  N2   C   124.00   730.00
+   CN  N2  CV   124.00   730.00
+    C  N2  CV   108.00   465.00
+   N2   C  N3   108.00   465.00
+   N2   C   O   124.00   730.00
+   N3   C   O   124.00   730.00
+    C  N3  H3   123.00   415.00
+    C  N3  CO   109.00  1680.51
+   H3  N3  CO   123.00   415.00
+   N3  CO  CP   132.00   760.00
+   N3  CO  CV   108.00   465.00
+   CP  CO  CV   120.00   560.00
+   CO  CP  HP   120.00   505.00
+   CO  CP  CQ   120.00   560.00
+   HP  CP  CQ   120.00   505.00
+   CP  CQ  HQ   120.00   505.00
+   CP  CQ  CR   120.00   560.00
+   HQ  CQ  CR   120.00   505.00
+   CQ  CR  HR   120.00   505.00
+   CQ  CR  CS   120.00   560.00
+   HR  CR  CS   120.00   505.00
+   CR  CS  HS   120.00   505.00
+   CR  CS  CV   120.00   560.00
+   HS  CS  CV   120.00   505.00
+   N2  CV  CO   108.00   465.00
+   N2  CV  CS   132.00   760.00
+   CO  CV  CS   120.00   560.00
+[ impropers ]
+;  ai   aj   ak   al  funct   angle     fc
+   N2  CN   C  CV     0.00   167.36
+   N3   C  H3  CO     0.00   167.36
+   CV  N2  CO  CS     0.00   167.36
+    C  N2  N3   O     0.00   167.36
+   CO  N3  CP  CV     0.00   167.36
+   CS  CR  HS  CV     0.00   167.36
+  CD1  CH CE1 CG1     0.00   167.36
+  CD2 CG2 CE2  CH     0.00   167.36
+   CP  CO  HP  CQ     0.00   167.36
+   CR  CQ  HR  CS     0.00   167.36
+   CQ  CP  HQ  CR     0.00   167.36
+  CG1 CD1 CB1 HG1     0.00   167.36
+  CE2 CD2 HE2 CZ2     0.00   167.36
+  CE1 CD1 HE1 CZ1     0.00   167.36
+  CG2 CB2 HG2 CD2     0.00   167.36
+  CB1 CA1 HB1 CG1     0.00   167.36
+  CZ2 CA2 CE2 HZ2     0.00   167.36
+  CZ1 CE1 HZ1 CA1     0.00   167.36
+  CB2 CA2 HB2 CG2     0.00   167.36
+  CA1 CZ1 CB1  F1     0.00   167.36
+  CA2  F2 CB2 CZ2     0.00   167.36
+   CN  N2 CM2 CM1    35.26   334.72
+   CH CD1  CT CD2    35.26   334.72
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+  CA2 CB2 CG2 CD2   180.00    41.80    2
+  CB2 CA2 CZ2 CE2   180.00    41.80    2
+  CB2 CG2 CD2 CE2   180.00    41.80    2
+  CG2 CD2 CE2 CZ2   180.00    41.80    2
+  CD2 CE2 CZ2 CA2   180.00    41.80    2
+  CE2 CD2  CH  CT     0.00     1.00    6
+  CZ2 CA2 CB2 CG2   180.00    41.80    2
+   CH  CT  CI  CK     0.00     5.92    3
+  CD1  CH  CT  CI     0.00     5.92    3
+  CD1 CE1 CZ1 CA1   180.00    41.80    2
+  CE1 CD1 CG1 CB1   180.00    41.80    2
+  CE1 CZ1 CA1 CB1   180.00    41.80    2
+  CZ1 CA1 CB1 CG1   180.00    41.80    2
+  CA1 CB1 CG1 CD1   180.00    41.80    2
+  CG1 CD1 CE1 CZ1   180.00    41.80    2
+   CT  CH CD1 CG1   180.00     1.00    6
+   CT  CI  CK  N1     0.00     5.92    3
+   CI  CK  N1 CL2     0.00     1.05    3
+   N1 CL1 CM1  CN     0.00     5.92    3
+  CL1  N1 CL2 CM2     0.00     1.05    3
+  CL1 CM1  CN  N2     0.00     5.92    3
+   CN CM2 CL2  N1     0.00     5.92    3
+  CM2  CN  N2  CV   180.00     1.00    6
+  CL2  N1 CL1 CM1     0.00     1.05    3
+   N2  CN CM2 CL2     0.00     5.92    3
+   N2   C  N3  CO   180.00    41.80    2
+    C  N2  CV  CO   180.00    41.80    2
+    C  N3  CO  CV   180.00    41.80    2
+   CO  CP  CQ  CR   180.00    41.80    2
+   CP  CO  CV  CS   180.00    41.80    2
+   CP  CQ  CR  CS   180.00    41.80    2
+   CQ  CR  CS  CV   180.00    41.80    2
+   CR  CS  CV  CO   180.00    41.80    2
+   CV  N2   C  N3   180.00    41.80    2
+   CV  CO  CP  CQ   180.00    41.80    2
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+   F1 HB1
+   F1 HZ1
+   F1 CG1
+  CA1 HG1
+  CA1 HE1
+  HB1 HG1
+  HB1 CZ1
+  HB1 CD1
+  CB1 CE1
+  CB1  CH
+  CZ1  CH
+  HG1  CH
+  HG1 CE1
+  CD1 HZ1
+  HE1 HZ1
+  CE1  F1
+  CZ1 CG1
+  HE1 CG1
+  HE1  CH
+  CD1 CA1
+  CB1 HZ1
+   F2 HB2
+   F2 HZ2
+   F2 CG2
+  CA2 HG2
+  CA2 HE2
+  HB2 HG2
+  HB2 CZ2
+  HB2 CD2
+  CB2 CE2
+  CB2  CH
+  CZ2  CH
+  HG2  CH
+  HG2 CE2
+  CD2 HZ2
+  HE2 HZ2
+  CE2  F2
+  CZ2 CG2
+  HE2 CG2
+  HE2  CH
+  CD2 CA2
+  CB2 HZ2
+   CN   O
+   CN  CS
+   CN  N3
+   CN  CO
+   N2  H3
+   N2  CP
+   N2  HS
+   N2  CR
+    C  CP 
+    C  CS
+    O  H3
+    O  CO
+    O  CV
+   N3  HP
+   N3  CQ
+   N3  CS
+   H3  CP
+   H3  CV
+   CO  HQ
+   CO  CR
+   CO  HS
+   CV  HP
+   CV  CQ
+   CV  HR
+   CP  HR
+   CP  CS
+   HP  HQ
+   HP  CR
+   CQ  HS
+   HQ  HR
+   HQ  CS
+   HR  HS
+
+[ CQ0 ]
+[ atoms ]
+;  nr  type
+  Cl    CL   -0.11   1
+  CB     C    0.05   1 
+  CA     C   -0.20   1
+  HA    HC    0.16   1
+  CG     C   -0.06   1
+  HG    HC    0.16   1
+  CD     C   -0.16   2
+  HD    HC    0.16   2
+  CZ     C    0.40   3
+  N3    NR   -0.75   3
+  CH     C    0.41   3
+  HH    HC    0.07   3
+  CE     C   -0.42   4
+  CI     C   -0.62   4
+  HI    HC    0.21   4
+  CJ     C    0.74   4
+  N2    NT   -0.93   4
+  H1     H    0.43   4
+  H2     H    0.00   4
+  CK   CH1    0.46   4
+  CR   CH3    0.00   5
+  CM   CH2    0.00   5
+[ bonds ]
+;  ai   aj  funct   c0         c1
+  Cl   CB    0.1758   8.1200e+06
+  CB   CG    0.1410   6.5389e+06
+  CB   CA    0.1380   1.1000e+07
+  CG   HG    0.1090   1.2300e+07
+  CG   CD    0.1380   1.1000e+07
+  CD   HD    0.1090   1.2300e+07
+  CD   CE    0.1420   3.2236e+06
+  CE   CZ    0.1435   6.1000e+06
+  CE   CJ    0.1420   3.2236e+06
+  CZ   CA    0.1420   3.2236e+06
+  CZ   N3    0.1360   1.0200e+07
+  CA   HA    0.1090   1.2300e+07
+  N3   CH    0.1320   1.2000e+07
+  CH   HH    0.1090   1.2300e+07
+  CH   CI    0.1420   3.2236e+06
+  CI   HI    0.1090   1.2300e+07
+  CI   CJ    0.1360   1.0200e+07
+  CJ   N2    0.1480   5.7300e+06
+  N2   H1    0.1030   3.2991e+06
+  N2   H2    0.1030   3.2991e+06
+  N2   CK    0.1560   3.0819e+06
+  CK   CR    0.1520   5.4300e+06
+  CK   CM    0.1530   7.1500e+06
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+  Cl   CB   CG      120.00   560.00
+  Cl   CB   CA      120.00   560.00
+  CG   CB   CA      120.00   560.00
+  CB   CG   HG      120.00   505.00
+  CB   CG   CD      120.00   560.00
+  HG   CG   CD      120.00   505.00
+  CG   CD   HD      120.00   505.00
+  CG   CD   CE      120.00   560.00
+  HD   CD   CE      120.00   505.00
+  CD   CE   CZ      120.00   560.00
+  CD   CE   CJ      126.00   640.00
+  CZ   CE   CJ      111.00   530.00
+  CE   CZ   CA      120.00   560.00
+  CE   CZ   N3      126.00   640.00
+  CA   CZ   N3      115.00   610.00
+  CB   CA   CZ      120.00   560.00
+  CB   CA   HA      120.00   505.00
+  CZ   CA   HA      120.00   505.00
+  CZ   N3   CH      117.00   635.00
+  N3   CH   HH      120.00   505.00
+  N3   CH   CI      126.00   640.00
+  HH   CH   CI      120.00   505.00
+  CH   CI   HI      120.00   505.00
+  CH   CI   CJ      120.00   560.00
+  HI   CI   CJ      120.00   505.00
+  CE   CJ   CI      120.00   560.00
+  CE   CJ   N2      120.00   560.00
+  CI   CJ   N2      120.00   560.00
+  CJ   N2   H1      109.50   425.00
+  CJ   N2   H2      109.50   425.00
+  CJ   N2   CK      117.00   635.00
+  H1   N2   H2      106.00  1733.55
+  H1   N2   CK      109.50   425.00
+  H2   N2   CK      109.50   425.00
+  N2   CK   CR      109.50   520.00
+  N2   CK   CM      108.00   465.00
+  CR   CK   CM      111.00   530.00
+[ impropers ]
+; GROMOS improper dihedrals
+;  ai   aj   ak   al  funct   angle     fc
+    CJ   CE   CI   N2        0.00   167.36
+    CE   CD   CZ   CJ        0.00   167.36
+    CI   CH   HI   CJ        0.00   167.36
+    CZ   CE   CA   N3        0.00   167.36
+    CD   CG   HD   CE        0.00   167.36
+    CH   N3   HH   CI        0.00   167.36
+    CA   CB   CZ   HA        0.00   167.36
+    CG   CB   HG   CD        0.00   167.36
+    CB   Cl   CG   CA        0.00   167.36
+    CK   N2   CM   CR       35.26   334.72
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+    CB   CG   CD   CE      180.00    41.80    2
+    CG   CB   CA   CZ      180.00    41.80    2
+    CG   CD   CE   CZ      180.00    41.80    2
+    CD   CE   CZ   CA      180.00    41.80    2
+    CE   CZ   CA   CB      180.00    41.80    2
+    CE   CZ   N3   CH      180.00    41.80    2
+    CE   CJ   N2   H1      180.00     5.86    2
+    CZ   CE   CJ   CI      180.00    41.80    2
+    CZ   N3   CH   CI      180.00    41.80    2
+    CA   CB   CG   CD      180.00    41.80    2
+    N3   CH   CI   CJ      180.00    41.80    2
+    CH   CI   CJ   CE      180.00    41.80    2
+    CI   CJ   N2   H2      180.00     5.86    2
+    CJ   N2   CK   CM        0.00     1.05    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+   Cl   HG 
+   Cl   HA 
+   Cl   CD 
+   Cl   CZ 
+   CB   HD 
+   CB   CE 
+   CB   N3 
+   CG   CK 
+   CG   CJ 
+   CG   HA 
+   HG   HD 
+   HG   CA 
+   HG   CE 
+   CD   CA 
+   CD   N3 
+   CD   CI 
+   CD   N2 
+   HD   CZ 
+   HD   CJ 
+   CE   CH 
+   CE   HA 
+   CE   HI 
+   CJ   N3 
+   CJ   HH 
+   CJ   CA 
+   CI   CZ 
+   HI   HH 
+   HI   N3 
+   HI   N2 
+   CH   CA 
+   CH   N2 
+   HH   CZ 
+   N3   HA 
+
+[ CQ1 ]
+[ atoms ]
+;  nr  type
+  Cl    CL   -0.11   1
+  CB     C    0.05   1 
+  CA     C   -0.20   1
+  HA    HC    0.16   1
+  CG     C   -0.06   1
+  HG    HC    0.16   1
+  CD     C   -0.16   2
+  HD    HC    0.16   2
+  CZ     C    0.40   3
+  N3    NR   -0.75   3
+  CH     C    0.41   3
+  HH    HC    0.07   3
+  CE     C   -0.42   4
+  CI     C   -0.62   4
+  HI    HC    0.21   4
+  CJ     C    0.74   4
+  N2    NT   -0.93   4
+  H1     H    0.00   4
+  H2     H    0.43   4
+  CK   CH1    0.46   4
+  CR   CH3    0.00   5
+  CM   CH2    0.00   5
+[ bonds ]
+;  ai   aj  funct   c0         c1
+  Cl   CB    0.1758   8.1200e+06
+  CB   CG    0.1410   6.5389e+06
+  CB   CA    0.1380   1.1000e+07
+  CG   HG    0.1090   1.2300e+07
+  CG   CD    0.1380   1.1000e+07
+  CD   HD    0.1090   1.2300e+07
+  CD   CE    0.1420   3.2236e+06
+  CE   CZ    0.1435   6.1000e+06
+  CE   CJ    0.1420   3.2236e+06
+  CZ   CA    0.1420   3.2236e+06
+  CZ   N3    0.1360   1.0200e+07
+  CA   HA    0.1090   1.2300e+07
+  N3   CH    0.1320   1.2000e+07
+  CH   HH    0.1090   1.2300e+07
+  CH   CI    0.1420   3.2236e+06
+  CI   HI    0.1090   1.2300e+07
+  CI   CJ    0.1360   1.0200e+07
+  CJ   N2    0.1480   5.7300e+06
+  N2   H1    0.1030   3.2991e+06
+  N2   H2    0.1030   3.2991e+06
+  N2   CK    0.1560   3.0819e+06
+  CK   CR    0.1520   5.4300e+06
+  CK   CM    0.1530   7.1500e+06
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+  Cl   CB   CG      120.00   560.00
+  Cl   CB   CA      120.00   560.00
+  CG   CB   CA      120.00   560.00
+  CB   CG   HG      120.00   505.00
+  CB   CG   CD      120.00   560.00
+  HG   CG   CD      120.00   505.00
+  CG   CD   HD      120.00   505.00
+  CG   CD   CE      120.00   560.00
+  HD   CD   CE      120.00   505.00
+  CD   CE   CZ      120.00   560.00
+  CD   CE   CJ      126.00   640.00
+  CZ   CE   CJ      111.00   530.00
+  CE   CZ   CA      120.00   560.00
+  CE   CZ   N3      126.00   640.00
+  CA   CZ   N3      115.00   610.00
+  CB   CA   CZ      120.00   560.00
+  CB   CA   HA      120.00   505.00
+  CZ   CA   HA      120.00   505.00
+  CZ   N3   CH      117.00   635.00
+  N3   CH   HH      120.00   505.00
+  N3   CH   CI      126.00   640.00
+  HH   CH   CI      120.00   505.00
+  CH   CI   HI      120.00   505.00
+  CH   CI   CJ      120.00   560.00
+  HI   CI   CJ      120.00   505.00
+  CE   CJ   CI      120.00   560.00
+  CE   CJ   N2      120.00   560.00
+  CI   CJ   N2      120.00   560.00
+  CJ   N2   H1      109.50   425.00
+  CJ   N2   H2      109.50   425.00
+  CJ   N2   CK      117.00   635.00
+  H1   N2   H2      106.00  1733.55
+  H1   N2   CK      109.50   425.00
+  H2   N2   CK      109.50   425.00
+  N2   CK   CR      109.50   520.00
+  N2   CK   CM      108.00   465.00
+  CR   CK   CM      111.00   530.00
+[ impropers ]
+; GROMOS improper dihedrals
+;  ai   aj   ak   al  funct   angle     fc
+    CJ   CE   CI   N2        0.00   167.36
+    CE   CD   CZ   CJ        0.00   167.36
+    CI   CH   HI   CJ        0.00   167.36
+    CZ   CE   CA   N3        0.00   167.36
+    CD   CG   HD   CE        0.00   167.36
+    CH   N3   HH   CI        0.00   167.36
+    CA   CB   CZ   HA        0.00   167.36
+    CG   CB   HG   CD        0.00   167.36
+    CB   Cl   CG   CA        0.00   167.36
+    CK   N2   CM   CR       35.26   334.72
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+    CB   CG   CD   CE      180.00    41.80    2
+    CG   CB   CA   CZ      180.00    41.80    2
+    CG   CD   CE   CZ      180.00    41.80    2
+    CD   CE   CZ   CA      180.00    41.80    2
+    CE   CZ   CA   CB      180.00    41.80    2
+    CE   CZ   N3   CH      180.00    41.80    2
+    CE   CJ   N2   H1      180.00     5.86    2
+    CZ   CE   CJ   CI      180.00    41.80    2
+    CZ   N3   CH   CI      180.00    41.80    2
+    CA   CB   CG   CD      180.00    41.80    2
+    N3   CH   CI   CJ      180.00    41.80    2
+    CH   CI   CJ   CE      180.00    41.80    2
+    CI   CJ   N2   H2      180.00     5.86    2
+    CJ   N2   CK   CM        0.00     1.05    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+   Cl   HG 
+   Cl   HA 
+   Cl   CD 
+   Cl   CZ 
+   CB   HD 
+   CB   CE 
+   CB   N3 
+   CG   CK 
+   CG   CJ 
+   CG   HA 
+   HG   HD 
+   HG   CA 
+   HG   CE 
+   CD   CA 
+   CD   N3 
+   CD   CI 
+   CD   N2 
+   HD   CZ 
+   HD   CJ 
+   CE   CH 
+   CE   HA 
+   CE   HI 
+   CJ   N3 
+   CJ   HH 
+   CJ   CA 
+   CI   CZ 
+   HI   HH 
+   HI   N3 
+   HI   N2 
+   CH   CA 
+   CH   N2 
+   HH   CZ 
+   N3   HA 
+
+[ CQ2 ]
+[ atoms ]
+;  nr  type
+  Cl    CL   -0.11   1
+  CB     C    0.05   1 
+  CA     C   -0.20   1
+  HA    HC    0.16   1
+  CG     C   -0.06   1
+  HG    HC    0.16   1
+  CD     C   -0.16   2
+  HD    HC    0.16   2
+  CZ     C    0.50   3
+  N3    NR   -0.72   3
+  CH     C    0.45   3
+  HH    HC    0.09   3
+  CE     C   -0.27   4
+  CI     C   -0.55   4
+  HI    HC    0.25   4
+  CJ     C    0.61   4
+  N2    NL   -0.74   4
+  H1     H    0.46   4
+  H2     H    0.46   4
+  CK   CH1    0.46   4
+  CR   CH3    0.00   5
+  CM   CH2    0.00   5
+[ bonds ]
+;  ai   aj  funct   c0         c1
+  Cl   CB    0.1758   8.1200e+06
+  CB   CG    0.1410   6.5389e+06
+  CB   CA    0.1380   1.1000e+07
+  CG   HG    0.1090   1.2300e+07
+  CG   CD    0.1380   1.1000e+07
+  CD   HD    0.1090   1.2300e+07
+  CD   CE    0.1420   3.2236e+06
+  CE   CZ    0.1435   6.1000e+06
+  CE   CJ    0.1420   3.2236e+06
+  CZ   CA    0.1420   3.2236e+06
+  CZ   N3    0.1360   1.0200e+07
+  CA   HA    0.1090   1.2300e+07
+  N3   CH    0.1320   1.2000e+07
+  CH   HH    0.1090   1.2300e+07
+  CH   CI    0.1420   3.2236e+06
+  CI   HI    0.1090   1.2300e+07
+  CI   CJ    0.1360   1.0200e+07
+  CJ   N2    0.1480   5.7300e+06
+  N2   H1    0.1030   3.2991e+06
+  N2   H2    0.1030   3.2991e+06
+  N2   CK    0.1560   3.0819e+06
+  CK   CR    0.1520   5.4300e+06
+  CK   CM    0.1530   7.1500e+06
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+  Cl   CB   CG      120.00   560.00
+  Cl   CB   CA      120.00   560.00
+  CG   CB   CA      120.00   560.00
+  CB   CG   HG      120.00   505.00
+  CB   CG   CD      120.00   560.00
+  HG   CG   CD      120.00   505.00
+  CG   CD   HD      120.00   505.00
+  CG   CD   CE      120.00   560.00
+  HD   CD   CE      120.00   505.00
+  CD   CE   CZ      120.00   560.00
+  CD   CE   CJ      126.00   640.00
+  CZ   CE   CJ      111.00   530.00
+  CE   CZ   CA      120.00   560.00
+  CE   CZ   N3      126.00   640.00
+  CA   CZ   N3      115.00   610.00
+  CB   CA   CZ      120.00   560.00
+  CB   CA   HA      120.00   505.00
+  CZ   CA   HA      120.00   505.00
+  CZ   N3   CH      117.00   635.00
+  N3   CH   HH      120.00   505.00
+  N3   CH   CI      126.00   640.00
+  HH   CH   CI      120.00   505.00
+  CH   CI   HI      120.00   505.00
+  CH   CI   CJ      120.00   560.00
+  HI   CI   CJ      120.00   505.00
+  CE   CJ   CI      120.00   560.00
+  CE   CJ   N2      120.00   560.00
+  CI   CJ   N2      120.00   560.00
+  CJ   N2   H1      109.50   425.00
+  CJ   N2   H2      109.50   425.00
+  CJ   N2   CK      117.00   635.00
+  H1   N2   H2      106.00  1733.55
+  H1   N2   CK      109.50   425.00
+  H2   N2   CK      109.50   425.00
+  N2   CK   CR      109.50   520.00
+  N2   CK   CM      108.00   465.00
+  CR   CK   CM      111.00   530.00
+[ impropers ]
+; GROMOS improper dihedrals
+;  ai   aj   ak   al  funct   angle     fc
+    CJ   CE   CI   N2        0.00   167.36
+    CE   CD   CZ   CJ        0.00   167.36
+    CI   CH   HI   CJ        0.00   167.36
+    CZ   CE   CA   N3        0.00   167.36
+    CD   CG   HD   CE        0.00   167.36
+    CH   N3   HH   CI        0.00   167.36
+    CA   CB   CZ   HA        0.00   167.36
+    CG   CB   HG   CD        0.00   167.36
+    CB   Cl   CG   CA        0.00   167.36
+    CK   N2   CM   CR       35.26   334.72
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+    CB   CG   CD   CE      180.00    41.80    2
+    CG   CB   CA   CZ      180.00    41.80    2
+    CG   CD   CE   CZ      180.00    41.80    2
+    CD   CE   CZ   CA      180.00    41.80    2
+    CE   CZ   CA   CB      180.00    41.80    2
+    CE   CZ   N3   CH      180.00    41.80    2
+    CE   CJ   N2   H1      180.00     5.86    2
+    CZ   CE   CJ   CI      180.00    41.80    2
+    CZ   N3   CH   CI      180.00    41.80    2
+    CA   CB   CG   CD      180.00    41.80    2
+    N3   CH   CI   CJ      180.00    41.80    2
+    CH   CI   CJ   CE      180.00    41.80    2
+    CI   CJ   N2   H2      180.00     5.86    2
+    CJ   N2   CK   CM        0.00     1.05    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+   Cl   HG 
+   Cl   HA 
+   Cl   CD 
+   Cl   CZ 
+   CB   HD 
+   CB   CE 
+   CB   N3 
+   CG   CK 
+   CG   CJ 
+   CG   HA 
+   HG   HD 
+   HG   CA 
+   HG   CE 
+   CD   CA 
+   CD   N3 
+   CD   CI 
+   CD   N2 
+   HD   CZ 
+   HD   CJ 
+   CE   CH 
+   CE   HA 
+   CE   HI 
+   CJ   N3 
+   CJ   HH 
+   CJ   CA 
+   CI   CZ 
+   HI   HH 
+   HI   N3 
+   HI   N2 
+   CH   CA 
+   CH   N2 
+   HH   CZ 
+   N3   HA 
+
+[ CN0 ]  ; Chloroquine
+[ atoms ]
+  CN   CH2    0.00   1
+  CO   CH2    0.19   2
+  N3    NT   -0.61   2
+  H3     H    0.00   2
+ CP1   CH2    0.21   2
+ CQ1   CH3    0.00   2
+ CP2   CH2    0.21   2
+ CQ2   CH3    0.00   2
+[ bonds ]
+  CN   CO    0.1530   7.1500e+06
+  CO   N3    0.1520   5.4300e+06
+  N3   H3    0.1030   3.2991e+06
+  N3  CP1    0.1530   7.1500e+06
+  N3  CP2    0.1530   7.1500e+06
+ CP1  CQ1    0.1520   5.4300e+06
+ CP2  CQ2    0.1520   5.4300e+06
+[ angles ]
+  CN   CO   N3      115.00   610.00
+  CO   N3   H3      109.50   425.00
+  CO   N3  CP1      116.00   620.00
+  CO   N3  CP2      111.00   530.00
+  H3   N3  CP1      109.50   425.00
+  H3   N3  CP2      109.50   425.00
+ CP1   N3  CP2      110.30   524.00
+  N3  CP1  CQ1      111.00   530.00
+  N3  CP2  CQ2      115.00   610.00
+[ dihedrals ]
+  CN   CO   N3  CP2        0.00     1.05    3
+  CO   N3  CP1  CQ1        0.00     1.05    3
+  CO   N3  CP2  CQ2        0.00     1.05    3
+ 
+[ CN1 ]
+[ atoms ]
+  CN   CH2    0.00   1
+  CO   CH2    0.19   2
+  N3    NL    0.00   2
+  H3     H    0.33   2
+ CP1   CH2    0.24   2
+ CQ1   CH3    0.00   2
+ CP2   CH2    0.24   2
+ CQ2   CH3    0.00   2
+[ bonds ]
+  CN   CO    0.1530   7.1500e+06
+  CO   N3    0.1520   5.4300e+06
+  N3   H3    0.1030   3.2991e+06
+  N3  CP1    0.1530   7.1500e+06
+  N3  CP2    0.1530   7.1500e+06
+ CP1  CQ1    0.1520   5.4300e+06
+ CP2  CQ2    0.1520   5.4300e+06
+[ angles ]
+  CN   CO   N3      115.00   610.00
+  CO   N3   H3      109.50   425.00
+  CO   N3  CP1      116.00   620.00
+  CO   N3  CP2      111.00   530.00
+  H3   N3  CP1      109.50   425.00
+  H3   N3  CP2      109.50   425.00
+ CP1   N3  CP2      110.30   524.00
+  N3  CP1  CQ1      111.00   530.00
+  N3  CP2  CQ2      115.00   610.00
+[ dihedrals ]
+ CN   CO   N3  CP2        0.00     1.05    3
+ CO   N3  CP1  CQ1        0.00     1.05    3
+ CO   N3  CP2  CQ2        0.00     1.05    3
+
+[ HQ0 ]
+[ atoms ]
+;  nr  type
+  Cl    CL   -0.11   1
+  CB     C    0.05   1 
+  CA     C   -0.20   1
+  HA    HC    0.16   1
+  CG     C   -0.06   1
+  HG    HC    0.16   1
+  CD     C   -0.16   2
+  HD    HC    0.16   2
+  CZ     C    0.40   3
+  N3    NR   -0.75   3
+  CH     C    0.41   3
+  HH    HC    0.07   3
+  CE     C   -0.42   4
+  CI     C   -0.62   4
+  HI    HC    0.21   4
+  CJ     C    0.74   4
+  N2    NT   -0.93   4
+  H1     H    0.43   4
+  H2     H    0.00   4
+  CK   CH1    0.46   4
+  CR   CH3    0.00   5
+  CM   CH2    0.00   5
+[ bonds ]
+;  ai   aj  funct   c0         c1
+  Cl   CB    0.1758   8.1200e+06
+  CB   CG    0.1410   6.5389e+06
+  CB   CA    0.1380   1.1000e+07
+  CG   HG    0.1090   1.2300e+07
+  CG   CD    0.1380   1.1000e+07
+  CD   HD    0.1090   1.2300e+07
+  CD   CE    0.1420   3.2236e+06
+  CE   CZ    0.1435   6.1000e+06
+  CE   CJ    0.1420   3.2236e+06
+  CZ   CA    0.1420   3.2236e+06
+  CZ   N3    0.1360   1.0200e+07
+  CA   HA    0.1090   1.2300e+07
+  N3   CH    0.1320   1.2000e+07
+  CH   HH    0.1090   1.2300e+07
+  CH   CI    0.1420   3.2236e+06
+  CI   HI    0.1090   1.2300e+07
+  CI   CJ    0.1360   1.0200e+07
+  CJ   N2    0.1480   5.7300e+06
+  N2   H1    0.1030   3.2991e+06
+  N2   H2    0.1030   3.2991e+06
+  N2   CK    0.1560   3.0819e+06
+  CK   CR    0.1520   5.4300e+06
+  CK   CM    0.1530   7.1500e+06
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+  Cl   CB   CG      120.00   560.00
+  Cl   CB   CA      120.00   560.00
+  CG   CB   CA      120.00   560.00
+  CB   CG   HG      120.00   505.00
+  CB   CG   CD      120.00   560.00
+  HG   CG   CD      120.00   505.00
+  CG   CD   HD      120.00   505.00
+  CG   CD   CE      120.00   560.00
+  HD   CD   CE      120.00   505.00
+  CD   CE   CZ      120.00   560.00
+  CD   CE   CJ      126.00   640.00
+  CZ   CE   CJ      111.00   530.00
+  CE   CZ   CA      120.00   560.00
+  CE   CZ   N3      126.00   640.00
+  CA   CZ   N3      115.00   610.00
+  CB   CA   CZ      120.00   560.00
+  CB   CA   HA      120.00   505.00
+  CZ   CA   HA      120.00   505.00
+  CZ   N3   CH      117.00   635.00
+  N3   CH   HH      120.00   505.00
+  N3   CH   CI      126.00   640.00
+  HH   CH   CI      120.00   505.00
+  CH   CI   HI      120.00   505.00
+  CH   CI   CJ      120.00   560.00
+  HI   CI   CJ      120.00   505.00
+  CE   CJ   CI      120.00   560.00
+  CE   CJ   N2      120.00   560.00
+  CI   CJ   N2      120.00   560.00
+  CJ   N2   H1      109.50   425.00
+  CJ   N2   H2      109.50   425.00
+  CJ   N2   CK      117.00   635.00
+  H1   N2   H2      106.00  1733.55
+  H1   N2   CK      109.50   425.00
+  H2   N2   CK      109.50   425.00
+  N2   CK   CR      109.50   520.00
+  N2   CK   CM      108.00   465.00
+  CR   CK   CM      111.00   530.00
+[ impropers ]
+; GROMOS improper dihedrals
+;  ai   aj   ak   al  funct   angle     fc
+    CJ   CE   CI   N2        0.00   167.36
+    CE   CD   CZ   CJ        0.00   167.36
+    CI   CH   HI   CJ        0.00   167.36
+    CZ   CE   CA   N3        0.00   167.36
+    CD   CG   HD   CE        0.00   167.36
+    CH   N3   HH   CI        0.00   167.36
+    CA   CB   CZ   HA        0.00   167.36
+    CG   CB   HG   CD        0.00   167.36
+    CB   Cl   CG   CA        0.00   167.36
+    CK   N2   CM   CR       35.26   334.72
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+    CB   CG   CD   CE      180.00    41.80    2
+    CG   CB   CA   CZ      180.00    41.80    2
+    CG   CD   CE   CZ      180.00    41.80    2
+    CD   CE   CZ   CA      180.00    41.80    2
+    CE   CZ   CA   CB      180.00    41.80    2
+    CE   CZ   N3   CH      180.00    41.80    2
+    CE   CJ   N2   H1      180.00     5.86    2
+    CZ   CE   CJ   CI      180.00    41.80    2
+    CZ   N3   CH   CI      180.00    41.80    2
+    CA   CB   CG   CD      180.00    41.80    2
+    N3   CH   CI   CJ      180.00    41.80    2
+    CH   CI   CJ   CE      180.00    41.80    2
+    CI   CJ   N2   H2      180.00     5.86    2
+    CJ   N2   CK   CM        0.00     1.05    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+   Cl   HG 
+   Cl   HA 
+   Cl   CD 
+   Cl   CZ 
+   CB   HD 
+   CB   CE 
+   CB   N3 
+   CG   CK 
+   CG   CJ 
+   CG   HA 
+   HG   HD 
+   HG   CA 
+   HG   CE 
+   CD   CA 
+   CD   N3 
+   CD   CI 
+   CD   N2 
+   HD   CZ 
+   HD   CJ 
+   CE   CH 
+   CE   HA 
+   CE   HI 
+   CJ   N3 
+   CJ   HH 
+   CJ   CA 
+   CI   CZ 
+   HI   HH 
+   HI   N3 
+   HI   N2 
+   CH   CA 
+   CH   N2 
+   HH   CZ 
+   N3   HA 
+
+[ HQ1 ]
+[ atoms ]
+;  nr  type
+  Cl    CL   -0.11   1
+  CB     C    0.05   1 
+  CA     C   -0.20   1
+  HA    HC    0.16   1
+  CG     C   -0.06   1
+  HG    HC    0.16   1
+  CD     C   -0.16   2
+  HD    HC    0.16   2
+  CZ     C    0.40   3
+  N3    NR   -0.75   3
+  CH     C    0.41   3
+  HH    HC    0.07   3
+  CE     C   -0.42   4
+  CI     C   -0.62   4
+  HI    HC    0.21   4
+  CJ     C    0.74   4
+  N2    NT   -0.93   4
+  H1     H    0.00   4
+  H2     H    0.43   4
+  CK   CH1    0.46   4
+  CR   CH3    0.00   5
+  CM   CH2    0.00   5
+[ bonds ]
+;  ai   aj  funct   c0         c1
+  Cl   CB    0.1758   8.1200e+06
+  CB   CG    0.1410   6.5389e+06
+  CB   CA    0.1380   1.1000e+07
+  CG   HG    0.1090   1.2300e+07
+  CG   CD    0.1380   1.1000e+07
+  CD   HD    0.1090   1.2300e+07
+  CD   CE    0.1420   3.2236e+06
+  CE   CZ    0.1435   6.1000e+06
+  CE   CJ    0.1420   3.2236e+06
+  CZ   CA    0.1420   3.2236e+06
+  CZ   N3    0.1360   1.0200e+07
+  CA   HA    0.1090   1.2300e+07
+  N3   CH    0.1320   1.2000e+07
+  CH   HH    0.1090   1.2300e+07
+  CH   CI    0.1420   3.2236e+06
+  CI   HI    0.1090   1.2300e+07
+  CI   CJ    0.1360   1.0200e+07
+  CJ   N2    0.1480   5.7300e+06
+  N2   H1    0.1030   3.2991e+06
+  N2   H2    0.1030   3.2991e+06
+  N2   CK    0.1560   3.0819e+06
+  CK   CR    0.1520   5.4300e+06
+  CK   CM    0.1530   7.1500e+06
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+  Cl   CB   CG      120.00   560.00
+  Cl   CB   CA      120.00   560.00
+  CG   CB   CA      120.00   560.00
+  CB   CG   HG      120.00   505.00
+  CB   CG   CD      120.00   560.00
+  HG   CG   CD      120.00   505.00
+  CG   CD   HD      120.00   505.00
+  CG   CD   CE      120.00   560.00
+  HD   CD   CE      120.00   505.00
+  CD   CE   CZ      120.00   560.00
+  CD   CE   CJ      126.00   640.00
+  CZ   CE   CJ      111.00   530.00
+  CE   CZ   CA      120.00   560.00
+  CE   CZ   N3      126.00   640.00
+  CA   CZ   N3      115.00   610.00
+  CB   CA   CZ      120.00   560.00
+  CB   CA   HA      120.00   505.00
+  CZ   CA   HA      120.00   505.00
+  CZ   N3   CH      117.00   635.00
+  N3   CH   HH      120.00   505.00
+  N3   CH   CI      126.00   640.00
+  HH   CH   CI      120.00   505.00
+  CH   CI   HI      120.00   505.00
+  CH   CI   CJ      120.00   560.00
+  HI   CI   CJ      120.00   505.00
+  CE   CJ   CI      120.00   560.00
+  CE   CJ   N2      120.00   560.00
+  CI   CJ   N2      120.00   560.00
+  CJ   N2   H1      109.50   425.00
+  CJ   N2   H2      109.50   425.00
+  CJ   N2   CK      117.00   635.00
+  H1   N2   H2      106.00  1733.55
+  H1   N2   CK      109.50   425.00
+  H2   N2   CK      109.50   425.00
+  N2   CK   CR      109.50   520.00
+  N2   CK   CM      108.00   465.00
+  CR   CK   CM      111.00   530.00
+[ impropers ]
+; GROMOS improper dihedrals
+;  ai   aj   ak   al  funct   angle     fc
+    CJ   CE   CI   N2        0.00   167.36
+    CE   CD   CZ   CJ        0.00   167.36
+    CI   CH   HI   CJ        0.00   167.36
+    CZ   CE   CA   N3        0.00   167.36
+    CD   CG   HD   CE        0.00   167.36
+    CH   N3   HH   CI        0.00   167.36
+    CA   CB   CZ   HA        0.00   167.36
+    CG   CB   HG   CD        0.00   167.36
+    CB   Cl   CG   CA        0.00   167.36
+    CK   N2   CM   CR       35.26   334.72
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+    CB   CG   CD   CE      180.00    41.80    2
+    CG   CB   CA   CZ      180.00    41.80    2
+    CG   CD   CE   CZ      180.00    41.80    2
+    CD   CE   CZ   CA      180.00    41.80    2
+    CE   CZ   CA   CB      180.00    41.80    2
+    CE   CZ   N3   CH      180.00    41.80    2
+    CE   CJ   N2   H1      180.00     5.86    2
+    CZ   CE   CJ   CI      180.00    41.80    2
+    CZ   N3   CH   CI      180.00    41.80    2
+    CA   CB   CG   CD      180.00    41.80    2
+    N3   CH   CI   CJ      180.00    41.80    2
+    CH   CI   CJ   CE      180.00    41.80    2
+    CI   CJ   N2   H2      180.00     5.86    2
+    CJ   N2   CK   CM        0.00     1.05    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+   Cl   HG 
+   Cl   HA 
+   Cl   CD 
+   Cl   CZ 
+   CB   HD 
+   CB   CE 
+   CB   N3 
+   CG   CK 
+   CG   CJ 
+   CG   HA 
+   HG   HD 
+   HG   CA 
+   HG   CE 
+   CD   CA 
+   CD   N3 
+   CD   CI 
+   CD   N2 
+   HD   CZ 
+   HD   CJ 
+   CE   CH 
+   CE   HA 
+   CE   HI 
+   CJ   N3 
+   CJ   HH 
+   CJ   CA 
+   CI   CZ 
+   HI   HH 
+   HI   N3 
+   HI   N2 
+   CH   CA 
+   CH   N2 
+   HH   CZ 
+   N3   HA 
+
+[ HQ2 ]
+[ atoms ]
+;  nr  type
+  Cl    CL   -0.11   1
+  CB     C    0.05   1 
+  CA     C   -0.20   1
+  HA    HC    0.16   1
+  CG     C   -0.06   1
+  HG    HC    0.16   1
+  CD     C   -0.16   2
+  HD    HC    0.16   2
+  CZ     C    0.50   3
+  N3    NR   -0.72   3
+  CH     C    0.45   3
+  HH    HC    0.09   3
+  CE     C   -0.27   4
+  CI     C   -0.55   4
+  HI    HC    0.25   4
+  CJ     C    0.61   4
+  N2    NL   -0.74   4
+  H1     H    0.46   4
+  H2     H    0.46   4
+  CK   CH1    0.46   4
+  CR   CH3    0.00   5
+  CM   CH2    0.00   5
+[ bonds ]
+;  ai   aj  funct   c0         c1
+  Cl   CB    0.1758   8.1200e+06
+  CB   CG    0.1410   6.5389e+06
+  CB   CA    0.1380   1.1000e+07
+  CG   HG    0.1090   1.2300e+07
+  CG   CD    0.1380   1.1000e+07
+  CD   HD    0.1090   1.2300e+07
+  CD   CE    0.1420   3.2236e+06
+  CE   CZ    0.1435   6.1000e+06
+  CE   CJ    0.1420   3.2236e+06
+  CZ   CA    0.1420   3.2236e+06
+  CZ   N3    0.1360   1.0200e+07
+  CA   HA    0.1090   1.2300e+07
+  N3   CH    0.1320   1.2000e+07
+  CH   HH    0.1090   1.2300e+07
+  CH   CI    0.1420   3.2236e+06
+  CI   HI    0.1090   1.2300e+07
+  CI   CJ    0.1360   1.0200e+07
+  CJ   N2    0.1480   5.7300e+06
+  N2   H1    0.1030   3.2991e+06
+  N2   H2    0.1030   3.2991e+06
+  N2   CK    0.1560   3.0819e+06
+  CK   CR    0.1520   5.4300e+06
+  CK   CM    0.1530   7.1500e+06
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+  Cl   CB   CG      120.00   560.00
+  Cl   CB   CA      120.00   560.00
+  CG   CB   CA      120.00   560.00
+  CB   CG   HG      120.00   505.00
+  CB   CG   CD      120.00   560.00
+  HG   CG   CD      120.00   505.00
+  CG   CD   HD      120.00   505.00
+  CG   CD   CE      120.00   560.00
+  HD   CD   CE      120.00   505.00
+  CD   CE   CZ      120.00   560.00
+  CD   CE   CJ      126.00   640.00
+  CZ   CE   CJ      111.00   530.00
+  CE   CZ   CA      120.00   560.00
+  CE   CZ   N3      126.00   640.00
+  CA   CZ   N3      115.00   610.00
+  CB   CA   CZ      120.00   560.00
+  CB   CA   HA      120.00   505.00
+  CZ   CA   HA      120.00   505.00
+  CZ   N3   CH      117.00   635.00
+  N3   CH   HH      120.00   505.00
+  N3   CH   CI      126.00   640.00
+  HH   CH   CI      120.00   505.00
+  CH   CI   HI      120.00   505.00
+  CH   CI   CJ      120.00   560.00
+  HI   CI   CJ      120.00   505.00
+  CE   CJ   CI      120.00   560.00
+  CE   CJ   N2      120.00   560.00
+  CI   CJ   N2      120.00   560.00
+  CJ   N2   H1      109.50   425.00
+  CJ   N2   H2      109.50   425.00
+  CJ   N2   CK      117.00   635.00
+  H1   N2   H2      106.00  1733.55
+  H1   N2   CK      109.50   425.00
+  H2   N2   CK      109.50   425.00
+  N2   CK   CR      109.50   520.00
+  N2   CK   CM      108.00   465.00
+  CR   CK   CM      111.00   530.00
+[ impropers ]
+; GROMOS improper dihedrals
+;  ai   aj   ak   al  funct   angle     fc
+    CJ   CE   CI   N2        0.00   167.36
+    CE   CD   CZ   CJ        0.00   167.36
+    CI   CH   HI   CJ        0.00   167.36
+    CZ   CE   CA   N3        0.00   167.36
+    CD   CG   HD   CE        0.00   167.36
+    CH   N3   HH   CI        0.00   167.36
+    CA   CB   CZ   HA        0.00   167.36
+    CG   CB   HG   CD        0.00   167.36
+    CB   Cl   CG   CA        0.00   167.36
+    CK   N2   CM   CR       35.26   334.72
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+    CB   CG   CD   CE      180.00    41.80    2
+    CG   CB   CA   CZ      180.00    41.80    2
+    CG   CD   CE   CZ      180.00    41.80    2
+    CD   CE   CZ   CA      180.00    41.80    2
+    CE   CZ   CA   CB      180.00    41.80    2
+    CE   CZ   N3   CH      180.00    41.80    2
+    CE   CJ   N2   H1      180.00     5.86    2
+    CZ   CE   CJ   CI      180.00    41.80    2
+    CZ   N3   CH   CI      180.00    41.80    2
+    CA   CB   CG   CD      180.00    41.80    2
+    N3   CH   CI   CJ      180.00    41.80    2
+    CH   CI   CJ   CE      180.00    41.80    2
+    CI   CJ   N2   H2      180.00     5.86    2
+    CJ   N2   CK   CM        0.00     1.05    3
+[ exclusions ]
+;  ai   aj  funct  ;  GROMOS 1-4 exclusions
+   Cl   HG 
+   Cl   HA 
+   Cl   CD 
+   Cl   CZ 
+   CB   HD 
+   CB   CE 
+   CB   N3 
+   CG   CK 
+   CG   CJ 
+   CG   HA 
+   HG   HD 
+   HG   CA 
+   HG   CE 
+   CD   CA 
+   CD   N3 
+   CD   CI 
+   CD   N2 
+   HD   CZ 
+   HD   CJ 
+   CE   CH 
+   CE   HA 
+   CE   HI 
+   CJ   N3 
+   CJ   HH 
+   CJ   CA 
+   CI   CZ 
+   HI   HH 
+   HI   N3 
+   HI   N2 
+   CH   CA 
+   CH   N2 
+   HH   CZ 
+   N3   HA 
+
+[ HN0 ] ; Hydroxychloroquine
+[ atoms ]
+  CN   CH2    0.00   1
+  CO   CH2    0.14   2
+  N3    NT   -0.62   2
+  H3     H    0.00   2
+ CP1   CH2    0.24   2
+  CQ   CH3    0.00   2
+ CP2   CH2    0.20   2
+  CS   CH2    0.29   2
+  OS    OA   -0.71   2
+  HS     H    0.46   2
+[ bonds ]
+  CN   CO    0.1530   7.1500e+06
+  CO   N3    0.1520   5.4300e+06
+  N3   H3    0.1030   3.2991e+06
+  N3  CP1    0.1530   7.1500e+06
+  N3  CP2    0.1530   7.1500e+06
+ CP1   CQ    0.1520   5.4300e+06
+ CP2   CS    0.1520   5.4300e+06
+  CS   OS    gb_18   
+  OS   HS    gb_1    
+[ angles ]
+  CN   CO   N3      115.00   610.00
+  CO   N3   H3      109.50   425.00
+  CO   N3  CP1      116.00   620.00
+  CO   N3  CP2      111.00   530.00
+  H3   N3  CP1      109.50   425.00
+  H3   N3  CP2      109.50   425.00
+ CP1   N3  CP2      110.30   524.00
+  N3  CP1   CQ      111.00   530.00
+  N3  CP2   CS      115.00   610.00
+ CP2   CS   OS      ga_13   
+  CS   OS   HS      ga_12   
+[ dihedrals ]
+  CN   CO   N3  CP2        0.00     1.05    3
+  CO   N3  CP1   CQ        0.00     1.05    3
+  CO   N3  CP2   CS        0.00     1.05    3
+  N3  CP2   CS   OS        gd_34   
+ CP2   CS   OS   HS        gd_23   
+
+[ HN1 ] ; Hydroxychloroquine
+[ atoms ]
+  CN   CH2    0.00   1
+  CO   CH2    0.14   2
+  N3    NT    0.09   2
+  H3     H    0.28   2
+ CP1   CH2    0.24   2
+  CQ   CH3    0.00   2
+ CP2   CH2    0.12   2
+  CS   CH2    0.38   2
+  OS    OA   -0.71   2
+  HS     H    0.46   2
+[ bonds ]
+  CN   CO    0.1530   7.1500e+06
+  CO   N3    0.1520   5.4300e+06
+  N3   H3    0.1030   3.2991e+06
+  N3  CP1    0.1530   7.1500e+06
+  N3  CP2    0.1530   7.1500e+06
+ CP1   CQ    0.1520   5.4300e+06
+ CP2   CS    0.1520   5.4300e+06
+  CS   OS    gb_18   
+  OS   HS    gb_1    
+[ angles ]
+  CN   CO   N3      115.00   610.00
+  CO   N3   H3      109.50   425.00
+  CO   N3  CP1      116.00   620.00
+  CO   N3  CP2      111.00   530.00
+  H3   N3  CP1      109.50   425.00
+  H3   N3  CP2      109.50   425.00
+ CP1   N3  CP2      110.30   524.00
+  N3  CP1   CQ      111.00   530.00
+  N3  CP2   CS      115.00   610.00
+ CP2   CS   OS      ga_13   
+  CS   OS   HS      ga_12   
+[ dihedrals ]
+  CN   CO   N3  CP2        0.00     1.05    3
+  CO   N3  CP1   CQ        0.00     1.05    3
+  CO   N3  CP2   CS        0.00     1.05    3
+  N3  CP2   CS   OS        gd_34   
+ CP2   CS   OS   HS        gd_23   
+; end of Yehuda molecules
+
+
