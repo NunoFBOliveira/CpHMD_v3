@@ -1,22 +1,25 @@
 # CpHMD_v3
-Git commit of the new CpHMD version
-This repository contains the old versions of CpHMD_v2 (normal, verlet, US, US_verlet) and now has the new aditions for CpHMD_v3. 
+Git commit of the improved stochastic-CpHMD base code.
 
-Also contains the Sts and Delphitools which will be completed in the future! 
+The original methodology can be found in :
+[1] Baptista et al., J. Chem. Phys. 117, 4184 (2002) DOI: 10.1063/1.1497164
 
-### -- LOGBOOK -- ###
-## 12/07/2023 ##
-- Introduction of AMBER FF (by J. Sequeira) into CpHMD v3 framework *(Debbug still on going, use carefully)*
-    - Creation of Delphi_tools for AMBER
-- Integration of PybindE tool (by J. Vitorino) into the CpHMD Framework.*(Debbug still on going, use carefully)*
+This new version of CpHMD enjoys several upgrades from the previous st-CpHMD used in the Machuqueiro Computational BiopHysics Lab in Lisbon.
 
+Some of the most notable are:
+   - Verified support for Recent GROMACS codes.
+   - Verified support for GPU usage in the MD steps.
+   - Support for multiple force-fields, including:
+       * GROMOS: G54a7pH - Base parameterization of the methodology;
+       * CHARMM: CHARMM36pH - New parameterization for titratable amino acids in CHARMM (https://doi.org/10.1021/acs.jpcb.2c04529)
+       * AMBER: AMBER14SBpH - New parameterization for titratable amino acids in AMBER (https://doi.org/10.1021/acs.jctc.5c00415)
+   - Support for Reduced Titration on sites with a predicted pKa far from the simulation pH.
+   - Support for plumed metadynamic simulations.
+   
 
-## 05/07/2023 ##
-- Introduction of dendrimer portion of the code
-- Added dendrimer blocks to delphi, sts and FF GROMOS54a7
-- corrected C-termini when capped to 8 due to the adition of SPB
-
-## 04/07/2023 ##
-- Added block for cobimetinib and cobimetinib-EP to delphi, sts and FF GROMOS54a7
-- Virtual site code was added to CpHMD_v3, allowing it do deal with EPs and others.
-- Corrected a bug with the sed that corrected O1 on C-terminal
+Inside this project you can find:
+   - The base code (CpHMD_v3.4.2);
+   - The DelphiTools with all the needed parameters and scripts for the PB calculation;
+   - petit 1.6.1 needed for the Monte Carlo step, developed in ITQB (https://www.itqb.unl.pt/labs/molecular-simulation/in-house-software);
+   - The force-field (FFs) parameterized for st-CpHMD;
+   - The tautomer files (Sts) for the titrating molecules. 
